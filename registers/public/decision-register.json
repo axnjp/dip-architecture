@@ -1,6 +1,6 @@
 {
   "projection_id": "DIP-PUBLIC-DECISION-REGISTER",
-  "projection_version": "0.1.0-candidate",
+  "projection_version": "0.1.0",
   "schema_version": "0.1.0-draft",
   "classification": "Public Reference Architecture",
   "source_register_id": "DIP-PUB-DECISION-REGISTER",
