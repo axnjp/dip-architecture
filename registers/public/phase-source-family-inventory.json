@@ -1,0 +1,144 @@
+{
+  "projection_id": "DIP-PUBLIC-PHASE-SOURCE-INVENTORY",
+  "projection_version": "0.1.0-candidate",
+  "schema_version": "0.1.0-draft",
+  "classification": "Public Reference Architecture",
+  "source_register_id": "DIP-PUB-PHASE-SOURCE-INVENTORY",
+  "source_revision": null,
+  "status": "approved_public_projection",
+  "disclosure_review": {
+    "semantic_review_status": "passed",
+    "prohibited_field_scan": "passed",
+    "private_instance_non_disclosure": "passed",
+    "secret_scan": "passed",
+    "reviewed_revision": null
+  },
+  "completed_phases": [
+    {
+      "sequence": 1,
+      "name": "G0 — Conceptual Architecture",
+      "status": "approved_locked",
+      "public_record_extraction_summary": "Public-safe record normalization is complete; complete source-body control remains pending."
+    },
+    {
+      "sequence": 2,
+      "name": "G1 — Operational Design",
+      "status": "approved_locked",
+      "public_record_extraction_summary": "Public-safe operational-design normalization is complete; complete source-body control remains pending."
+    },
+    {
+      "sequence": 3,
+      "name": "First-Domain Viability & Implementation Readiness Review",
+      "status": "approved_locked",
+      "public_record_extraction_summary": "Public-safe disposition-level normalization is complete; complete source-body control remains pending."
+    },
+    {
+      "sequence": 4,
+      "name": "AI Operating Profile v1.0",
+      "status": "approved_locked",
+      "public_record_extraction_summary": "Public-safe section-level normalization is complete; complete source-body control remains pending."
+    },
+    {
+      "sequence": 5,
+      "name": "DIP AI Constitution",
+      "status": "approved_locked",
+      "public_record_extraction_summary": "The approved constitutional principle list is normalized; complete supporting commentary remains pending."
+    },
+    {
+      "sequence": 6,
+      "name": "Governed Companion Intelligence Operating System framing",
+      "status": "approved_locked",
+      "public_record_extraction_summary": "Public-safe record-level normalization is complete; immutable source-corpus control remains pending."
+    },
+    {
+      "sequence": 7,
+      "name": "Implementation Planning Sections 1–12",
+      "status": "approved_locked",
+      "public_record_extraction_summary": "All accepted implementation ADRs and approved non-ADR implementation decisions are normalized."
+    },
+    {
+      "sequence": 8,
+      "name": "Architecture Publication Planning P0–P6",
+      "status": "approved_locked",
+      "public_record_extraction_summary": "Publication planning recommendations and publication-gate criteria are normalized."
+    }
+  ],
+  "source_families": [
+    {
+      "family": "Program directives and approval handoffs",
+      "classification_summary": "Public projection; restricted evidence is retained outside the public build.",
+      "public_record_extraction_summary": "Public program directives and publication-control summaries are normalized; detailed approval evidence remains outside the public build."
+    },
+    {
+      "family": "Conceptual and operational architecture conversations",
+      "classification_summary": "Public Reference Architecture",
+      "public_record_extraction_summary": "Public-safe conceptual and operational architecture records are normalized; complete source-body control remains pending."
+    },
+    {
+      "family": "Viability and readiness review",
+      "classification_summary": "Public Reference Architecture",
+      "public_record_extraction_summary": "The public viability disposition, findings, transition conditions, and roadmap reconciliation are normalized."
+    },
+    {
+      "family": "AI operating and constitutional architecture",
+      "classification_summary": "Public Reference Architecture",
+      "public_record_extraction_summary": "Public AI operating, constitutional, and governed-companion records are normalized for architectural publication."
+    },
+    {
+      "family": "Implementation planning and ADRs",
+      "classification_summary": "Public projection; restricted evidence is retained outside the public build.",
+      "public_record_extraction_summary": "Public implementation summaries and minimum-necessary ADR projections are normalized; complete decision evidence remains outside the public build."
+    }
+  ],
+  "publication_phases": [
+    {
+      "id": "P0",
+      "name": "Source Inventory and Normalization",
+      "planning_status": "approved_locked",
+      "production_status": "in_progress",
+      "gate": "PG0"
+    },
+    {
+      "id": "P1",
+      "name": "Architectural Foundations",
+      "planning_status": "approved_locked",
+      "production_status": "not_started",
+      "gate": "PG1"
+    },
+    {
+      "id": "P2",
+      "name": "Living Architecture Blueprint",
+      "planning_status": "approved_locked",
+      "production_status": "not_started",
+      "gate": "PG2"
+    },
+    {
+      "id": "P3",
+      "name": "ADR and Decision Register",
+      "planning_status": "approved_locked",
+      "production_status": "not_started",
+      "gate": "PG3"
+    },
+    {
+      "id": "P4",
+      "name": "Architecture v1.0 and Architect's Letter",
+      "planning_status": "approved_locked",
+      "production_status": "not_started",
+      "gate": "PG4"
+    },
+    {
+      "id": "P5",
+      "name": "Editable Sources, Word/PDF, Rendering, QA, and Archives",
+      "planning_status": "approved_locked",
+      "production_status": "not_started",
+      "gate": "PG5"
+    },
+    {
+      "id": "P6",
+      "name": "Implementation Kickoff Package",
+      "planning_status": "approved_locked",
+      "production_status": "not_started",
+      "gate": "PG6"
+    }
+  ]
+}
