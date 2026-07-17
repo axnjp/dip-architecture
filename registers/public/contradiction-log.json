@@ -1,0 +1,49 @@
+{
+  "projection_id": "DIP-PUBLIC-CONTRADICTION-LOG",
+  "projection_version": "0.1.0-candidate",
+  "schema_version": "0.1.0-draft",
+  "classification": "Public Reference Architecture",
+  "source_register_id": "DIP-PUB-CONTRADICTION-LOG",
+  "source_revision": null,
+  "status": "approved_public_projection",
+  "disclosure_review": {
+    "semantic_review_status": "passed",
+    "prohibited_field_scan": "passed",
+    "private_instance_non_disclosure": "passed",
+    "secret_scan": "passed",
+    "reviewed_revision": null
+  },
+  "blocking_contradiction_found": false,
+  "records": [
+    {
+      "id": "PUB-CON-0001",
+      "title": "ADR-IMP-020 through ADR-IMP-022 identifier and title reuse",
+      "description": "Implementation Planning Section 4 used ADR-IMP-020 through ADR-IMP-022 as deferred placeholder identifiers for later secret-provider, remote-configuration, and configuration-write-back decisions. The final Section 10 ADR disposition used the same identifiers for testing, observability, and reliability decisions.",
+      "lifecycle_status": "resolved",
+      "potential_impact": "Without lifecycle-aware normalization, the publication inventory would attach the wrong titles and bodies to accepted ADR identifiers.",
+      "resolution": "The exact final Section 10 disposition plus explicit user approval controls the locked ADR corpus. The Section 4 names are retained only as superseded pre-lock placeholders and do not define the accepted ADRs.",
+      "architectural_decision_reopened": false,
+      "blocking": false
+    },
+    {
+      "id": "PUB-CON-0002",
+      "title": "Pre-lock ADR numbering plan differs from final accepted dispositions",
+      "description": "Implementation Planning Sections 1 through 4 used several ADR identifiers for proposed or deferred subjects that were later reassigned or refined by the final approved section dispositions, including identifiers in the ADR-IMP-005 through ADR-IMP-019 and ADR-IMP-023 range.",
+      "lifecycle_status": "resolved",
+      "potential_impact": "A publication based on early planning lists could attach obsolete subjects to accepted identifiers.",
+      "resolution": "Treat early names as pre-lock planning history. The exact later section disposition that explicitly accepts each ADR controls its final title and body. No approved architecture is reopened.",
+      "architectural_decision_reopened": false,
+      "blocking": false
+    },
+    {
+      "id": "PUB-CON-0003",
+      "title": "G1 roadmap numbering differs from executed readiness-review numbering",
+      "description": "The recovered thirteen-area G1 roadmap places First-Domain Viability and Launch Recommendation at Section 13, while later execution and approval evidence identifies the formal First-Domain Viability & Implementation Readiness Review as G1 Section 7.",
+      "lifecycle_status": "resolved",
+      "potential_impact": "Without lifecycle-aware normalization, publication history could present the planning roadmap as the final executed section sequence or merge the readiness disposition into the wrong source family.",
+      "resolution": "Retain the thirteen-area artifact as roadmap and coverage history. Treat the later Section 7 evidence as controlling for the executed review and approval event, while preserving the review as its own publication source family. The architectural outcomes are compatible and no decision is reopened.",
+      "architectural_decision_reopened": false,
+      "blocking": false
+    }
+  ]
+}
