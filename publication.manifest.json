@@ -1,7 +1,7 @@
 {
   "manifest_id": "DIP-PUBLIC-WORKING-CORPUS",
-  "manifest_version": "0.3.0-draft",
-  "production_batch": "P0-B27",
+  "manifest_version": "0.5.0-draft",
+  "production_batch": "P0-B30",
   "classification": "Public Reference Architecture",
   "status": "controlled_working_revision_not_release",
   "authorization": {
@@ -29,18 +29,19 @@
     "raw conversation and account exports",
     "publication evidence reports",
     "complete ADR bodies retained in the restricted architecture repository",
-    "structured registers pending stricter field-level projection",
+    "complete canonical and restricted registers; only approved public structured projections are included",
     "repository-control and restricted-repository metadata",
     "conversation-export ingestion tooling"
   ],
   "source_revision_status": "working_revision_pending_repository_commit",
+  "structured_register_projection_status": "twelve_approved_public_projections_installed",
   "release_pin": null,
   "manifest_self_hash_excluded": true,
   "files": [
     {
       "path": "README.md",
-      "size_bytes": 1497,
-      "sha256": "4dbe7d6fd4c8e0f6536a2e670309cd1af89c60c6a5412c1e9e9b4cb3d188ab53"
+      "size_bytes": 1803,
+      "sha256": "4243bf89c88a183d039d75f1606afd584201043f2538e6ffc8aaf6e0094b8d73"
     },
     {
       "path": "adrs/ADR-IMP-001.md",
@@ -189,8 +190,8 @@
     },
     {
       "path": "adrs/README.md",
-      "size_bytes": 389,
-      "sha256": "f3c8876cbaec4ee1c983ac4a84eb503c1f640295e82d9106a230ba49ebf786e6"
+      "size_bytes": 785,
+      "sha256": "8df40d799806d4843e0eec3229baeb6bc094b8ca374c8845e4b110caf766fcb5"
     },
     {
       "path": "blueprint/README.md",
@@ -199,8 +200,18 @@
     },
     {
       "path": "build/README.md",
-      "size_bytes": 238,
-      "sha256": "f7a391f5027dfd525a0a6c24fe584ceead95d43c51385d1b292b821870a97ecd"
+      "size_bytes": 1871,
+      "sha256": "55b95cbab3e82d0311f50bf1d52ccebff4e6d9ba6644c91225657fd36a26df50"
+    },
+    {
+      "path": "build/public-staging-policy.json",
+      "size_bytes": 2791,
+      "sha256": "cbde9b0c0d3321e8cdb8d78e1c2af5066df15a10e51c494a1c2283d7a93b515a"
+    },
+    {
+      "path": "build/public-structured-register-projection-policy.md",
+      "size_bytes": 2682,
+      "sha256": "c894ef3ede4e3d77516a8f6c7c0fee5d4e9e8820b278bb023336ce37f057c37e"
     },
     {
       "path": "foundations/README.md",
@@ -213,9 +224,144 @@
       "sha256": "f88604dffaf0f59784ace56dbb4f434649cb955e7d0055216b4e157778a9c26e"
     },
     {
+      "path": "registers/public/adr-inventory.json",
+      "size_bytes": 6575,
+      "sha256": "8d07775994b4ea7e493f7a1e63514a6587f680033f98d2d1f1f1cdfb3bf44840"
+    },
+    {
+      "path": "registers/public/contradiction-log.json",
+      "size_bytes": 3486,
+      "sha256": "8c2338d68b618e379beab7f6a8878f1f5de68184b9bbdc3f411a3704f57a24fc"
+    },
+    {
+      "path": "registers/public/decision-register.json",
+      "size_bytes": 518612,
+      "sha256": "e947975069d928725d550b4ed0416e971657a870823c82b1bd68252a5ddd44f1"
+    },
+    {
+      "path": "registers/public/gap-log.json",
+      "size_bytes": 5550,
+      "sha256": "71893d84b7d293fd028dd72f3c3c673ce595ac4e9d6e2465594509f2d3f22473"
+    },
+    {
+      "path": "registers/public/gate-spike-register.json",
+      "size_bytes": 31995,
+      "sha256": "230c6b3c800d5d9bf581542eb3898e80f0cf5d2c60484f3299200ccaa359a157"
+    },
+    {
+      "path": "registers/public/phase-source-family-inventory.json",
+      "size_bytes": 5697,
+      "sha256": "978810c9cea369eac1667fda1a7479734284398f29d6b29c036e2ee2f684870e"
+    },
+    {
+      "path": "registers/public/principle-invariant-register.json",
+      "size_bytes": 162846,
+      "sha256": "3201ea10ecb2d99fb5eea97da6501dae31d3a7ab9b860233a9ae430c82bb9641"
+    },
+    {
+      "path": "registers/public/requirement-register.json",
+      "size_bytes": 250276,
+      "sha256": "09ff834fef45cce1705996dd188b38a68ed80fe2a4bba26bcbc78fbdc32114a0"
+    },
+    {
+      "path": "registers/public/scope-deferral-matrix.json",
+      "size_bytes": 30519,
+      "sha256": "9b297035abe4d2adf027bb35e7e2ea4dd56f0095b051b84ed7c368ff44fc83c9"
+    },
+    {
+      "path": "registers/public/source-catalog.json",
+      "size_bytes": 20205,
+      "sha256": "562d437e85c56da0230845eac993e857ec032dde8b3c79843a89592ebbe04e2e"
+    },
+    {
+      "path": "registers/public/terminology-register.json",
+      "size_bytes": 104664,
+      "sha256": "2bda12b64fa74438450fd7d949c0ab7b0814fe2e6e6aac0cbbc7f59b8c94fc52"
+    },
+    {
+      "path": "registers/public/traceability-map.json",
+      "size_bytes": 47950,
+      "sha256": "da9384cef0f27054182ac8d1ff5d5ceb3f86c0a4b7d4bb0a8fdcecb80f568bcf"
+    },
+    {
       "path": "releases/README.md",
       "size_bytes": 215,
       "sha256": "a8f09f062f57f6bd9fef7210dc51e814ec08f315bbe40af9b94a888592730684"
+    },
+    {
+      "path": "schemas/public-projections/README.md",
+      "size_bytes": 1528,
+      "sha256": "9381d8c94a98fc4fef550c0a34a8f714af92dbffeab2c5ae47f122523ec750af"
+    },
+    {
+      "path": "schemas/public-projections/public-adr-inventory-projection.schema.json",
+      "size_bytes": 1285,
+      "sha256": "c2336ea57bc51edc38d908a6ce8242fe104dfd3d97c200bc8e0cd11dfaf74d85"
+    },
+    {
+      "path": "schemas/public-projections/public-contradiction-log-projection.schema.json",
+      "size_bytes": 1573,
+      "sha256": "2b093246133d56a71a7e0883dcdcb7cdc395baf0b51aeaa1903640d420b434be"
+    },
+    {
+      "path": "schemas/public-projections/public-decision-register-projection.schema.json",
+      "size_bytes": 915,
+      "sha256": "69f35df657ee7846b87f04d8194cea0dd492778e0ae5e1f370343a65c2a97938"
+    },
+    {
+      "path": "schemas/public-projections/public-gap-log-projection.schema.json",
+      "size_bytes": 1309,
+      "sha256": "d2d591851b251b36878ccdb4b1e085b29130a20a19aad4e67ab2cc423f871f6c"
+    },
+    {
+      "path": "schemas/public-projections/public-gate-spike-register-projection.schema.json",
+      "size_bytes": 2506,
+      "sha256": "76be108a6c3e0b3e65d45d539736244d5c0fb352889b5e4da0dacd6c7a673fed"
+    },
+    {
+      "path": "schemas/public-projections/public-phase-source-inventory-projection.schema.json",
+      "size_bytes": 2408,
+      "sha256": "bc0a1ceec3be2bb92864a3565c4852945bc189f296b8c04f6fd90e5082d771e6"
+    },
+    {
+      "path": "schemas/public-projections/public-principle-invariant-register-projection.schema.json",
+      "size_bytes": 1314,
+      "sha256": "b466ac20962da7cead8f1ae9699423c307f86533b4b4b7f3c6eace7eeac89939"
+    },
+    {
+      "path": "schemas/public-projections/public-projection-common.schema.json",
+      "size_bytes": 3958,
+      "sha256": "1a1164fddd3c3cc61bdffd05c5e5590b78926d88c35de2ca062f8f1e35c4bd93"
+    },
+    {
+      "path": "schemas/public-projections/public-projection-schema-registry.json",
+      "size_bytes": 6981,
+      "sha256": "7210f6365c5c55bd6a210e16bde48172265a9e279eba839f1b8a0f1052f37ed7"
+    },
+    {
+      "path": "schemas/public-projections/public-requirement-register-projection.schema.json",
+      "size_bytes": 930,
+      "sha256": "8be13d5b894b1cb51c5a67e52d0fe518ceb43557c308ba3f35f8c49e04272dc5"
+    },
+    {
+      "path": "schemas/public-projections/public-scope-deferral-projection.schema.json",
+      "size_bytes": 1840,
+      "sha256": "b9ac681b4dee6a8a47ae9fafab47911c4c65ebeabf928f96ed8557cb8168ab52"
+    },
+    {
+      "path": "schemas/public-projections/public-source-catalog-projection.schema.json",
+      "size_bytes": 1615,
+      "sha256": "9a72bea939acf9e7f848d51a3c1ef11a0bdc95ceb7902a73e289028b54e91771"
+    },
+    {
+      "path": "schemas/public-projections/public-terminology-register-projection.schema.json",
+      "size_bytes": 1406,
+      "sha256": "031f8a1cdb073c384ca9a1a039424bea2ec55ac66b958cd278788738ca8199da"
+    },
+    {
+      "path": "schemas/public-projections/public-traceability-map-projection.schema.json",
+      "size_bytes": 1433,
+      "sha256": "530b35b7d4a2c486a039042d546ce4c29616af43ba7e7b8f75a1ac7be7250d38"
     },
     {
       "path": "sources/public/README.md",
