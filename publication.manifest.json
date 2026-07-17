@@ -1,0 +1,236 @@
+{
+  "manifest_id": "DIP-PUBLIC-WORKING-CORPUS",
+  "manifest_version": "0.3.0-draft",
+  "production_batch": "P0-B27",
+  "classification": "Public Reference Architecture",
+  "status": "controlled_working_revision_not_release",
+  "authorization": {
+    "pg0_passed": false,
+    "ikg0_granted": false,
+    "product_implementation_coding_permitted": false
+  },
+  "public_source_ids": [
+    "DIP-SRC-0001",
+    "DIP-SRC-0002",
+    "DIP-SRC-0003",
+    "DIP-SRC-0004",
+    "DIP-SRC-0005",
+    "DIP-SRC-0006",
+    "DIP-SRC-0007",
+    "DIP-SRC-0008",
+    "DIP-SRC-0009",
+    "DIP-SRC-0010"
+  ],
+  "projection_policy": "build/public-staging-policy.json",
+  "exclusions": [
+    "restricted source bodies and approval locators",
+    "Private Authority data and active private configuration",
+    "Secrets",
+    "raw conversation and account exports",
+    "publication evidence reports",
+    "complete ADR bodies retained in the restricted architecture repository",
+    "structured registers pending stricter field-level projection",
+    "repository-control and restricted-repository metadata",
+    "conversation-export ingestion tooling"
+  ],
+  "source_revision_status": "working_revision_pending_repository_commit",
+  "release_pin": null,
+  "manifest_self_hash_excluded": true,
+  "files": [
+    {
+      "path": "README.md",
+      "size_bytes": 1497,
+      "sha256": "4dbe7d6fd4c8e0f6536a2e670309cd1af89c60c6a5412c1e9e9b4cb3d188ab53"
+    },
+    {
+      "path": "adrs/ADR-IMP-001.md",
+      "size_bytes": 1019,
+      "sha256": "744100d18952ed49f4a6ae83f33f2db24bb1512876355ae8be3c6bffb511e56c"
+    },
+    {
+      "path": "adrs/ADR-IMP-002.md",
+      "size_bytes": 1030,
+      "sha256": "8f9a0378392422afadea22b0086908016082bc021f74ec35955534c0a002e071"
+    },
+    {
+      "path": "adrs/ADR-IMP-003.md",
+      "size_bytes": 1048,
+      "sha256": "a84cbd94ae75aa14ade81b3d57ea4763bea8cb52ef7f513cb0d0ac75b1e773f5"
+    },
+    {
+      "path": "adrs/ADR-IMP-004.md",
+      "size_bytes": 1028,
+      "sha256": "cf1eda59bdd6fd5f51089e5f847dea8b201726bbf0b29cd0fc805fb3b304b7d0"
+    },
+    {
+      "path": "adrs/ADR-IMP-005.md",
+      "size_bytes": 1052,
+      "sha256": "48ad4b701b99065fb34832ec7dc0e9f9f787cee1e002d7ac7ddcf6de3bfb6e29"
+    },
+    {
+      "path": "adrs/ADR-IMP-006.md",
+      "size_bytes": 1038,
+      "sha256": "657c479e81e09cd7ca5ed11692b6919f71d79d980b6d6d15de0f2ce334c2bfa7"
+    },
+    {
+      "path": "adrs/ADR-IMP-007.md",
+      "size_bytes": 1044,
+      "sha256": "0660fd62d1ff1118789203450d5aa852b7775782a6ba3d61373874d25b45f851"
+    },
+    {
+      "path": "adrs/ADR-IMP-008.md",
+      "size_bytes": 1132,
+      "sha256": "f066769bac21a72bc6e7258db01ea29f18efbd358ec10233114349a2e353f9ce"
+    },
+    {
+      "path": "adrs/ADR-IMP-009.md",
+      "size_bytes": 1049,
+      "sha256": "7270c99da2a39ff768b046cdf4b34f01f0e0ed7f7ea7c76508985946352cfbba"
+    },
+    {
+      "path": "adrs/ADR-IMP-010.md",
+      "size_bytes": 1054,
+      "sha256": "a8e77e3f25c4f3ed656071e931f2544fea3736b5bdbdb5bd0cb384e841da959d"
+    },
+    {
+      "path": "adrs/ADR-IMP-011.md",
+      "size_bytes": 1056,
+      "sha256": "662990b8903df8d450f9107a35954e4b7cb498d5040d7e14428f9e652525d3e4"
+    },
+    {
+      "path": "adrs/ADR-IMP-012.md",
+      "size_bytes": 1064,
+      "sha256": "06412ea600c3b05fc1f9f6e8d16806cc054f5a4d1ce498cf4f4f466556051886"
+    },
+    {
+      "path": "adrs/ADR-IMP-013.md",
+      "size_bytes": 1049,
+      "sha256": "68f4b5964a52044caeaf0ea7eb517743d8059b8753c56b4257fdaf95de76ac97"
+    },
+    {
+      "path": "adrs/ADR-IMP-014.md",
+      "size_bytes": 1042,
+      "sha256": "702347791cf8e781f5d611a823fe5ae6d67e36f12bbdf652ace38a2722f542f0"
+    },
+    {
+      "path": "adrs/ADR-IMP-015.md",
+      "size_bytes": 1045,
+      "sha256": "e8ae14d53544ec621f2e56900e278933a5a9354ee3da26d02d1d0cd95deb5b77"
+    },
+    {
+      "path": "adrs/ADR-IMP-016.md",
+      "size_bytes": 1051,
+      "sha256": "e8f6f4805e9a31587b35829c4a7456734e900ee69338ede9d4cc11d149eae05b"
+    },
+    {
+      "path": "adrs/ADR-IMP-017.md",
+      "size_bytes": 1052,
+      "sha256": "2b6068595772d3f172f79c96764c1add12abb0b6fe4b6b24e9093e97036450a8"
+    },
+    {
+      "path": "adrs/ADR-IMP-018.md",
+      "size_bytes": 1062,
+      "sha256": "fc5c667ccd52521ed618c66377aaa027f67d0f824b602f3aa0691fb77141bc7c"
+    },
+    {
+      "path": "adrs/ADR-IMP-019.md",
+      "size_bytes": 1054,
+      "sha256": "03b2ed61854022b40c0da4b35deec6ba8784aee1ea8fd4af289de2ce6f59c5a8"
+    },
+    {
+      "path": "adrs/ADR-IMP-020.md",
+      "size_bytes": 1038,
+      "sha256": "7c696eb5fae02897fec5639334b8adcc86cf3ac8176fd73b4f08eb73e7363343"
+    },
+    {
+      "path": "adrs/ADR-IMP-021.md",
+      "size_bytes": 1060,
+      "sha256": "6d2ad308217e6dd49496f33c74adc736680c755bf01585c19715f9026c4ebce1"
+    },
+    {
+      "path": "adrs/ADR-IMP-022.md",
+      "size_bytes": 1056,
+      "sha256": "fd32f2afcc3ade089a4ca5969f2c827d16adab006ae30afce75aec84657db79c"
+    },
+    {
+      "path": "adrs/ADR-IMP-023.md",
+      "size_bytes": 1065,
+      "sha256": "0e6ccb8e8601fa684bd614a5d5cef4d2b756726ccb2b8bda62855622e13f99eb"
+    },
+    {
+      "path": "adrs/ADR-IMP-024.md",
+      "size_bytes": 1041,
+      "sha256": "95b6e610dec7fe53abb3ef383b1096042a9d327eb528d5db77895c86758e4ed2"
+    },
+    {
+      "path": "adrs/ADR-IMP-025.md",
+      "size_bytes": 1056,
+      "sha256": "3a75b958397ac78cf2efe429de3c6d4657ecc216b8377a61ac6cc7032446a9da"
+    },
+    {
+      "path": "adrs/ADR-IMP-026.md",
+      "size_bytes": 1052,
+      "sha256": "063257fa2152acc7d2a9c6b736c9ff72d6b07ee358420ef898257558e7908df6"
+    },
+    {
+      "path": "adrs/ADR-IMP-027.md",
+      "size_bytes": 1060,
+      "sha256": "082826096d89bdceec5d3ba5603b5082d7cd7620c863aaddb3cea5fb8e9c3c77"
+    },
+    {
+      "path": "adrs/ADR-IMP-028.md",
+      "size_bytes": 1064,
+      "sha256": "d015422a6738757e4db408d23e9fc2b09109b5ead5e4f54c0abbdc2cf6494884"
+    },
+    {
+      "path": "adrs/ADR-IMP-029.md",
+      "size_bytes": 1080,
+      "sha256": "984314f8ac3de0e0c5c7b64ee391c989e353b69e368d5e0bcfbd6b87b039e8df"
+    },
+    {
+      "path": "adrs/README.md",
+      "size_bytes": 389,
+      "sha256": "f3c8876cbaec4ee1c983ac4a84eb503c1f640295e82d9106a230ba49ebf786e6"
+    },
+    {
+      "path": "blueprint/README.md",
+      "size_bytes": 142,
+      "sha256": "28031c5a00da736b6ce1513215bff5fdc1d344379ae5fbadabe5a1e1e1fd12a1"
+    },
+    {
+      "path": "build/README.md",
+      "size_bytes": 238,
+      "sha256": "f7a391f5027dfd525a0a6c24fe584ceead95d43c51385d1b292b821870a97ecd"
+    },
+    {
+      "path": "foundations/README.md",
+      "size_bytes": 130,
+      "sha256": "e1236d0a85f38165c2e032bf11b97f6b642c3e2d8a122f90baa7be6b8f941bfe"
+    },
+    {
+      "path": "kickoff/README.md",
+      "size_bytes": 218,
+      "sha256": "f88604dffaf0f59784ace56dbb4f434649cb955e7d0055216b4e157778a9c26e"
+    },
+    {
+      "path": "releases/README.md",
+      "size_bytes": 215,
+      "sha256": "a8f09f062f57f6bd9fef7210dc51e814ec08f315bbe40af9b94a888592730684"
+    },
+    {
+      "path": "sources/public/README.md",
+      "size_bytes": 738,
+      "sha256": "247c2d7f6ba161d6d25e439e9f093f97f1dc3e24bcb54d4999180d119d0c0172"
+    },
+    {
+      "path": "sources/public/program-directives/p0-production-and-publication-governance-directive.md",
+      "size_bytes": 5768,
+      "sha256": "a5eac097ce7a519272a815fcbcbc9baedcbdc05c2fd12cde5cc23388f59d911a"
+    },
+    {
+      "path": "sources/public/publication-controls/two-tier-adr-publication-model.md",
+      "size_bytes": 1874,
+      "sha256": "4bc76702391a423e0a3a805f4b592caeab2f433a56779be654b7821123d8294d"
+    }
+  ]
+}
