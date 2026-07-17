@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dip.local/schemas/public-projections/public-traceability-map-projection.schema.json",
+  "title": "DIP Public Traceability Map Projection",
+  "allOf": [
+    {"$ref": "public-projection-common.schema.json#/$defs/projectionEnvelope"},
+    {
+      "type": "object",
+      "required": ["relationships"],
+      "properties": {
+        "projection_id": {"const": "DIP-PUBLIC-TRACEABILITY-MAP"},
+        "source_register_id": {"const": "DIP-PUB-TRACEABILITY-MAP"},
+        "relationships": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["source_family", "foundations_destinations", "blueprint_destinations", "record_ids", "kickoff_destinations"],
+            "properties": {
+              "source_family": {"type": "string", "minLength": 1},
+              "foundations_destinations": {"$ref": "public-projection-common.schema.json#/$defs/stringArray"},
+              "blueprint_destinations": {"$ref": "public-projection-common.schema.json#/$defs/stringArray"},
+              "record_ids": {"$ref": "public-projection-common.schema.json#/$defs/identifierArray"},
+              "kickoff_destinations": {"$ref": "public-projection-common.schema.json#/$defs/stringArray"}
+            }
+          }
+        }
+      }
+    }
+  ],
+  "unevaluatedProperties": false
+}
