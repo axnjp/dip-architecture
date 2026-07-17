@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dip.local/schemas/public-projections/public-adr-inventory-projection.schema.json",
+  "title": "DIP Public ADR Inventory Projection",
+  "allOf": [
+    {"$ref": "public-projection-common.schema.json#/$defs/projectionEnvelope"},
+    {
+      "type": "object",
+      "required": ["publication_model", "records"],
+      "properties": {
+        "projection_id": {"const": "DIP-PUBLIC-ADR-INVENTORY"},
+        "source_register_id": {"const": "DIP-PUB-ADR-INVENTORY"},
+        "publication_model": {"const": "two_tier_public_projection_and_restricted_complete_body"},
+        "records": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["id", "title", "lifecycle_status", "public_projection_path"],
+            "properties": {
+              "id": {"type": "string", "pattern": "^ADR-IMP-[0-9]{3}$"},
+              "title": {"type": "string", "minLength": 1},
+              "lifecycle_status": {"const": "accepted_locked"},
+              "public_projection_path": {"type": "string", "pattern": "^adrs/ADR-IMP-[0-9]{3}\\.md$"}
+            }
+          }
+        }
+      }
+    }
+  ],
+  "unevaluatedProperties": false
+}
