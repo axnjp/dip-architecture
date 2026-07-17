@@ -290,8 +290,8 @@
     },
     {
       "path": "schemas/public-projections/README.md",
-      "size_bytes": 1528,
-      "sha256": "9381d8c94a98fc4fef550c0a34a8f714af92dbffeab2c5ae47f122523ec750af"
+      "size_bytes": 1627,
+      "sha256": "759e79d20a0ff3f2ce509e9926f7f831dce335a09459b63ddddba0f9895955ff"
     },
     {
       "path": "schemas/public-projections/public-adr-inventory-projection.schema.json",
@@ -318,65 +318,3 @@
       "size_bytes": 2506,
       "sha256": "76be108a6c3e0b3e65d45d539736244d5c0fb352889b5e4da0dacd6c7a673fed"
     },
-    {
-      "path": "schemas/public-projections/public-phase-source-inventory-projection.schema.json",
-      "size_bytes": 2408,
-      "sha256": "bc0a1ceec3be2bb92864a3565c4852945bc189f296b8c04f6fd90e5082d771e6"
-    },
-    {
-      "path": "schemas/public-projections/public-principle-invariant-register-projection.schema.json",
-      "size_bytes": 1314,
-      "sha256": "b466ac20962da7cead8f1ae9699423c307f86533b4b4b7f3c6eace7eeac89939"
-    },
-    {
-      "path": "schemas/public-projections/public-projection-common.schema.json",
-      "size_bytes": 3958,
-      "sha256": "1a1164fddd3c3cc61bdffd05c5e5590b78926d88c35de2ca062f8f1e35c4bd93"
-    },
-    {
-      "path": "schemas/public-projections/public-projection-schema-registry.json",
-      "size_bytes": 6990,
-      "sha256": "40c64818bd0e4c3e805c0e17b0bdd4738c51828f35cf10aff825cd45d693b594"
-    },
-    {
-      "path": "schemas/public-projections/public-requirement-register-projection.schema.json",
-      "size_bytes": 930,
-      "sha256": "8be13d5b894b1cb51c5a67e52d0fe518ceb43557c308ba3f35f8c49e04272dc5"
-    },
-    {
-      "path": "schemas/public-projections/public-scope-deferral-projection.schema.json",
-      "size_bytes": 1840,
-      "sha256": "b9ac681b4dee6a8a47ae9fafab47911c4c65ebeabf928f96ed8557cb8168ab52"
-    },
-    {
-      "path": "schemas/public-projections/public-source-catalog-projection.schema.json",
-      "size_bytes": 1615,
-      "sha256": "9a72bea939acf9e7f848d51a3c1ef11a0bdc95ceb7902a73e289028b54e91771"
-    },
-    {
-      "path": "schemas/public-projections/public-terminology-register-projection.schema.json",
-      "size_bytes": 1406,
-      "sha256": "031f8a1cdb073c384ca9a1a039424bea2ec55ac66b958cd278788738ca8199da"
-    },
-    {
-      "path": "schemas/public-projections/public-traceability-map-projection.schema.json",
-      "size_bytes": 1433,
-      "sha256": "530b35b7d4a2c486a039042d546ce4c29616af43ba7e7b8f75a1ac7be7250d38"
-    },
-    {
-      "path": "sources/public/README.md",
-      "size_bytes": 738,
-      "sha256": "247c2d7f6ba161d6d25e439e9f093f97f1dc3e24bcb54d4999180d119d0c0172"
-    },
-    {
-      "path": "sources/public/program-directives/p0-production-and-publication-governance-directive.md",
-      "size_bytes": 5768,
-      "sha256": "a5eac097ce7a519272a815fcbcbc9baedcbdc05c2fd12cde5cc23388f59d911a"
-    },
-    {
-      "path": "sources/public/publication-controls/two-tier-adr-publication-model.md",
-      "size_bytes": 1874,
-      "sha256": "4bc76702391a423e0a3a805f4b592caeab2f433a56779be654b7821123d8294d"
-    }
-  ]
-}
