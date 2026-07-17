@@ -1,0 +1,5329 @@
+{
+  "projection_id": "DIP-PUBLIC-PRINCIPLE-INVARIANT-REGISTER",
+  "projection_version": "0.1.0-candidate",
+  "schema_version": "0.1.0-draft",
+  "classification": "Public Reference Architecture",
+  "source_register_id": "DIP-PUB-PRINCIPLE-INVARIANT-REGISTER",
+  "source_revision": null,
+  "status": "approved_public_projection",
+  "disclosure_review": {
+    "semantic_review_status": "passed",
+    "prohibited_field_scan": "passed",
+    "private_instance_non_disclosure": "passed",
+    "secret_scan": "passed",
+    "reviewed_revision": null
+  },
+  "principles": [
+    {
+      "id": "DIP-PRN-0001",
+      "title": "Review before mutation",
+      "record_kind": "principle",
+      "normalized_publication_statement": "A governed review and authorization path precedes every mutation that requires human authority.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Foundations principles",
+        "Blueprint Review Service"
+      ],
+      "relationships": {}
+    },
+    {
+      "id": "DIP-PRN-0002",
+      "title": "Preserve capabilities; limit implementation scope",
+      "record_kind": "principle",
+      "normalized_publication_statement": "Implementation sequencing may defer delivery breadth but may not erase approved architectural capabilities.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Foundations principles",
+        "Kickoff Package"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0001"
+        ],
+        "gates": [
+          "DIP-GATE-0008"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0003",
+      "title": "Authorized interface parity",
+      "record_kind": "principle",
+      "normalized_publication_statement": "Interface choice does not change authority, review, execution, provenance, or audit semantics.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint interfaces",
+        "Blueprint Review Service"
+      ],
+      "relationships": {}
+    },
+    {
+      "id": "DIP-PRN-0004",
+      "title": "Conversation is a first-class workflow trigger",
+      "record_kind": "principle",
+      "normalized_publication_statement": "Authorized conversational interaction may initiate governed workflows through the same durable trigger model as other interfaces.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint workflow model",
+        "Blueprint interfaces"
+      ],
+      "relationships": {}
+    },
+    {
+      "id": "DIP-PRN-0005",
+      "title": "Optimize version 1 for trust, coherence, and daily usefulness",
+      "record_kind": "principle",
+      "normalized_publication_statement": "Initial implementation priorities favor trustworthy, coherent, useful operation over feature count.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Foundations design philosophy",
+        "Kickoff Package"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0001"
+        ],
+        "gates": [
+          "DIP-GATE-0008"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0006",
+      "title": "Explicit ports and adapters",
+      "record_kind": "principle",
+      "normalized_publication_statement": "Core and application behavior depend on explicit ports; infrastructure realizes those contracts through adapters.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Foundations principles",
+        "Blueprint: application services"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0009"
+        ],
+        "adrs": [
+          "ADR-IMP-005"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0007",
+      "title": "Preserve durable history over mutation",
+      "record_kind": "principle",
+      "normalized_publication_statement": "Retries, cancellation, compensation, and recovery preserve prior execution history through new append-oriented records.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Foundations principles",
+        "Blueprint: application services"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0014",
+          "DIP-DEC-0017",
+          "DIP-DEC-0019"
+        ],
+        "adrs": [
+          "ADR-IMP-006"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0008",
+      "title": "Evidence precedes progress",
+      "record_kind": "principle",
+      "normalized_publication_statement": "Progress checkpoints advance only after the evidence supporting that progress is durably stored.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Foundations principles",
+        "Blueprint: acquisition and MCP"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0047"
+        ],
+        "adrs": [
+          "ADR-IMP-009"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0009",
+      "title": "Peer interfaces share governance",
+      "record_kind": "principle",
+      "normalized_publication_statement": "MCP remains a peer adapter over the same application services, authority, review, and audit semantics as other authorized interfaces.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Foundations principles",
+        "Blueprint: acquisition and MCP"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0056"
+        ],
+        "adrs": [
+          "ADR-IMP-010"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0010",
+      "title": "Compile governance into runtime policy",
+      "record_kind": "principle",
+      "normalized_publication_statement": "AI governance is enforceable runtime policy, not prompt text alone.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Foundations principles",
+        "Blueprint: governed AI execution"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0067"
+        ],
+        "adrs": [
+          "ADR-IMP-011",
+          "ADR-IMP-012",
+          "ADR-IMP-013"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0011",
+      "title": "Scope before relevance",
+      "record_kind": "principle",
+      "normalized_publication_statement": "Authority and information scope are resolved before semantic relevance.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Foundations principles",
+        "Blueprint: governed AI execution"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0083"
+        ],
+        "adrs": [
+          "ADR-IMP-011",
+          "ADR-IMP-012",
+          "ADR-IMP-013"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0012",
+      "title": "Treat external content as untrusted data",
+      "record_kind": "principle",
+      "normalized_publication_statement": "External content is evidence to inspect, not authority to obey.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Foundations principles",
+        "Blueprint: governed AI execution"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0086"
+        ],
+        "adrs": [
+          "ADR-IMP-011",
+          "ADR-IMP-012",
+          "ADR-IMP-013"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0013",
+      "title": "Evidence over model self-assessment",
+      "record_kind": "principle",
+      "normalized_publication_statement": "DIP confidence derives from evidence and policy; model-reported confidence and hidden chain-of-thought are not authoritative records.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Foundations principles",
+        "Blueprint: governed AI execution"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0091",
+          "DIP-DEC-0092"
+        ],
+        "adrs": [
+          "ADR-IMP-011",
+          "ADR-IMP-012",
+          "ADR-IMP-013"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0014",
+      "title": "One Review Service across peer interfaces",
+      "record_kind": "principle",
+      "normalized_publication_statement": "All authorized interfaces meet at one domain-neutral Review Service and preserve identical governance and audit semantics.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Foundations principles",
+        "Blueprint: Review Service"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0103",
+          "DIP-DEC-0115",
+          "DIP-DEC-0116"
+        ],
+        "adrs": [
+          "ADR-IMP-014",
+          "ADR-IMP-015"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0015",
+      "title": "Review exact immutable versions",
+      "record_kind": "principle",
+      "normalized_publication_statement": "Review always targets exact immutable proposal versions; revisions supersede rather than mutate reviewed content.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Foundations principles",
+        "Blueprint: Review Service"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0107",
+          "DIP-DEC-0108",
+          "DIP-DEC-0109"
+        ],
+        "adrs": [
+          "ADR-IMP-014",
+          "ADR-IMP-015"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0016",
+      "title": "Deny by default",
+      "record_kind": "principle",
+      "normalized_publication_statement": "Security decisions begin from denial and require an explicit applicable grant.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Foundations principles",
+        "Blueprint: identity and authorization"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0136",
+          "DIP-DEC-0153"
+        ],
+        "adrs": [
+          "ADR-IMP-016",
+          "ADR-IMP-017",
+          "ADR-IMP-018",
+          "ADR-IMP-019"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007",
+          "DIP-GATE-0010"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0017",
+      "title": "Network location does not confer authority",
+      "record_kind": "principle",
+      "normalized_publication_statement": "Authentication and authorization are independent of network location.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Foundations principles",
+        "Blueprint: identity and authorization"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0137"
+        ],
+        "adrs": [
+          "ADR-IMP-016",
+          "ADR-IMP-017",
+          "ADR-IMP-018",
+          "ADR-IMP-019"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007",
+          "DIP-GATE-0010"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0018",
+      "title": "Separate privileged responsibilities",
+      "record_kind": "principle",
+      "normalized_publication_statement": "Administration, migration, runtime, worker, backup, and read-only responsibilities remain separated.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Foundations principles",
+        "Blueprint: identity and authorization"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0156",
+          "DIP-DEC-0158"
+        ],
+        "adrs": [
+          "ADR-IMP-016",
+          "ADR-IMP-017",
+          "ADR-IMP-018",
+          "ADR-IMP-019"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007",
+          "DIP-GATE-0010"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0019",
+      "title": "Classification follows information",
+      "record_kind": "principle",
+      "normalized_publication_statement": "Information classification propagates into every context, derivative, log, export, and backup.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Foundations principles",
+        "Blueprint: identity and authorization"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0163"
+        ],
+        "adrs": [
+          "ADR-IMP-016",
+          "ADR-IMP-017",
+          "ADR-IMP-018",
+          "ADR-IMP-019"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007",
+          "DIP-GATE-0010"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0020",
+      "title": "Test by risk and invariant",
+      "record_kind": "principle",
+      "normalized_publication_statement": "Testing depth follows architectural risk and invariants; coverage metrics support but do not replace evidence of correctness.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Foundations principles",
+        "Blueprint: testing and conformance"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0179",
+          "DIP-DEC-0196"
+        ],
+        "adrs": [
+          "ADR-IMP-020",
+          "ADR-IMP-021",
+          "ADR-IMP-022"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0021",
+      "title": "Observe through provider-neutral telemetry",
+      "record_kind": "principle",
+      "normalized_publication_statement": "DIP emits structured signals through provider-neutral, OpenTelemetry-compatible instrumentation.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Foundations principles",
+        "Blueprint: testing and conformance"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0197",
+          "DIP-DEC-0198",
+          "DIP-DEC-0199"
+        ],
+        "adrs": [
+          "ADR-IMP-020",
+          "ADR-IMP-021",
+          "ADR-IMP-022"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0022",
+      "title": "Define reliability as durable correctness",
+      "record_kind": "principle",
+      "normalized_publication_statement": "Reliability is durable correctness, freshness, isolation, and recoverability rather than uptime alone.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Foundations principles",
+        "Blueprint: testing and conformance"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0205"
+        ],
+        "adrs": [
+          "ADR-IMP-020",
+          "ADR-IMP-021",
+          "ADR-IMP-022"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0023",
+      "title": "Degrade and reconcile explicitly",
+      "record_kind": "principle",
+      "normalized_publication_statement": "Critical dependencies have explicit degraded behavior, and reconciliation is governed and history-preserving.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Foundations principles",
+        "Blueprint: testing and conformance"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0207",
+          "DIP-DEC-0211",
+          "DIP-DEC-0212"
+        ],
+        "adrs": [
+          "ADR-IMP-020",
+          "ADR-IMP-021",
+          "ADR-IMP-022"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0024",
+      "title": "Start production as a coherent small system",
+      "record_kind": "principle",
+      "normalized_publication_statement": "Initial production favors one coherent application process with managed persistence and payload services, single-region and non-HA.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Foundations principles",
+        "Blueprint: deployment and release"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0219",
+          "DIP-DEC-0220",
+          "DIP-DEC-0221",
+          "DIP-DEC-0222"
+        ],
+        "adrs": [
+          "ADR-IMP-023",
+          "ADR-IMP-024",
+          "ADR-IMP-025",
+          "ADR-IMP-026"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0025",
+      "title": "Separate immutable release identity from activation",
+      "record_kind": "principle",
+      "normalized_publication_statement": "An immutable release and Deployment Manifest do not themselves authorize capability activation.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Foundations principles",
+        "Blueprint: deployment and release"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0230",
+          "DIP-DEC-0235",
+          "DIP-DEC-0240"
+        ],
+        "adrs": [
+          "ADR-IMP-023",
+          "ADR-IMP-024",
+          "ADR-IMP-025",
+          "ADR-IMP-026"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0026",
+      "title": "Design recovery across provider boundaries",
+      "record_kind": "principle",
+      "normalized_publication_statement": "Recovery uses provider-separated evidence, isolated restores, and rehearsed procedures.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Foundations principles",
+        "Blueprint: deployment and release"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0245",
+          "DIP-DEC-0250",
+          "DIP-DEC-0251",
+          "DIP-DEC-0252"
+        ],
+        "adrs": [
+          "ADR-IMP-023",
+          "ADR-IMP-024",
+          "ADR-IMP-025",
+          "ADR-IMP-026"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0027",
+      "title": "Scale from measured need",
+      "record_kind": "principle",
+      "normalized_publication_statement": "Vertical scaling precedes service extraction, which requires measured evidence.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Foundations principles",
+        "Blueprint: deployment and release"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0258"
+        ],
+        "adrs": [
+          "ADR-IMP-023",
+          "ADR-IMP-024",
+          "ADR-IMP-025",
+          "ADR-IMP-026"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0028",
+      "title": "Use measurable gates instead of speculative dates",
+      "record_kind": "principle",
+      "normalized_publication_statement": "Build sequencing is governed by evidence-bearing gates rather than speculative calendar commitments.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Foundations principles",
+        "Blueprint: first vertical slice"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0273"
+        ],
+        "adrs": [
+          "ADR-IMP-027",
+          "ADR-IMP-028",
+          "ADR-IMP-029"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0029",
+      "title": "Keep acceptance continuous and infrastructure earned",
+      "record_kind": "principle",
+      "normalized_publication_statement": "Cross-cutting acceptance is continuous, and new infrastructure must be justified by measurement or a new ADR.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Foundations principles",
+        "Blueprint: first vertical slice"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0275",
+          "DIP-DEC-0276"
+        ],
+        "adrs": [
+          "ADR-IMP-027",
+          "ADR-IMP-028",
+          "ADR-IMP-029"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0030",
+      "title": "Keep reproducible engineering public and authority private",
+      "record_kind": "principle",
+      "normalized_publication_statement": "The implementation source is publicly reproducible while real private authority and runtime records remain in their governing stores.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Foundations principles",
+        "Blueprint: repository and package boundaries"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0277",
+          "DIP-DEC-0278",
+          "DIP-DEC-0279",
+          "DIP-DEC-0280"
+        ],
+        "adrs": [
+          "ADR-IMP-001",
+          "ADR-IMP-007",
+          "ADR-IMP-008"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0031",
+      "title": "Dependencies point inward",
+      "record_kind": "principle",
+      "normalized_publication_statement": "Core owns contracts, higher layers depend inward, and infrastructure implements ports under machine-enforced boundaries.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Foundations principles",
+        "Blueprint: repository and package boundaries"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0287",
+          "DIP-DEC-0288",
+          "DIP-DEC-0289",
+          "DIP-DEC-0290"
+        ],
+        "adrs": [
+          "ADR-IMP-001",
+          "ADR-IMP-007",
+          "ADR-IMP-008"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0032",
+      "title": "Authoritative contracts precede generated convenience",
+      "record_kind": "principle",
+      "normalized_publication_statement": "JSON Schema authority remains explicit, and generated language assets remain reproducible derivatives.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Foundations principles",
+        "Blueprint: repository and package boundaries"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0292",
+          "DIP-DEC-0293",
+          "DIP-DEC-0294",
+          "DIP-DEC-0295"
+        ],
+        "adrs": [
+          "ADR-IMP-001",
+          "ADR-IMP-007",
+          "ADR-IMP-008"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0033",
+      "title": "Start small without bypassing governance",
+      "record_kind": "principle",
+      "normalized_publication_statement": "The initial service footprint is minimal, but the first slice still proves the governed lifecycle.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Foundations principles",
+        "Blueprint: repository and package boundaries"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0297",
+          "DIP-DEC-0301"
+        ],
+        "adrs": [
+          "ADR-IMP-001",
+          "ADR-IMP-007",
+          "ADR-IMP-008"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0034",
+      "title": "Use Python without becoming framework-centered",
+      "record_kind": "principle",
+      "normalized_publication_statement": "Python provides implementation speed while canonical domain concepts remain typed and framework-independent.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Foundations principles",
+        "Blueprint: runtime and technology baseline"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0302",
+          "DIP-DEC-0316",
+          "DIP-DEC-0317",
+          "DIP-DEC-0318"
+        ],
+        "adrs": [
+          "ADR-IMP-001"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0035",
+      "title": "Keep model providers replaceable",
+      "record_kind": "principle",
+      "normalized_publication_statement": "Provider-neutral contracts and deterministic test doubles preserve portability and conformance without foundational agent frameworks.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Foundations principles",
+        "Blueprint: runtime and technology baseline"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0332",
+          "DIP-DEC-0333",
+          "DIP-DEC-0334"
+        ],
+        "adrs": [
+          "ADR-IMP-001"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0036",
+      "title": "Use one transactional foundation with distinct authority categories",
+      "record_kind": "principle",
+      "normalized_publication_statement": "One PostgreSQL foundation may host distinct immutable, operational, and rebuildable data without collapsing their semantics or requiring universal event sourcing.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Foundations principles",
+        "Blueprint: persistence and artifacts"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0342",
+          "DIP-DEC-0345",
+          "DIP-DEC-0346"
+        ],
+        "adrs": [
+          "ADR-IMP-002",
+          "ADR-IMP-003",
+          "ADR-IMP-007"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0037",
+      "title": "Preserve history and exact provenance",
+      "record_kind": "principle",
+      "normalized_publication_statement": "Accepted truth changes through new versions and exact lineage, not destructive rewriting.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Foundations principles",
+        "Blueprint: persistence and artifacts"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0353",
+          "DIP-DEC-0354",
+          "DIP-DEC-0355",
+          "DIP-DEC-0358",
+          "DIP-DEC-0392"
+        ],
+        "adrs": [
+          "ADR-IMP-002",
+          "ADR-IMP-003",
+          "ADR-IMP-007"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0038",
+      "title": "Configuration is authority, not an override stack",
+      "record_kind": "principle",
+      "normalized_publication_statement": "Configuration resolves through explicit authority ownership and combination rules rather than load-order precedence.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Foundations principles",
+        "Blueprint: configuration authority"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0400",
+          "DIP-DEC-0402",
+          "DIP-DEC-0403",
+          "DIP-DEC-0404"
+        ],
+        "adrs": [
+          "ADR-IMP-004",
+          "ADR-IMP-008"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0039",
+      "title": "Compile before activating",
+      "record_kind": "principle",
+      "normalized_publication_statement": "Configuration is compiled and validated before a separate governed atomic activation.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Foundations principles",
+        "Blueprint: configuration authority"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0420",
+          "DIP-DEC-0433",
+          "DIP-DEC-0434",
+          "DIP-DEC-0435"
+        ],
+        "adrs": [
+          "ADR-IMP-004",
+          "ADR-IMP-008"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0040",
+      "title": "Combine restrictively",
+      "record_kind": "principle",
+      "normalized_publication_statement": "Configuration combination preserves the most restrictive applicable permissions, review requirements, and ceilings.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Foundations principles",
+        "Blueprint: configuration authority"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0426",
+          "DIP-DEC-0429",
+          "DIP-DEC-0430",
+          "DIP-DEC-0431"
+        ],
+        "adrs": [
+          "ADR-IMP-004",
+          "ADR-IMP-008"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0041",
+      "title": "Treat secrets as capability-scoped references",
+      "record_kind": "principle",
+      "normalized_publication_statement": "Secrets remain references in authority documents and are resolved only by the capability that requires them, with values excluded from durable artifacts and telemetry.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Foundations principles",
+        "Blueprint: configuration authority"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0449",
+          "DIP-DEC-0450",
+          "DIP-DEC-0451",
+          "DIP-DEC-0453",
+          "DIP-DEC-0454"
+        ],
+        "adrs": [
+          "ADR-IMP-004",
+          "ADR-IMP-008"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0042",
+      "title": "Evidence establishes publication normativity",
+      "record_kind": "principle",
+      "normalized_publication_statement": "Publication authority follows demonstrable approval rather than explanatory confidence or editorial inference.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Foundations principles",
+        "Blueprint traceability model"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0471"
+        ],
+        "requirements": [
+          "DIP-REQ-0155",
+          "DIP-REQ-0157"
+        ],
+        "gates": [
+          "DIP-GATE-0001"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0043",
+      "title": "Normalize form while preserving approved meaning",
+      "record_kind": "principle",
+      "normalized_publication_statement": "Publication normalization may improve structure and traceability but never change the authority, force, lifecycle, activation, or scope of an approved statement.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Foundations principles",
+        "Publication normalization policy"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0475"
+        ],
+        "requirements": [
+          "DIP-REQ-0159",
+          "DIP-REQ-0160",
+          "DIP-REQ-0161",
+          "DIP-REQ-0162"
+        ],
+        "gates": [
+          "DIP-GATE-0001"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0044",
+      "title": "Keep identity permanent and placement descriptive",
+      "record_kind": "principle",
+      "normalized_publication_statement": "Stable record identity remains independent from evolving phase, subsystem, authority, and publication placement metadata.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Foundations principles",
+        "Publication identifier policy"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0472",
+          "DIP-DEC-0473"
+        ],
+        "requirements": [
+          "DIP-REQ-0158"
+        ],
+        "gates": [
+          "DIP-GATE-0001"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0045",
+      "title": "Preserve explanatory history and authoritative history separately",
+      "record_kind": "principle",
+      "normalized_publication_statement": "DIP preserves both understandable design evolution and exact decision provenance without allowing either record to replace the other.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Foundations principles",
+        "Architectural Foundations",
+        "Decision Register"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0478"
+        ],
+        "requirements": [
+          "DIP-REQ-0166"
+        ],
+        "gates": [
+          "DIP-GATE-0001",
+          "DIP-GATE-0002"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0046",
+      "title": "Explain architecture through a problem-to-system narrative",
+      "record_kind": "principle",
+      "normalized_publication_statement": "Architectural Foundations explains why durable, governed intelligence became necessary before presenting the technical system.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Foundations principles",
+        "Architectural Foundations",
+        "Publication plan"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0481"
+        ],
+        "requirements": [
+          "DIP-REQ-0168"
+        ],
+        "gates": [
+          "DIP-GATE-0002"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0047",
+      "title": "Treat the first domain as origin and proving ground, not platform boundary",
+      "record_kind": "principle",
+      "normalized_publication_statement": "The first domain grounds the architecture without narrowing DIP’s domain-neutral governing purpose.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Foundations principles",
+        "Architectural Foundations",
+        "Publication plan"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0481"
+        ],
+        "requirements": [
+          "DIP-REQ-0168"
+        ],
+        "gates": [
+          "DIP-GATE-0002"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0048",
+      "title": "Present AI as a governed participant",
+      "record_kind": "principle",
+      "normalized_publication_statement": "DIP assigns AI a bounded reasoning role while durable authority, memory, and action remain governed by the platform.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Foundations principles",
+        "Architectural Foundations",
+        "Publication plan"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0481"
+        ],
+        "requirements": [
+          "DIP-REQ-0168"
+        ],
+        "gates": [
+          "DIP-GATE-0002"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0049",
+      "title": "Make the Blueprint the integrated normative architecture",
+      "record_kind": "principle",
+      "normalized_publication_statement": "The Blueprint integrates approved architecture into a modular normative specification without replacing ADR history or machine contracts.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Foundations principles",
+        "Living Architecture Blueprint",
+        "Blueprint governance"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0492"
+        ],
+        "requirements": [
+          "DIP-REQ-0179"
+        ],
+        "gates": [
+          "DIP-GATE-0003"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0050",
+      "title": "Prefer precise requirements and contracts over diagram implication",
+      "record_kind": "principle",
+      "normalized_publication_statement": "Visual models aid comprehension but cannot override normative prose, stable requirements, or exact contracts.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Foundations principles",
+        "Living Architecture Blueprint",
+        "Blueprint governance"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0492"
+        ],
+        "requirements": [
+          "DIP-REQ-0179"
+        ],
+        "gates": [
+          "DIP-GATE-0003"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0051",
+      "title": "Separate logical responsibility from deployment topology",
+      "record_kind": "principle",
+      "normalized_publication_statement": "Logical authorities and responsibilities remain stable even when the initial runtime combines them into one deployment unit.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Foundations principles",
+        "Living Architecture Blueprint",
+        "Blueprint governance"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0492"
+        ],
+        "requirements": [
+          "DIP-REQ-0179"
+        ],
+        "gates": [
+          "DIP-GATE-0003"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0052",
+      "title": "Match decision-record weight to architectural significance",
+      "record_kind": "principle",
+      "normalized_publication_statement": "DIP uses ADRs for architecturally significant choices and lighter approved records for authoritative but narrower decisions.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Foundations principles",
+        "ADR collection",
+        "Decision Register"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0507"
+        ],
+        "requirements": [
+          "DIP-REQ-0193"
+        ],
+        "gates": [
+          "DIP-GATE-0004"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0053",
+      "title": "Preserve decision history through explicit supersession",
+      "record_kind": "principle",
+      "normalized_publication_statement": "Decision history remains auditable because corrections, full supersession, and partial supersession are explicit rather than silent rewrites.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Foundations principles",
+        "ADR collection",
+        "Decision Register"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0507"
+        ],
+        "requirements": [
+          "DIP-REQ-0193"
+        ],
+        "gates": [
+          "DIP-GATE-0004"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0054",
+      "title": "Treat an architecture release as a governing baseline",
+      "record_kind": "principle",
+      "normalized_publication_statement": "An architecture release establishes approved design authority independently from software completion or operational certification.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Foundations principles",
+        "Architecture v1.0 release",
+        "Architect’s Letter"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0523"
+        ],
+        "requirements": [
+          "DIP-REQ-0207"
+        ],
+        "gates": [
+          "DIP-GATE-0005"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0055",
+      "title": "Disclose AI assistance while preserving human approval authority",
+      "record_kind": "principle",
+      "normalized_publication_statement": "Publication provenance acknowledges AI assistance without transferring architectural approval authority away from accountable humans.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Foundations principles",
+        "Architecture v1.0 release",
+        "Architect’s Letter"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0523"
+        ],
+        "requirements": [
+          "DIP-REQ-0207"
+        ],
+        "gates": [
+          "DIP-GATE-0005"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0056",
+      "title": "Keep editable sources authoritative over generated editions",
+      "record_kind": "principle",
+      "normalized_publication_statement": "Generated DOCX, PDF, tables, and archives derive from canonical editable sources and never become competing sources of truth.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Foundations principles",
+        "Publication build and archive workflow"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0541",
+          "DIP-DEC-0561"
+        ],
+        "requirements": [
+          "DIP-REQ-0220"
+        ],
+        "gates": [
+          "DIP-GATE-0006"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0057",
+      "title": "Apply classification at source and build boundaries",
+      "record_kind": "principle",
+      "normalized_publication_statement": "Classification is enforced before rendering through separate sources and build targets, with public inputs explicitly allowlisted.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Foundations principles",
+        "Publication build and archive workflow"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0541",
+          "DIP-DEC-0561"
+        ],
+        "requirements": [
+          "DIP-REQ-0220"
+        ],
+        "gates": [
+          "DIP-GATE-0006"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0058",
+      "title": "Separate restricted architecture access from live authority access",
+      "record_kind": "principle",
+      "normalized_publication_statement": "Architectural stewardship and operational authority are independent authorization domains.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Foundations principles",
+        "Publication build and archive workflow"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0541",
+          "DIP-DEC-0561"
+        ],
+        "requirements": [
+          "DIP-REQ-0220"
+        ],
+        "gates": [
+          "DIP-GATE-0006"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0059",
+      "title": "Authorize implementation through an exact pinned baseline",
+      "record_kind": "principle",
+      "normalized_publication_statement": "Engineering proceeds against an explicitly pinned architecture and kickoff baseline.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Foundations principles",
+        "Implementation Kickoff Package",
+        "Implementation gate model"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0574"
+        ],
+        "requirements": [
+          "DIP-REQ-0236"
+        ],
+        "gates": [
+          "DIP-GATE-0007",
+          "DIP-GATE-0008"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0060",
+      "title": "Prove governing architecture through a narrow vertical slice",
+      "record_kind": "principle",
+      "normalized_publication_statement": "The first implementation surface remains narrow while exercising the full governed lifecycle.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Foundations principles",
+        "Implementation Kickoff Package",
+        "Implementation gate model"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0574"
+        ],
+        "requirements": [
+          "DIP-REQ-0236"
+        ],
+        "gates": [
+          "DIP-GATE-0007",
+          "DIP-GATE-0008"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0061",
+      "title": "Require accountable human implementation authorization",
+      "record_kind": "principle",
+      "normalized_publication_statement": "AI may contribute implementation and evidence, but accountable human approval remains required at consequential gates.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Foundations principles",
+        "Implementation Kickoff Package",
+        "Implementation gate model"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0574"
+        ],
+        "requirements": [
+          "DIP-REQ-0236"
+        ],
+        "gates": [
+          "DIP-GATE-0007",
+          "DIP-GATE-0008"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0062",
+      "title": "One logical authority per durable fact",
+      "record_kind": "principle",
+      "normalized_publication_statement": "DIP assigns one accountable authority to each durable fact category.",
+      "lifecycle_status": "approved_locked_recovered_summary",
+      "blueprint_destinations": [
+        "Foundations principles",
+        "Blueprint: conceptual architecture"
+      ],
+      "relationships": {
+        "gates": [
+          "DIP-GATE-0001",
+          "DIP-GATE-0002",
+          "DIP-GATE-0003"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0063",
+      "title": "Authority precedes storage",
+      "record_kind": "principle",
+      "normalized_publication_statement": "Architecture defines ownership and semantics before choosing storage products.",
+      "lifecycle_status": "approved_locked_recovered_summary",
+      "blueprint_destinations": [
+        "Foundations principles",
+        "Blueprint: conceptual architecture"
+      ],
+      "relationships": {
+        "gates": [
+          "DIP-GATE-0001",
+          "DIP-GATE-0002",
+          "DIP-GATE-0003"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0064",
+      "title": "Portable semantics with replaceable infrastructure",
+      "record_kind": "principle",
+      "normalized_publication_statement": "Infrastructure may change without redefining authoritative meaning.",
+      "lifecycle_status": "approved_locked_recovered_summary",
+      "blueprint_destinations": [
+        "Foundations principles",
+        "Blueprint: conceptual architecture"
+      ],
+      "relationships": {
+        "gates": [
+          "DIP-GATE-0001",
+          "DIP-GATE-0002",
+          "DIP-GATE-0003"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0065",
+      "title": "Managed-first commodity infrastructure",
+      "record_kind": "principle",
+      "normalized_publication_statement": "DIP minimizes commodity operating burden while retaining semantic control.",
+      "lifecycle_status": "approved_locked_recovered_summary",
+      "blueprint_destinations": [
+        "Foundations principles",
+        "Blueprint: conceptual architecture"
+      ],
+      "relationships": {
+        "gates": [
+          "DIP-GATE-0001",
+          "DIP-GATE-0002",
+          "DIP-GATE-0003"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0066",
+      "title": "Rebuildable derivatives do not become authority",
+      "record_kind": "principle",
+      "normalized_publication_statement": "Derived serving structures remain replaceable and reconstructable.",
+      "lifecycle_status": "approved_locked_recovered_summary",
+      "blueprint_destinations": [
+        "Foundations principles",
+        "Blueprint: conceptual architecture"
+      ],
+      "relationships": {
+        "gates": [
+          "DIP-GATE-0001",
+          "DIP-GATE-0002",
+          "DIP-GATE-0003"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0067",
+      "title": "Security and authority fail closed",
+      "record_kind": "principle",
+      "normalized_publication_statement": "Uncertainty at an authority or security boundary results in denial or stopped work.",
+      "lifecycle_status": "approved_locked_recovered_summary",
+      "blueprint_destinations": [
+        "Foundations principles",
+        "Blueprint: conceptual architecture"
+      ],
+      "relationships": {
+        "gates": [
+          "DIP-GATE-0001",
+          "DIP-GATE-0002",
+          "DIP-GATE-0003"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0068",
+      "title": "Technology requires evidence-based qualification",
+      "record_kind": "principle",
+      "normalized_publication_statement": "Products are selected only after architecture-relevant evidence exists.",
+      "lifecycle_status": "approved_locked_recovered_summary",
+      "blueprint_destinations": [
+        "Foundations principles",
+        "Blueprint: conceptual architecture"
+      ],
+      "relationships": {
+        "gates": [
+          "DIP-GATE-0001",
+          "DIP-GATE-0002",
+          "DIP-GATE-0003"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0069",
+      "title": "Recovery includes reconciliation and isolation",
+      "record_kind": "principle",
+      "normalized_publication_statement": "Availability restoration includes semantic and authority correctness, not only process restart.",
+      "lifecycle_status": "approved_locked_recovered_summary",
+      "blueprint_destinations": [
+        "Foundations principles",
+        "Blueprint: conceptual architecture"
+      ],
+      "relationships": {
+        "gates": [
+          "DIP-GATE-0001",
+          "DIP-GATE-0002",
+          "DIP-GATE-0003"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0070",
+      "title": "Human agency is the objective",
+      "record_kind": "principle",
+      "normalized_publication_statement": "Governed AI shall improve human agency.",
+      "lifecycle_status": "approved_locked_exact_constitutional_item",
+      "blueprint_destinations": [
+        "Architectural Foundations: constitutional principles",
+        "Blueprint: AI governance and conformance"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0688"
+        ],
+        "requirements": [
+          "DIP-REQ-0312"
+        ],
+        "gates": [
+          "DIP-GATE-0001",
+          "DIP-GATE-0002",
+          "DIP-GATE-0003"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0071",
+      "title": "Alignment is not agreement",
+      "record_kind": "principle",
+      "normalized_publication_statement": "Goal alignment shall preserve evidence-based challenge rather than require agreement.",
+      "lifecycle_status": "approved_locked_exact_constitutional_item",
+      "blueprint_destinations": [
+        "Architectural Foundations: constitutional principles",
+        "Blueprint: AI governance and conformance"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0688"
+        ],
+        "requirements": [
+          "DIP-REQ-0312"
+        ],
+        "gates": [
+          "DIP-GATE-0001",
+          "DIP-GATE-0002",
+          "DIP-GATE-0003"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0072",
+      "title": "Evidence precedes assertion",
+      "record_kind": "principle",
+      "normalized_publication_statement": "Assertions shall be grounded in evaluated evidence.",
+      "lifecycle_status": "approved_locked_exact_constitutional_item",
+      "blueprint_destinations": [
+        "Architectural Foundations: constitutional principles",
+        "Blueprint: AI governance and conformance"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0688"
+        ],
+        "requirements": [
+          "DIP-REQ-0312"
+        ],
+        "gates": [
+          "DIP-GATE-0001",
+          "DIP-GATE-0002",
+          "DIP-GATE-0003"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0073",
+      "title": "Uncertainty must be represented",
+      "record_kind": "principle",
+      "normalized_publication_statement": "Material uncertainty shall be represented explicitly.",
+      "lifecycle_status": "approved_locked_exact_constitutional_item",
+      "blueprint_destinations": [
+        "Architectural Foundations: constitutional principles",
+        "Blueprint: AI governance and conformance"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0688"
+        ],
+        "requirements": [
+          "DIP-REQ-0312"
+        ],
+        "gates": [
+          "DIP-GATE-0001",
+          "DIP-GATE-0002",
+          "DIP-GATE-0003"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0074",
+      "title": "Explanation must support decisions",
+      "record_kind": "principle",
+      "normalized_publication_statement": "Explanations shall provide the information needed for governed decisions.",
+      "lifecycle_status": "approved_locked_exact_constitutional_item",
+      "blueprint_destinations": [
+        "Architectural Foundations: constitutional principles",
+        "Blueprint: AI governance and conformance"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0688"
+        ],
+        "requirements": [
+          "DIP-REQ-0312"
+        ],
+        "gates": [
+          "DIP-GATE-0001",
+          "DIP-GATE-0002",
+          "DIP-GATE-0003"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0075",
+      "title": "DIP owns continuity",
+      "record_kind": "principle",
+      "normalized_publication_statement": "DIP shall own durable memory and continuity.",
+      "lifecycle_status": "approved_locked_exact_constitutional_item",
+      "blueprint_destinations": [
+        "Architectural Foundations: constitutional principles",
+        "Blueprint: AI governance and conformance"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0688"
+        ],
+        "requirements": [
+          "DIP-REQ-0312"
+        ],
+        "gates": [
+          "DIP-GATE-0001",
+          "DIP-GATE-0002",
+          "DIP-GATE-0003"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0076",
+      "title": "Context is governed access",
+      "record_kind": "principle",
+      "normalized_publication_statement": "Context inclusion shall be treated as governed access.",
+      "lifecycle_status": "approved_locked_exact_constitutional_item",
+      "blueprint_destinations": [
+        "Architectural Foundations: constitutional principles",
+        "Blueprint: AI governance and conformance"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0688"
+        ],
+        "requirements": [
+          "DIP-REQ-0312"
+        ],
+        "gates": [
+          "DIP-GATE-0001",
+          "DIP-GATE-0002",
+          "DIP-GATE-0003"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0077",
+      "title": "Information boundaries follow meaning",
+      "record_kind": "principle",
+      "normalized_publication_statement": "Information boundaries shall follow semantic meaning and derived use.",
+      "lifecycle_status": "approved_locked_exact_constitutional_item",
+      "blueprint_destinations": [
+        "Architectural Foundations: constitutional principles",
+        "Blueprint: AI governance and conformance"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0688"
+        ],
+        "requirements": [
+          "DIP-REQ-0312"
+        ],
+        "gates": [
+          "DIP-GATE-0001",
+          "DIP-GATE-0002",
+          "DIP-GATE-0003"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0078",
+      "title": "Private Strategy is separately protected",
+      "record_kind": "principle",
+      "normalized_publication_statement": "Private Strategy shall retain independent protection.",
+      "lifecycle_status": "approved_locked_exact_constitutional_item",
+      "blueprint_destinations": [
+        "Architectural Foundations: constitutional principles",
+        "Blueprint: AI governance and conformance"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0688"
+        ],
+        "requirements": [
+          "DIP-REQ-0312"
+        ],
+        "gates": [
+          "DIP-GATE-0001",
+          "DIP-GATE-0002",
+          "DIP-GATE-0003"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0079",
+      "title": "Review precedes governed mutation",
+      "record_kind": "principle",
+      "normalized_publication_statement": "Governed mutation shall require the applicable review and authority controls.",
+      "lifecycle_status": "approved_locked_exact_constitutional_item",
+      "blueprint_destinations": [
+        "Architectural Foundations: constitutional principles",
+        "Blueprint: AI governance and conformance"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0688"
+        ],
+        "requirements": [
+          "DIP-REQ-0312"
+        ],
+        "gates": [
+          "DIP-GATE-0001",
+          "DIP-GATE-0002",
+          "DIP-GATE-0003"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0080",
+      "title": "Recommendations are not Commands",
+      "record_kind": "principle",
+      "normalized_publication_statement": "Recommendations shall remain distinct from executable Commands.",
+      "lifecycle_status": "approved_locked_exact_constitutional_item",
+      "blueprint_destinations": [
+        "Architectural Foundations: constitutional principles",
+        "Blueprint: AI governance and conformance"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0688"
+        ],
+        "requirements": [
+          "DIP-REQ-0312"
+        ],
+        "gates": [
+          "DIP-GATE-0001",
+          "DIP-GATE-0002",
+          "DIP-GATE-0003"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0081",
+      "title": "Initiative remains bounded",
+      "record_kind": "principle",
+      "normalized_publication_statement": "AI initiative shall remain explicitly bounded.",
+      "lifecycle_status": "approved_locked_exact_constitutional_item",
+      "blueprint_destinations": [
+        "Architectural Foundations: constitutional principles",
+        "Blueprint: AI governance and conformance"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0688"
+        ],
+        "requirements": [
+          "DIP-REQ-0312"
+        ],
+        "gates": [
+          "DIP-GATE-0001",
+          "DIP-GATE-0002",
+          "DIP-GATE-0003"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0082",
+      "title": "Interfaces are governance peers",
+      "record_kind": "principle",
+      "normalized_publication_statement": "Authorized interfaces shall preserve governance parity.",
+      "lifecycle_status": "approved_locked_exact_constitutional_item",
+      "blueprint_destinations": [
+        "Architectural Foundations: constitutional principles",
+        "Blueprint: AI governance and conformance"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0688"
+        ],
+        "requirements": [
+          "DIP-REQ-0312"
+        ],
+        "gates": [
+          "DIP-GATE-0001",
+          "DIP-GATE-0002",
+          "DIP-GATE-0003"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0083",
+      "title": "Identity and status must be accurate",
+      "record_kind": "principle",
+      "normalized_publication_statement": "AI identity, authority, and lifecycle status shall be represented accurately.",
+      "lifecycle_status": "approved_locked_exact_constitutional_item",
+      "blueprint_destinations": [
+        "Architectural Foundations: constitutional principles",
+        "Blueprint: AI governance and conformance"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0688"
+        ],
+        "requirements": [
+          "DIP-REQ-0312"
+        ],
+        "gates": [
+          "DIP-GATE-0001",
+          "DIP-GATE-0002",
+          "DIP-GATE-0003"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0084",
+      "title": "Interaction must remain non-deceptive",
+      "record_kind": "principle",
+      "normalized_publication_statement": "AI interaction shall not deceive users about identity, authority, evidence, or state.",
+      "lifecycle_status": "approved_locked_exact_constitutional_item",
+      "blueprint_destinations": [
+        "Architectural Foundations: constitutional principles",
+        "Blueprint: AI governance and conformance"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0688"
+        ],
+        "requirements": [
+          "DIP-REQ-0312"
+        ],
+        "gates": [
+          "DIP-GATE-0001",
+          "DIP-GATE-0002",
+          "DIP-GATE-0003"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0085",
+      "title": "Multi-user differences remain attributable",
+      "record_kind": "principle",
+      "normalized_publication_statement": "Multi-user goals, instructions, differences, and actions shall remain attributable.",
+      "lifecycle_status": "approved_locked_exact_constitutional_item",
+      "blueprint_destinations": [
+        "Architectural Foundations: constitutional principles",
+        "Blueprint: AI governance and conformance"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0688"
+        ],
+        "requirements": [
+          "DIP-REQ-0312"
+        ],
+        "gates": [
+          "DIP-GATE-0001",
+          "DIP-GATE-0002",
+          "DIP-GATE-0003"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0086",
+      "title": "Failure must be visible",
+      "record_kind": "principle",
+      "normalized_publication_statement": "Material failure shall remain visible.",
+      "lifecycle_status": "approved_locked_exact_constitutional_item",
+      "blueprint_destinations": [
+        "Architectural Foundations: constitutional principles",
+        "Blueprint: AI governance and conformance"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0688"
+        ],
+        "requirements": [
+          "DIP-REQ-0312"
+        ],
+        "gates": [
+          "DIP-GATE-0001",
+          "DIP-GATE-0002",
+          "DIP-GATE-0003"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0087",
+      "title": "Learning is governed change",
+      "record_kind": "principle",
+      "normalized_publication_statement": "Learning and adaptation shall be governed change.",
+      "lifecycle_status": "approved_locked_exact_constitutional_item",
+      "blueprint_destinations": [
+        "Architectural Foundations: constitutional principles",
+        "Blueprint: AI governance and conformance"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0688"
+        ],
+        "requirements": [
+          "DIP-REQ-0312"
+        ],
+        "gates": [
+          "DIP-GATE-0001",
+          "DIP-GATE-0002",
+          "DIP-GATE-0003"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0088",
+      "title": "Models are replaceable components",
+      "record_kind": "principle",
+      "normalized_publication_statement": "Foundation models shall remain replaceable components beneath AIOP.",
+      "lifecycle_status": "approved_locked_exact_constitutional_item",
+      "blueprint_destinations": [
+        "Architectural Foundations: constitutional principles",
+        "Blueprint: AI governance and conformance"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0688"
+        ],
+        "requirements": [
+          "DIP-REQ-0312"
+        ],
+        "gates": [
+          "DIP-GATE-0001",
+          "DIP-GATE-0002",
+          "DIP-GATE-0003"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0089",
+      "title": "Trust requires defense in depth",
+      "record_kind": "principle",
+      "normalized_publication_statement": "AI trust shall rely on defense-in-depth controls rather than prompt compliance alone.",
+      "lifecycle_status": "approved_locked_exact_constitutional_item",
+      "blueprint_destinations": [
+        "Architectural Foundations: constitutional principles",
+        "Blueprint: AI governance and conformance"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0688"
+        ],
+        "requirements": [
+          "DIP-REQ-0312"
+        ],
+        "gates": [
+          "DIP-GATE-0001",
+          "DIP-GATE-0002",
+          "DIP-GATE-0003"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0090",
+      "title": "History remains intact",
+      "record_kind": "principle",
+      "normalized_publication_statement": "Corrections, supersession, and learning shall not erase historical record.",
+      "lifecycle_status": "approved_locked_exact_constitutional_item",
+      "blueprint_destinations": [
+        "Architectural Foundations: constitutional principles",
+        "Blueprint: AI governance and conformance"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0688"
+        ],
+        "requirements": [
+          "DIP-REQ-0312"
+        ],
+        "gates": [
+          "DIP-GATE-0001",
+          "DIP-GATE-0002",
+          "DIP-GATE-0003"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0091",
+      "title": "Outcomes complete the loop",
+      "record_kind": "principle",
+      "normalized_publication_statement": "Governed execution shall record Outcomes and use them to complete evaluation and learning loops.",
+      "lifecycle_status": "approved_locked_exact_constitutional_item",
+      "blueprint_destinations": [
+        "Architectural Foundations: constitutional principles",
+        "Blueprint: AI governance and conformance"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0688"
+        ],
+        "requirements": [
+          "DIP-REQ-0312"
+        ],
+        "gates": [
+          "DIP-GATE-0001",
+          "DIP-GATE-0002",
+          "DIP-GATE-0003"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0092",
+      "title": "Evidence follows its classification boundary",
+      "record_kind": "principle",
+      "normalized_publication_statement": "Evidence shall be retained, processed, and published only within controls appropriate to its classification, with public builds isolated from restricted source contents.",
+      "lifecycle_status": "approved_locked_current_capture",
+      "blueprint_destinations": [
+        "Architectural Foundations: publication principles",
+        "Blueprint: evidence governance"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0699",
+          "DIP-DEC-0700",
+          "DIP-DEC-0702"
+        ],
+        "requirements": [
+          "DIP-REQ-0322",
+          "DIP-REQ-0323",
+          "DIP-REQ-0327"
+        ],
+        "gates": [
+          "DIP-GATE-0001",
+          "DIP-GATE-0005"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0093",
+      "title": "Disclose only the architectural detail necessary for the publication tier",
+      "record_kind": "principle",
+      "normalized_publication_statement": "Each publication tier shall disclose only the architectural meaning necessary for its audience and authority boundary; completeness within the restricted tier does not create a requirement to expose restricted detail publicly.",
+      "lifecycle_status": "approved_locked_current_capture",
+      "blueprint_destinations": [
+        "Architectural Foundations: publication principles",
+        "Blueprint: classification and disclosure"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0704"
+        ],
+        "requirements": [
+          "DIP-REQ-0329",
+          "DIP-REQ-0330"
+        ],
+        "gates": [
+          "DIP-GATE-0001",
+          "DIP-GATE-0004",
+          "DIP-GATE-0005"
+        ]
+      }
+    },
+    {
+      "id": "DIP-PRN-0094",
+      "title": "Omission is safer than inference or redaction",
+      "record_kind": "principle",
+      "normalized_publication_statement": "When a public-safe projection cannot be established from approved public evidence, omit the affected field or register and record the gap; do not infer a value or redact a more complete source into apparent safety.",
+      "lifecycle_status": "approved_locked_current_capture",
+      "blueprint_destinations": [
+        "Architectural Foundations: publication principles",
+        "Blueprint: evidence boundaries"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0705",
+          "DIP-DEC-0700"
+        ],
+        "requirements": [
+          "DIP-REQ-0333"
+        ],
+        "gates": [
+          "DIP-GATE-0001",
+          "DIP-GATE-0004",
+          "DIP-GATE-0005"
+        ]
+      }
+    }
+  ],
+  "invariants": [
+    {
+      "id": "DIP-INV-0001",
+      "title": "Governing hierarchy",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Every AI interaction and domain operation is resolved through the ordered governing hierarchy from model to private strategic scope.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Foundations hierarchy",
+        "Blueprint platform model"
+      ],
+      "relationships": {}
+    },
+    {
+      "id": "DIP-INV-0002",
+      "title": "Stable artifact identity and immutable version identity remain separate",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Artifact identity is stable while every accepted version is immutable and independently addressable.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint artifact model"
+      ],
+      "relationships": {
+        "adrs": [
+          "ADR-IMP-002",
+          "ADR-IMP-003"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0003",
+      "title": "Recommendation, decision, command, and outcome remain distinct",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Advisory reasoning, human or authorized decision, executable instruction, and execution result are distinct durable records.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint decision lifecycle"
+      ],
+      "relationships": {}
+    },
+    {
+      "id": "DIP-INV-0004",
+      "title": "Restricted inputs never enter the public build",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "A public build cannot observe, load, transform, or redact Restricted Architecture, Private Authority, or Secrets.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Publication build controls"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0002"
+        ],
+        "requirements": [
+          "DIP-REQ-0001"
+        ],
+        "gates": [
+          "DIP-GATE-0001",
+          "DIP-GATE-0006"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0005",
+      "title": "Implementation remains unauthorized before IKG0",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Publication status cannot be interpreted as product implementation authorization; only IKG0 grants that authority.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Kickoff Package"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0006"
+        ],
+        "requirements": [
+          "DIP-REQ-0009"
+        ],
+        "gates": [
+          "DIP-GATE-0008"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0006",
+      "title": "Unit of Work ownership",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Command and workflow-transition handlers own the Unit of Work; repositories and domain objects never commit independently.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: workflow execution"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0010",
+          "DIP-DEC-0011"
+        ],
+        "adrs": [
+          "ADR-IMP-005"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0007",
+      "title": "Durable execution hierarchy",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Every governed execution resolves through Trigger → Workflow → Stage → Job → Attempt.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: workflow execution"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0013"
+        ],
+        "adrs": [
+          "ADR-IMP-006"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0008",
+      "title": "Resumption preserves pins",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Resumption retains original configuration and capability pins; reprocessing creates a distinct Workflow.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: workflow execution"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0018"
+        ],
+        "adrs": [
+          "ADR-IMP-006"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0009",
+      "title": "Analyzers cannot mutate or command",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Analyzers consume immutable accepted versions and cannot directly persist authoritative state or issue external Commands.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: workflow execution"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0022"
+        ],
+        "adrs": [
+          "ADR-IMP-005"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0010",
+      "title": "Decision, Command, and Outcome separation",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Decision Records authorize Commands, and Command execution produces append-only Outcomes; the three records never collapse into one another.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: workflow execution"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0025"
+        ],
+        "adrs": [
+          "ADR-IMP-006"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0011",
+      "title": "Accepted good state survives failed refresh",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "The last accepted good state remains authoritative when a later refresh fails.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: acquisition and MCP"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0051"
+        ],
+        "adrs": [
+          "ADR-IMP-009"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0012",
+      "title": "External effect provenance",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Every external effect originates from an authorized Command and terminates in a durable Outcome, Failure, or uncertain state.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: acquisition and MCP"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0053",
+          "DIP-DEC-0054"
+        ],
+        "adrs": [
+          "ADR-IMP-010"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0013",
+      "title": "MCP has no privileged bypass",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "MCP cannot bypass application services or obtain direct access to databases, secrets, repositories, connectors, or model providers.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: acquisition and MCP"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0057"
+        ],
+        "adrs": [
+          "ADR-IMP-010"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0014",
+      "title": "External authority propagation",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Actor, Workspace, applicable Private Strategy, authority, and causation remain attached to every external invocation.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: acquisition and MCP"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0065"
+        ],
+        "adrs": [
+          "ADR-IMP-010"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0015",
+      "title": "AI governing hierarchy cannot be weakened",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Every governed task resolves through Foundation Model → AIOP → Domain Package → Workspace → Private Strategy, and lower levels cannot weaken higher governance.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: governed AI execution",
+        "Blueprint: model gateway and context"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0070",
+          "DIP-DEC-0071"
+        ],
+        "adrs": [
+          "ADR-IMP-011",
+          "ADR-IMP-012",
+          "ADR-IMP-013"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0016",
+      "title": "AI execution record chain",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "AI Execution Plan, Context Manifest, Prompt Package, Model Invocation, Model Result, AI Output Candidate, and Conformance Result remain first-class records.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: governed AI execution",
+        "Blueprint: model gateway and context"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0069"
+        ],
+        "adrs": [
+          "ADR-IMP-011",
+          "ADR-IMP-012",
+          "ADR-IMP-013"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0017",
+      "title": "AI context and output remain scope-bound",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Scope filtering precedes ranking, output visibility cannot exceed input visibility, and Private Strategy context requires explicit private scope.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: governed AI execution",
+        "Blueprint: model gateway and context"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0083",
+          "DIP-DEC-0084",
+          "DIP-DEC-0085"
+        ],
+        "adrs": [
+          "ADR-IMP-011",
+          "ADR-IMP-012",
+          "ADR-IMP-013"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0018",
+      "title": "AI tools cannot bypass application authority",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "AI tools are allowlisted application-query capabilities; models receive no direct infrastructure or secret access.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: governed AI execution",
+        "Blueprint: model gateway and context"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0093",
+          "DIP-DEC-0094"
+        ],
+        "adrs": [
+          "ADR-IMP-011",
+          "ADR-IMP-012",
+          "ADR-IMP-013"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0019",
+      "title": "Conversation is not automatic memory",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Conversational content becomes persistent only through the governed artifact lifecycle.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: governed AI execution",
+        "Blueprint: model gateway and context"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0096",
+          "DIP-DEC-0097"
+        ],
+        "adrs": [
+          "ADR-IMP-011",
+          "ADR-IMP-012",
+          "ADR-IMP-013"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0020",
+      "title": "Review binds immutable exact versions",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "A Review Item binds one immutable proposal version; revisions supersede; exact-version checks precede immutable Decision Records.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: Review Service",
+        "Blueprint: API and Operations Page"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0107",
+          "DIP-DEC-0108",
+          "DIP-DEC-0109",
+          "DIP-DEC-0110"
+        ],
+        "adrs": [
+          "ADR-IMP-014",
+          "ADR-IMP-015"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0021",
+      "title": "Review disposition and execution remain distinct",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Review disposition, Command creation, execution, and Outcome remain separate records and transitions.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: Review Service",
+        "Blueprint: API and Operations Page"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0111"
+        ],
+        "adrs": [
+          "ADR-IMP-014",
+          "ADR-IMP-015"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0022",
+      "title": "Deep links are never credentials",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "A deep link may identify an authorized destination but can never convey authorization.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: Review Service",
+        "Blueprint: API and Operations Page"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0129",
+          "DIP-DEC-0130"
+        ],
+        "adrs": [
+          "ADR-IMP-014",
+          "ADR-IMP-015"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0023",
+      "title": "Human and executing identities remain distinct",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Person, Principal, Actor, Interface Client, Membership, Grant, and Delegation remain distinct, and both human initiator and executing mechanism are preserved.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: identity and authorization",
+        "Blueprint: security and isolation"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0138",
+          "DIP-DEC-0139"
+        ],
+        "adrs": [
+          "ADR-IMP-016",
+          "ADR-IMP-017",
+          "ADR-IMP-018",
+          "ADR-IMP-019"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007",
+          "DIP-GATE-0010"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0024",
+      "title": "Private Strategy authority is independent",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Workspace access and platform administration do not imply Private Strategy authority.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: identity and authorization",
+        "Blueprint: security and isolation"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0154",
+          "DIP-DEC-0155"
+        ],
+        "adrs": [
+          "ADR-IMP-016",
+          "ADR-IMP-017",
+          "ADR-IMP-018",
+          "ADR-IMP-019"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007",
+          "DIP-GATE-0010"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0025",
+      "title": "Application authorization remains primary over RLS",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Application authorization is primary and PostgreSQL RLS is mandatory defense in depth for production scope-sensitive tables.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: identity and authorization",
+        "Blueprint: security and isolation"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0160",
+          "DIP-DEC-0161"
+        ],
+        "adrs": [
+          "ADR-IMP-016",
+          "ADR-IMP-017",
+          "ADR-IMP-018",
+          "ADR-IMP-019"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007",
+          "DIP-GATE-0010"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0026",
+      "title": "Restricted encryption realms remain isolated",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Restricted payloads use envelope encryption with separately scoped security-realm keys and realm-local deduplication.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: identity and authorization",
+        "Blueprint: security and isolation"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0165",
+          "DIP-DEC-0166",
+          "DIP-DEC-0167"
+        ],
+        "adrs": [
+          "ADR-IMP-016",
+          "ADR-IMP-017",
+          "ADR-IMP-018",
+          "ADR-IMP-019"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007",
+          "DIP-GATE-0010"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0027",
+      "title": "Security-control failure fails closed",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Identity, authorization, encryption, and key failures fail closed.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: identity and authorization",
+        "Blueprint: security and isolation"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0177"
+        ],
+        "adrs": [
+          "ADR-IMP-016",
+          "ADR-IMP-017",
+          "ADR-IMP-018",
+          "ADR-IMP-019"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007",
+          "DIP-GATE-0010"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0028",
+      "title": "Security audit remains distinct",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Security audit is distinct from diagnostic logs and domain events and remains append-oriented and content-minimized.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: identity and authorization",
+        "Blueprint: security and isolation"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0171",
+          "DIP-DEC-0172"
+        ],
+        "adrs": [
+          "ADR-IMP-016",
+          "ADR-IMP-017",
+          "ADR-IMP-018",
+          "ADR-IMP-019"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007",
+          "DIP-GATE-0010"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0029",
+      "title": "Remote production waits for security readiness",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "No production remote exposure occurs until the security readiness gate passes.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: identity and authorization",
+        "Blueprint: security and isolation"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0178"
+        ],
+        "adrs": [
+          "ADR-IMP-016",
+          "ADR-IMP-017",
+          "ADR-IMP-018",
+          "ADR-IMP-019"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007",
+          "DIP-GATE-0010"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0030",
+      "title": "PostgreSQL behavior is tested on PostgreSQL",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Database mocks and SQLite never substitute for production-database behavioral and RLS tests.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: testing and conformance",
+        "Blueprint: observability and reliability"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0185",
+          "DIP-DEC-0186"
+        ],
+        "adrs": [
+          "ADR-IMP-020",
+          "ADR-IMP-021",
+          "ADR-IMP-022"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0031",
+      "title": "Telemetry and authoritative records remain distinct",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Telemetry, security audit, Workflow history, Event Ledger, and Conformance Reports remain distinct record classes.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: testing and conformance",
+        "Blueprint: observability and reliability"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0200"
+        ],
+        "adrs": [
+          "ADR-IMP-020",
+          "ADR-IMP-021",
+          "ADR-IMP-022"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0032",
+      "title": "Telemetry contains no private content or high-cardinality identities",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Telemetry fields are allowlisted, private content is prohibited, and metric labels exclude high-cardinality domain and security identities.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: testing and conformance",
+        "Blueprint: observability and reliability"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0202",
+          "DIP-DEC-0203"
+        ],
+        "adrs": [
+          "ADR-IMP-020",
+          "ADR-IMP-021",
+          "ADR-IMP-022"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0033",
+      "title": "Failed work is never silently discarded",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Failed messages and artifacts remain visible and irrecoverable work enters a terminal or quarantine state.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: testing and conformance",
+        "Blueprint: observability and reliability"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0209",
+          "DIP-DEC-0210"
+        ],
+        "adrs": [
+          "ADR-IMP-020",
+          "ADR-IMP-021",
+          "ADR-IMP-022"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0034",
+      "title": "Reconciliation never rewrites history silently",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Reconciliation is a governed Workflow and cannot silently rewrite authoritative history.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: testing and conformance",
+        "Blueprint: observability and reliability"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0211",
+          "DIP-DEC-0212"
+        ],
+        "adrs": [
+          "ADR-IMP-020",
+          "ADR-IMP-021",
+          "ADR-IMP-022"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0035",
+      "title": "Deployment identity is immutable",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Every production deployment is identified by immutable OCI image digest and Deployment Manifest.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: deployment and release",
+        "Blueprint: backup and production operations"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0230",
+          "DIP-DEC-0235"
+        ],
+        "adrs": [
+          "ADR-IMP-023",
+          "ADR-IMP-024",
+          "ADR-IMP-025",
+          "ADR-IMP-026"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007",
+          "DIP-GATE-0009"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0036",
+      "title": "Migration failure blocks deployment",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Production migrations are forward-oriented; failure blocks deployment and rollback does not rely on routine down-migration.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: deployment and release",
+        "Blueprint: backup and production operations"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0237",
+          "DIP-DEC-0238",
+          "DIP-DEC-0239"
+        ],
+        "adrs": [
+          "ADR-IMP-023",
+          "ADR-IMP-024",
+          "ADR-IMP-025",
+          "ADR-IMP-026"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007",
+          "DIP-GATE-0009"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0037",
+      "title": "Deployment cannot activate governed capability",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Deployment and activation remain separate; deployment cannot automatically activate new capabilities, models, AIOP, or external effects.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: deployment and release",
+        "Blueprint: backup and production operations"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0240",
+          "DIP-DEC-0241"
+        ],
+        "adrs": [
+          "ADR-IMP-023",
+          "ADR-IMP-024",
+          "ADR-IMP-025",
+          "ADR-IMP-026"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007",
+          "DIP-GATE-0009"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0038",
+      "title": "MCP launch has no unauthenticated bypass",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "ChatGPT/MCP launch requires the compatibility spike, and failure leads to the authenticated fallback rather than no-auth MCP.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: deployment and release",
+        "Blueprint: backup and production operations"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0242",
+          "DIP-DEC-0243",
+          "DIP-DEC-0244"
+        ],
+        "adrs": [
+          "ADR-IMP-023",
+          "ADR-IMP-024",
+          "ADR-IMP-025",
+          "ADR-IMP-026"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007",
+          "DIP-GATE-0009"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0039",
+      "title": "Restore evidence comes from isolated recovery",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Restores occur in isolated environments and are exercised on the approved schedule.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: deployment and release",
+        "Blueprint: backup and production operations"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0250",
+          "DIP-DEC-0251"
+        ],
+        "adrs": [
+          "ADR-IMP-023",
+          "ADR-IMP-024",
+          "ADR-IMP-025",
+          "ADR-IMP-026"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007",
+          "DIP-GATE-0009"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0040",
+      "title": "Deletion remains pending while required backups persist",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Governed deletion cannot be treated as complete while required backup copies remain in retention.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: deployment and release",
+        "Blueprint: backup and production operations"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0253",
+          "DIP-DEC-0255"
+        ],
+        "adrs": [
+          "ADR-IMP-023",
+          "ADR-IMP-024",
+          "ADR-IMP-025",
+          "ADR-IMP-026"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007",
+          "DIP-GATE-0009"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0041",
+      "title": "The first vertical slice traverses the full lifecycle",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "The first vertical slice remains narrow in domain scope but traverses the complete governing lifecycle.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: first vertical slice",
+        "Blueprint: implementation sequence and gates"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0262",
+          "DIP-DEC-0263"
+        ],
+        "adrs": [
+          "ADR-IMP-027",
+          "ADR-IMP-028",
+          "ADR-IMP-029"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0042",
+      "title": "Initial governed action does not mutate the external source",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "The initial Review → Decision → Command → Outcome demonstration uses an internal or no-op effect and performs no external platform mutation.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: first vertical slice",
+        "Blueprint: implementation sequence and gates"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0265"
+        ],
+        "adrs": [
+          "ADR-IMP-027",
+          "ADR-IMP-028",
+          "ADR-IMP-029"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0043",
+      "title": "Private fixtures never enter public tests",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Private Workspace fixtures stay outside the public repository; public tests use synthetic structurally equivalent fixtures.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: first vertical slice",
+        "Blueprint: implementation sequence and gates"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0267",
+          "DIP-DEC-0268"
+        ],
+        "adrs": [
+          "ADR-IMP-027",
+          "ADR-IMP-028",
+          "ADR-IMP-029"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0044",
+      "title": "Market-valued output waits for qualified evidence",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Value-dependent recommendations remain disabled until qualified automated and comparison evidence satisfies the market-intelligence gate.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: first vertical slice",
+        "Blueprint: implementation sequence and gates"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0269",
+          "DIP-DEC-0270"
+        ],
+        "adrs": [
+          "ADR-IMP-027",
+          "ADR-IMP-028",
+          "ADR-IMP-029"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0045",
+      "title": "Architecture Publication precedes product implementation",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Product implementation cannot begin before Architecture Publication and the applicable authorization gate.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: first vertical slice",
+        "Blueprint: implementation sequence and gates"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0274"
+        ],
+        "adrs": [
+          "ADR-IMP-027",
+          "ADR-IMP-028",
+          "ADR-IMP-029"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0046",
+      "title": "Public source never becomes private or runtime authority",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "The public-reproducible repository does not own real Workspace or Private Strategy authority or runtime operational truth.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: repository and package boundaries",
+        "Blueprint: dependency and contract foundation"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0278",
+          "DIP-DEC-0279",
+          "DIP-DEC-0280"
+        ],
+        "adrs": [
+          "ADR-IMP-001",
+          "ADR-IMP-007",
+          "ADR-IMP-008"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007",
+          "DIP-GATE-0012"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0047",
+      "title": "Core remains dependency-inward and application-neutral",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Core cannot depend on outer layers, and composition roots cannot become reusable canonical-logic owners.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: repository and package boundaries",
+        "Blueprint: dependency and contract foundation"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0281",
+          "DIP-DEC-0282",
+          "DIP-DEC-0287",
+          "DIP-DEC-0288",
+          "DIP-DEC-0289"
+        ],
+        "adrs": [
+          "ADR-IMP-001",
+          "ADR-IMP-007",
+          "ADR-IMP-008"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007",
+          "DIP-GATE-0012"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0048",
+      "title": "Generated assets never replace authoritative schemas",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Generated models remain reproducible and drift-checked against authoritative JSON Schemas.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: repository and package boundaries",
+        "Blueprint: dependency and contract foundation"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0292",
+          "DIP-DEC-0293",
+          "DIP-DEC-0294",
+          "DIP-DEC-0295"
+        ],
+        "adrs": [
+          "ADR-IMP-001",
+          "ADR-IMP-007",
+          "ADR-IMP-008"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007",
+          "DIP-GATE-0012"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0049",
+      "title": "Canonical domain models remain framework-independent",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Pydantic, SQLAlchemy, FastAPI, and provider SDK objects never become canonical domain authority.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: runtime and technology baseline",
+        "Blueprint: engineering foundation"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0316",
+          "DIP-DEC-0317"
+        ],
+        "adrs": [
+          "ADR-IMP-001"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007",
+          "DIP-GATE-0012"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0050",
+      "title": "Stable identity and immutable version identity remain separate",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Artifact identity remains stable while accepted versions are immutable and corrections create new versions.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: persistence and artifacts",
+        "Blueprint: transactions and workflow records"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0349",
+          "DIP-DEC-0353",
+          "DIP-DEC-0354"
+        ],
+        "adrs": [
+          "ADR-IMP-002",
+          "ADR-IMP-003",
+          "ADR-IMP-007"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007",
+          "DIP-GATE-0012"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0051",
+      "title": "Recorded, observed, accepted, and effective time remain distinct",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Persisted temporal facts retain timezone-aware UTC and declared temporal meaning.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: persistence and artifacts",
+        "Blueprint: transactions and workflow records"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0351",
+          "DIP-DEC-0352"
+        ],
+        "adrs": [
+          "ADR-IMP-002",
+          "ADR-IMP-003",
+          "ADR-IMP-007"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007",
+          "DIP-GATE-0012"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0052",
+      "title": "Acceptance is atomic",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Artifact acceptance and its required provenance, lifecycle, and outbox records commit together or not at all.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: persistence and artifacts",
+        "Blueprint: transactions and workflow records"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0361",
+          "DIP-DEC-0362"
+        ],
+        "adrs": [
+          "ADR-IMP-002",
+          "ADR-IMP-003",
+          "ADR-IMP-007"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007",
+          "DIP-GATE-0012"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0053",
+      "title": "Payload presence does not confer acceptance authority",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Only governed database references authorize payload acceptance; blob writes precede acceptance and unreferenced objects remain removable.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: persistence and artifacts",
+        "Blueprint: transactions and workflow records"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0365",
+          "DIP-DEC-0367",
+          "DIP-DEC-0368",
+          "DIP-DEC-0369"
+        ],
+        "adrs": [
+          "ADR-IMP-002",
+          "ADR-IMP-003",
+          "ADR-IMP-007"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007",
+          "DIP-GATE-0012"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0054",
+      "title": "Retries never overwrite Attempt history",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Workflow records are durable and every retry creates a new Attempt.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: persistence and artifacts",
+        "Blueprint: transactions and workflow records"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0372",
+          "DIP-DEC-0373"
+        ],
+        "adrs": [
+          "ADR-IMP-002",
+          "ADR-IMP-003",
+          "ADR-IMP-007"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007",
+          "DIP-GATE-0012"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0055",
+      "title": "Review, Decision, Recommendation, Command, and Outcome remain distinct",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Governed advisory, authority, execution, and result records never collapse into one another.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: persistence and artifacts",
+        "Blueprint: transactions and workflow records"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0374",
+          "DIP-DEC-0375",
+          "DIP-DEC-0376"
+        ],
+        "adrs": [
+          "ADR-IMP-002",
+          "ADR-IMP-003",
+          "ADR-IMP-007"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007",
+          "DIP-GATE-0012"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0056",
+      "title": "Application use cases own transactions",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Domain objects and repositories never commit independently, and long external I/O stays outside the Unit of Work.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: persistence and artifacts",
+        "Blueprint: transactions and workflow records"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0377",
+          "DIP-DEC-0378",
+          "DIP-DEC-0379"
+        ],
+        "adrs": [
+          "ADR-IMP-002",
+          "ADR-IMP-003",
+          "ADR-IMP-007"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007",
+          "DIP-GATE-0012"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0057",
+      "title": "Propagation is outbox-backed and replay-safe",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Asynchronous propagation uses transactional outbox, deduplication, and explicit idempotency keys.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: persistence and artifacts",
+        "Blueprint: transactions and workflow records"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0380",
+          "DIP-DEC-0381",
+          "DIP-DEC-0382"
+        ],
+        "adrs": [
+          "ADR-IMP-002",
+          "ADR-IMP-003",
+          "ADR-IMP-007"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007",
+          "DIP-GATE-0012"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0058",
+      "title": "Authoritative rows carry explicit scope",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Workspace and applicable Private Strategy scope are explicit and receive defense-in-depth isolation before shared production.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: persistence and artifacts",
+        "Blueprint: transactions and workflow records"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0389",
+          "DIP-DEC-0390",
+          "DIP-DEC-0391"
+        ],
+        "adrs": [
+          "ADR-IMP-002",
+          "ADR-IMP-003",
+          "ADR-IMP-007"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007",
+          "DIP-GATE-0012"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0059",
+      "title": "Governed artifacts are not destructively deleted",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Authoritative history is preserved while rebuildable projections may be removed and regenerated.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: persistence and artifacts",
+        "Blueprint: transactions and workflow records"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0392",
+          "DIP-DEC-0393"
+        ],
+        "adrs": [
+          "ADR-IMP-002",
+          "ADR-IMP-003",
+          "ADR-IMP-007"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007",
+          "DIP-GATE-0012"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0060",
+      "title": "Configuration authority cannot expand silently",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Unauthorized values fail compilation, and lower or runtime layers can only narrow capability.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: configuration authority",
+        "Blueprint: secrets and private authority"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0405",
+          "DIP-DEC-0406",
+          "DIP-DEC-0407"
+        ],
+        "adrs": [
+          "ADR-IMP-004",
+          "ADR-IMP-008"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007",
+          "DIP-GATE-0012"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0061",
+      "title": "Validation never implies activation",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "A candidate becomes authoritative only through atomic activation, and failure preserves the prior valid activation.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: configuration authority",
+        "Blueprint: secrets and private authority"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0433",
+          "DIP-DEC-0434",
+          "DIP-DEC-0435",
+          "DIP-DEC-0436"
+        ],
+        "adrs": [
+          "ADR-IMP-004",
+          "ADR-IMP-008"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007",
+          "DIP-GATE-0012"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0062",
+      "title": "Execution remains pinned to activation history",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Workflows and governed decision/execution records retain exact configuration activation references.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: configuration authority",
+        "Blueprint: secrets and private authority"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0437",
+          "DIP-DEC-0438",
+          "DIP-DEC-0439"
+        ],
+        "adrs": [
+          "ADR-IMP-004",
+          "ADR-IMP-008"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007",
+          "DIP-GATE-0012"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0063",
+      "title": "Secret values never enter authoritative or generated records",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Only typed references enter configuration; resolved values never enter bundles, logs, events, prompts, artifacts, or exceptions.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: configuration authority",
+        "Blueprint: secrets and private authority"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0449",
+          "DIP-DEC-0450",
+          "DIP-DEC-0451",
+          "DIP-DEC-0453",
+          "DIP-DEC-0454"
+        ],
+        "adrs": [
+          "ADR-IMP-004",
+          "ADR-IMP-008"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007",
+          "DIP-GATE-0012"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0064",
+      "title": "Private Strategy never falls back, combines, or broadens visibility implicitly",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Private Strategy requires explicit scoped authority, narrows output visibility, and cannot be inferred from Workspace or operator authority.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: configuration authority",
+        "Blueprint: secrets and private authority"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0458",
+          "DIP-DEC-0460",
+          "DIP-DEC-0461",
+          "DIP-DEC-0462",
+          "DIP-DEC-0463"
+        ],
+        "adrs": [
+          "ADR-IMP-004",
+          "ADR-IMP-008"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007",
+          "DIP-GATE-0012"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0065",
+      "title": "Configuration failure preserves last valid authority and remains visible",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Invalid candidates or missing sources do not invent replacement authority; permitted degradation is bounded, freshness visible, and provenance explainable.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: configuration authority",
+        "Blueprint: secrets and private authority"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0464",
+          "DIP-DEC-0465",
+          "DIP-DEC-0466",
+          "DIP-DEC-0467",
+          "DIP-DEC-0468"
+        ],
+        "adrs": [
+          "ADR-IMP-004",
+          "ADR-IMP-008"
+        ],
+        "gates": [
+          "DIP-GATE-0003",
+          "DIP-GATE-0007",
+          "DIP-GATE-0012"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0066",
+      "title": "Inference never becomes normative publication authority",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "No inferred statement may enter the normative publication inventory.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint traceability model",
+        "Publication evidence controls"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0471",
+          "DIP-DEC-0477"
+        ],
+        "requirements": [
+          "DIP-REQ-0155",
+          "DIP-REQ-0157"
+        ],
+        "gates": [
+          "DIP-GATE-0001"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0067",
+      "title": "Existing publication and ADR identifiers never change",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Existing stable identifiers remain unchanged across normalization, movement, and publication composition.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Publication identifier policy",
+        "ADR publication policy"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0472",
+          "DIP-DEC-0473"
+        ],
+        "requirements": [
+          "DIP-REQ-0158"
+        ],
+        "gates": [
+          "DIP-GATE-0001",
+          "DIP-GATE-0004"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0068",
+      "title": "Every normalized decision retains both wording layers",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "A normalized decision is incomplete unless both its approved-source and architectural-publication statements are retained.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Publication normalization policy",
+        "Decision Register"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0475"
+        ],
+        "requirements": [
+          "DIP-REQ-0159"
+        ],
+        "gates": [
+          "DIP-GATE-0001"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0069",
+      "title": "Editorial normalization never changes approved semantics",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Normalization preserves obligation, approval, modality, lifecycle, activation, history, and vendor or implementation scope.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Publication normalization policy",
+        "Blueprint governance"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0475"
+        ],
+        "requirements": [
+          "DIP-REQ-0160",
+          "DIP-REQ-0161",
+          "DIP-REQ-0162"
+        ],
+        "gates": [
+          "DIP-GATE-0001"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0070",
+      "title": "Deferred and conditional states retain their approved meaning",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Deferred capability remains governed architecture outside current scope, and conditional capability remains inactive until its approved conditions are satisfied.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint scope model",
+        "Scope and Deferral Matrix"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0476"
+        ],
+        "requirements": [
+          "DIP-REQ-0161",
+          "DIP-REQ-0163",
+          "DIP-REQ-0164"
+        ],
+        "gates": [
+          "DIP-GATE-0001"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0071",
+      "title": "P0 planning approval does not pass PG0",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Approval of the P0 plan defines PG0 but cannot pass it; PG0 passage requires verified satisfaction of every approved blocking criterion.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Publication gate model",
+        "Foundations production plan"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0479"
+        ],
+        "requirements": [
+          "DIP-REQ-0167"
+        ],
+        "gates": [
+          "DIP-GATE-0001",
+          "DIP-GATE-0002"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0072",
+      "title": "Foundations never expose real private instances or data",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Public Foundations contain no real Workspace, Private Strategy, membership, roster, or manager instance data.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint invariants",
+        "Architectural Foundations",
+        "Publication plan"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0481"
+        ],
+        "requirements": [
+          "DIP-REQ-0168"
+        ],
+        "gates": [
+          "DIP-GATE-0002"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0073",
+      "title": "Foundations do not replace normative technical authority",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Foundations may explain and summarize but cannot replace normative Blueprint requirements, contracts, or ADRs.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint invariants",
+        "Architectural Foundations",
+        "Publication plan"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0481"
+        ],
+        "requirements": [
+          "DIP-REQ-0168"
+        ],
+        "gates": [
+          "DIP-GATE-0002"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0074",
+      "title": "Every governing architecture area remains represented",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "The Blueprint cannot omit governing architecture merely because a capability is conditional, deferred, or outside the initial runtime.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint invariants",
+        "Living Architecture Blueprint",
+        "Blueprint governance"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0492"
+        ],
+        "requirements": [
+          "DIP-REQ-0179"
+        ],
+        "gates": [
+          "DIP-GATE-0003"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0075",
+      "title": "Every verifiable obligation has stable identity",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Verifiable Blueprint obligations retain permanent identifiers across document movement and release evolution.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint invariants",
+        "Living Architecture Blueprint",
+        "Blueprint governance"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0492"
+        ],
+        "requirements": [
+          "DIP-REQ-0179"
+        ],
+        "gates": [
+          "DIP-GATE-0003"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0076",
+      "title": "Blueprint changes remain atomic across dependent records",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "A semantic change cannot update one architectural representation while leaving dependent representations inconsistent.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint invariants",
+        "Living Architecture Blueprint",
+        "Blueprint governance"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0492"
+        ],
+        "requirements": [
+          "DIP-REQ-0179"
+        ],
+        "gates": [
+          "DIP-GATE-0003"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0077",
+      "title": "Existing identifiers and gaps are preserved",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Published identifiers are never renumbered, reused, or silently filled.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint invariants",
+        "ADR collection",
+        "Decision Register"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0507"
+        ],
+        "requirements": [
+          "DIP-REQ-0193"
+        ],
+        "gates": [
+          "DIP-GATE-0004"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0078",
+      "title": "Accepted decision bodies are substantively immutable",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Semantic decision change requires a new record and explicit supersession rather than in-place rewriting.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint invariants",
+        "ADR collection",
+        "Decision Register"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0507"
+        ],
+        "requirements": [
+          "DIP-REQ-0193"
+        ],
+        "gates": [
+          "DIP-GATE-0004"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0079",
+      "title": "Public decisions exclude private approval evidence",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Public decision records remain understandable without exposing private evidence locators, conversations, or operational data.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint invariants",
+        "ADR collection",
+        "Decision Register"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0507"
+        ],
+        "requirements": [
+          "DIP-REQ-0193"
+        ],
+        "gates": [
+          "DIP-GATE-0004"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0080",
+      "title": "Approved releases and letters remain immutable",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "An approved architecture release and its Architect’s Letter remain frozen historical baselines.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint invariants",
+        "Architecture v1.0 release",
+        "Architect’s Letter"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0523"
+        ],
+        "requirements": [
+          "DIP-REQ-0207"
+        ],
+        "gates": [
+          "DIP-GATE-0005"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0081",
+      "title": "Checksums do not establish authorship",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Checksums prove content integrity only and cannot be represented as proof of human authorship or approval.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint invariants",
+        "Architecture v1.0 release",
+        "Architect’s Letter"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0523"
+        ],
+        "requirements": [
+          "DIP-REQ-0207"
+        ],
+        "gates": [
+          "DIP-GATE-0005"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0082",
+      "title": "Generated files never become independent sources",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Every semantic correction returns to canonical source and is regenerated through the controlled toolchain.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint invariants",
+        "Publication build and archive workflow"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0541",
+          "DIP-DEC-0561"
+        ],
+        "requirements": [
+          "DIP-REQ-0220"
+        ],
+        "gates": [
+          "DIP-GATE-0006"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0083",
+      "title": "The public build never consumes restricted input",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Public production loads only explicitly allowlisted public sources and never loads restricted material for later redaction.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint invariants",
+        "Publication build and archive workflow"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0541",
+          "DIP-DEC-0561"
+        ],
+        "requirements": [
+          "DIP-REQ-0220"
+        ],
+        "gates": [
+          "DIP-GATE-0006"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0084",
+      "title": "Secrets appear in no publication artifact or derivative",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Secret values are absent from sources, generated files, workspaces, logs, archives, backups, and recovery copies.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint invariants",
+        "Publication build and archive workflow"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0541",
+          "DIP-DEC-0561"
+        ],
+        "requirements": [
+          "DIP-REQ-0220"
+        ],
+        "gates": [
+          "DIP-GATE-0006"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0085",
+      "title": "No product implementation coding occurs before IKG0",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Until a separate human authorization grants IKG0, work is limited to approved publication, planning, review, validation, and non-code evidence activities.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint invariants",
+        "Implementation Kickoff Package",
+        "Implementation gate model"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0574"
+        ],
+        "requirements": [
+          "DIP-REQ-0236"
+        ],
+        "gates": [
+          "DIP-GATE-0007",
+          "DIP-GATE-0008"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0086",
+      "title": "Implementation contradictions fail closed",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Affected work stops until the governing state is unambiguous; implementation convenience cannot become de facto architecture.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint invariants",
+        "Implementation Kickoff Package",
+        "Implementation gate model"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0574"
+        ],
+        "requirements": [
+          "DIP-REQ-0236"
+        ],
+        "gates": [
+          "DIP-GATE-0007",
+          "DIP-GATE-0008"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0087",
+      "title": "Gate approval cannot be self-certified by AI",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "AI contributions require independent evidence and accountable approval at the applicable gate.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint invariants",
+        "Implementation Kickoff Package",
+        "Implementation gate model"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0574"
+        ],
+        "requirements": [
+          "DIP-REQ-0236"
+        ],
+        "gates": [
+          "DIP-GATE-0007",
+          "DIP-GATE-0008"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0088",
+      "title": "Information lifecycle order is preserved",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Receive, Validate, Accept, Version, Propagate, and Observe remain distinct ordered states.",
+      "lifecycle_status": "approved_locked_recovered_summary",
+      "blueprint_destinations": [
+        "Blueprint invariants"
+      ],
+      "relationships": {
+        "gates": [
+          "DIP-GATE-0001",
+          "DIP-GATE-0002",
+          "DIP-GATE-0003"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0089",
+      "title": "Workflow hierarchy order is preserved",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Trigger, Workflow, Stage, Job, and Attempt remain distinct ordered execution identities.",
+      "lifecycle_status": "approved_locked_recovered_summary",
+      "blueprint_destinations": [
+        "Blueprint invariants"
+      ],
+      "relationships": {
+        "gates": [
+          "DIP-GATE-0001",
+          "DIP-GATE-0002",
+          "DIP-GATE-0003"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0090",
+      "title": "Semantic message families never collapse",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Domain Events, Orchestration Signals, Commands, and Outcomes remain distinct.",
+      "lifecycle_status": "approved_locked_recovered_summary",
+      "blueprint_destinations": [
+        "Blueprint invariants"
+      ],
+      "relationships": {
+        "gates": [
+          "DIP-GATE-0001",
+          "DIP-GATE-0002",
+          "DIP-GATE-0003"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0091",
+      "title": "Artifact representation classes never collapse",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Raw, Normalized, Canonical, and Derived artifacts remain distinct.",
+      "lifecycle_status": "approved_locked_recovered_summary",
+      "blueprint_destinations": [
+        "Blueprint invariants"
+      ],
+      "relationships": {
+        "gates": [
+          "DIP-GATE-0001",
+          "DIP-GATE-0002",
+          "DIP-GATE-0003"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0092",
+      "title": "Accepted authority is immutable",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Accepted authoritative records are immutable; mutable current state is revision-controlled.",
+      "lifecycle_status": "approved_locked_recovered_summary",
+      "blueprint_destinations": [
+        "Blueprint invariants"
+      ],
+      "relationships": {
+        "gates": [
+          "DIP-GATE-0001",
+          "DIP-GATE-0002",
+          "DIP-GATE-0003"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0093",
+      "title": "Every durable transition has one commit owner",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "One declared authority owns each durable state transition.",
+      "lifecycle_status": "approved_locked_recovered_summary",
+      "blueprint_destinations": [
+        "Blueprint invariants"
+      ],
+      "relationships": {
+        "gates": [
+          "DIP-GATE-0001",
+          "DIP-GATE-0002",
+          "DIP-GATE-0003"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0094",
+      "title": "Derivatives hold no exclusive authoritative fact",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "A projection, index, cache, replica, or generated view never holds the only authoritative fact.",
+      "lifecycle_status": "approved_locked_recovered_summary",
+      "blueprint_destinations": [
+        "Blueprint invariants"
+      ],
+      "relationships": {
+        "gates": [
+          "DIP-GATE-0001",
+          "DIP-GATE-0002",
+          "DIP-GATE-0003"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0095",
+      "title": "Delivery stages remain separately governed",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Source, build, release, deployment, migration, promotion, and activation remain distinct.",
+      "lifecycle_status": "approved_locked_recovered_summary",
+      "blueprint_destinations": [
+        "Blueprint invariants"
+      ],
+      "relationships": {
+        "gates": [
+          "DIP-GATE-0001",
+          "DIP-GATE-0002",
+          "DIP-GATE-0003"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0096",
+      "title": "First-domain semantics never enter Core",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "First-domain vocabulary and behavior remain in the Domain Package, not DIP Core.",
+      "lifecycle_status": "approved_locked_recovered_summary",
+      "blueprint_destinations": [
+        "Blueprint invariants"
+      ],
+      "relationships": {
+        "gates": [
+          "DIP-GATE-0001",
+          "DIP-GATE-0002",
+          "DIP-GATE-0003"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0097",
+      "title": "Real operational Workspace identities remain restricted",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Public architecture uses abstract Workspace boundaries and does not disclose real operational identities.",
+      "lifecycle_status": "approved_locked_recovered_summary",
+      "blueprint_destinations": [
+        "Blueprint invariants"
+      ],
+      "relationships": {
+        "gates": [
+          "DIP-GATE-0001",
+          "DIP-GATE-0002",
+          "DIP-GATE-0003"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0098",
+      "title": "Operational and portability Workspaces remain distinct",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "The first operational Workspace and portability Workspace are separate governed boundaries.",
+      "lifecycle_status": "approved_locked_recovered_summary",
+      "blueprint_destinations": [
+        "Blueprint invariants"
+      ],
+      "relationships": {
+        "gates": [
+          "DIP-GATE-0001",
+          "DIP-GATE-0002",
+          "DIP-GATE-0003"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0099",
+      "title": "G1 and readiness approval remain distinct",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "G1 completion does not substitute for the separate First-Domain Viability & Implementation Readiness Review.",
+      "lifecycle_status": "approved_locked_recovered_summary",
+      "blueprint_destinations": [
+        "Blueprint invariants"
+      ],
+      "relationships": {
+        "gates": [
+          "DIP-GATE-0001",
+          "DIP-GATE-0002",
+          "DIP-GATE-0003"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0100",
+      "title": "Readiness review remains distinct",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "G1 completion does not substitute for the First-Domain Viability & Implementation Readiness Review.",
+      "lifecycle_status": "approved_locked_recovered_summary",
+      "blueprint_destinations": [
+        "Architectural Foundations: validation history",
+        "Kickoff Package"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0646",
+          "DIP-DEC-0651"
+        ],
+        "requirements": [
+          "DIP-REQ-0284"
+        ],
+        "gates": [
+          "DIP-GATE-0001",
+          "DIP-GATE-0007",
+          "DIP-GATE-0008"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0101",
+      "title": "AIOP precedes implementation planning",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Implementation planning does not begin before AIOP completion and approval.",
+      "lifecycle_status": "approved_locked_recovered_summary",
+      "blueprint_destinations": [
+        "Architectural Foundations: validation history",
+        "Kickoff Package"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0650"
+        ],
+        "requirements": [
+          "DIP-REQ-0282"
+        ],
+        "gates": [
+          "DIP-GATE-0001",
+          "DIP-GATE-0007",
+          "DIP-GATE-0008"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0102",
+      "title": "Initial surface may shrink but architecture may not",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Version 1 scope discipline reduces delivery surface without reducing the governing architecture.",
+      "lifecycle_status": "approved_locked_recovered_summary",
+      "blueprint_destinations": [
+        "Architectural Foundations: validation history",
+        "Kickoff Package"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0647",
+          "DIP-DEC-0648",
+          "DIP-DEC-0651"
+        ],
+        "requirements": [
+          "DIP-REQ-0283"
+        ],
+        "gates": [
+          "DIP-GATE-0001",
+          "DIP-GATE-0007",
+          "DIP-GATE-0008"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0103",
+      "title": "Lower AI layers cannot weaken higher controls",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Domain, Workspace, Private Strategy, or task specialization cannot weaken AIOP constitutional controls.",
+      "lifecycle_status": "approved_locked_recovered_summary",
+      "blueprint_destinations": [
+        "Architectural Foundations: AI principles",
+        "Blueprint: AI governance and conformance"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0652",
+          "DIP-DEC-0653"
+        ],
+        "requirements": [
+          "DIP-REQ-0285",
+          "DIP-REQ-0286"
+        ],
+        "gates": [
+          "DIP-GATE-0001",
+          "DIP-GATE-0002",
+          "DIP-GATE-0003"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0104",
+      "title": "Prompts and confidence confer no authority",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "No prompt, retrieved content, or model confidence score grants authority.",
+      "lifecycle_status": "approved_locked_recovered_summary",
+      "blueprint_destinations": [
+        "Architectural Foundations: AI principles",
+        "Blueprint: AI governance and conformance"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0656",
+          "DIP-DEC-0660",
+          "DIP-DEC-0664"
+        ],
+        "requirements": [
+          "DIP-REQ-0287",
+          "DIP-REQ-0291",
+          "DIP-REQ-0295"
+        ],
+        "gates": [
+          "DIP-GATE-0001",
+          "DIP-GATE-0002",
+          "DIP-GATE-0003"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0105",
+      "title": "Recommendations never become Commands directly",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "A Recommendation cannot become an executable Command without a governed Decision Record and authority path.",
+      "lifecycle_status": "approved_locked_recovered_summary",
+      "blueprint_destinations": [
+        "Architectural Foundations: AI principles",
+        "Blueprint: AI governance and conformance"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0665"
+        ],
+        "requirements": [
+          "DIP-REQ-0296"
+        ],
+        "gates": [
+          "DIP-GATE-0001",
+          "DIP-GATE-0002",
+          "DIP-GATE-0003"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0106",
+      "title": "Conversation is not durable memory",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Conversation or session state cannot silently become accepted durable memory.",
+      "lifecycle_status": "approved_locked_recovered_summary",
+      "blueprint_destinations": [
+        "Architectural Foundations: AI principles",
+        "Blueprint: AI governance and conformance"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0666",
+          "DIP-DEC-0667",
+          "DIP-DEC-0668"
+        ],
+        "requirements": [
+          "DIP-REQ-0297",
+          "DIP-REQ-0298",
+          "DIP-REQ-0299"
+        ],
+        "gates": [
+          "DIP-GATE-0001",
+          "DIP-GATE-0002",
+          "DIP-GATE-0003"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0107",
+      "title": "Context cannot cross scope without authorization",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Context cannot enter or cross a governed scope without explicit authorization and provenance.",
+      "lifecycle_status": "approved_locked_recovered_summary",
+      "blueprint_destinations": [
+        "Architectural Foundations: AI principles",
+        "Blueprint: AI governance and conformance"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0669",
+          "DIP-DEC-0670",
+          "DIP-DEC-0671",
+          "DIP-DEC-0673"
+        ],
+        "requirements": [
+          "DIP-REQ-0300",
+          "DIP-REQ-0301",
+          "DIP-REQ-0302",
+          "DIP-REQ-0304"
+        ],
+        "gates": [
+          "DIP-GATE-0001",
+          "DIP-GATE-0002",
+          "DIP-GATE-0003"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0108",
+      "title": "Private Strategy remains independently protected",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Private Strategy protection cannot be reduced to Workspace membership alone.",
+      "lifecycle_status": "approved_locked_recovered_summary",
+      "blueprint_destinations": [
+        "Architectural Foundations: AI principles",
+        "Blueprint: AI governance and conformance"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0672"
+        ],
+        "requirements": [
+          "DIP-REQ-0303"
+        ],
+        "gates": [
+          "DIP-GATE-0001",
+          "DIP-GATE-0002",
+          "DIP-GATE-0003"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0109",
+      "title": "Initiative is not authority",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Observe, Analyze, Propose, or Prepare capability does not imply Execute authority.",
+      "lifecycle_status": "approved_locked_recovered_summary",
+      "blueprint_destinations": [
+        "Architectural Foundations: AI principles",
+        "Blueprint: AI governance and conformance"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0674",
+          "DIP-DEC-0675"
+        ],
+        "requirements": [
+          "DIP-REQ-0305"
+        ],
+        "gates": [
+          "DIP-GATE-0001",
+          "DIP-GATE-0002",
+          "DIP-GATE-0003"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0110",
+      "title": "Review precedes governed mutation",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Consequential governed mutation cannot bypass applicable Review Service and authority controls.",
+      "lifecycle_status": "approved_locked_recovered_summary",
+      "blueprint_destinations": [
+        "Architectural Foundations: AI principles",
+        "Blueprint: AI governance and conformance"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0676",
+          "DIP-DEC-0677"
+        ],
+        "requirements": [
+          "DIP-REQ-0306"
+        ],
+        "gates": [
+          "DIP-GATE-0001",
+          "DIP-GATE-0002",
+          "DIP-GATE-0003"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0111",
+      "title": "Interfaces do not change governance",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Changing an authorized interface cannot change the meaning, authority, review, or audit behavior of an action.",
+      "lifecycle_status": "approved_locked_recovered_summary",
+      "blueprint_destinations": [
+        "Architectural Foundations: AI principles",
+        "Blueprint: AI governance and conformance"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0680"
+        ],
+        "requirements": [
+          "DIP-REQ-0309"
+        ],
+        "gates": [
+          "DIP-GATE-0001",
+          "DIP-GATE-0002",
+          "DIP-GATE-0003"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0112",
+      "title": "Interaction status reflects actual state",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "AI interaction cannot claim approval, execution, completion, or certainty that the governed records do not support.",
+      "lifecycle_status": "approved_locked_recovered_summary",
+      "blueprint_destinations": [
+        "Architectural Foundations: AI principles",
+        "Blueprint: AI governance and conformance"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0681",
+          "DIP-DEC-0682",
+          "DIP-DEC-0683"
+        ],
+        "requirements": [
+          "DIP-REQ-0310"
+        ],
+        "gates": [
+          "DIP-GATE-0001",
+          "DIP-GATE-0002",
+          "DIP-GATE-0003"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0113",
+      "title": "Material failure is not hidden",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Protected-boundary, consequential-action, and uncertain-execution failures cannot be silently suppressed.",
+      "lifecycle_status": "approved_locked_recovered_summary",
+      "blueprint_destinations": [
+        "Architectural Foundations: AI principles",
+        "Blueprint: AI governance and conformance"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0684",
+          "DIP-DEC-0685"
+        ],
+        "requirements": [
+          "DIP-REQ-0311"
+        ],
+        "gates": [
+          "DIP-GATE-0001",
+          "DIP-GATE-0002",
+          "DIP-GATE-0003"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0114",
+      "title": "Uncertain external effects are reconciled",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "An uncertain external effect cannot be blindly retried before reconciliation.",
+      "lifecycle_status": "approved_locked_recovered_summary",
+      "blueprint_destinations": [
+        "Architectural Foundations: AI principles",
+        "Blueprint: AI governance and conformance"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0679",
+          "DIP-DEC-0685"
+        ],
+        "requirements": [
+          "DIP-REQ-0308",
+          "DIP-REQ-0311"
+        ],
+        "gates": [
+          "DIP-GATE-0001",
+          "DIP-GATE-0002",
+          "DIP-GATE-0003"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0115",
+      "title": "Learning cannot silently change governing authority",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Learning and adaptation cannot silently modify the Constitution, AIOP policy, authority, or accepted memory.",
+      "lifecycle_status": "approved_locked_recovered_summary",
+      "blueprint_destinations": [
+        "Architectural Foundations: AI principles",
+        "Blueprint: AI governance and conformance"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0686",
+          "DIP-DEC-0688"
+        ],
+        "requirements": [
+          "DIP-REQ-0311",
+          "DIP-REQ-0312"
+        ],
+        "gates": [
+          "DIP-GATE-0001",
+          "DIP-GATE-0002",
+          "DIP-GATE-0003"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0116",
+      "title": "Fallback must remain conforming and visible",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Model or provider fallback cannot occur unless the replacement deployment is qualified and the substitution is visible.",
+      "lifecycle_status": "approved_locked_recovered_summary",
+      "blueprint_destinations": [
+        "Architectural Foundations: AI principles",
+        "Blueprint: AI governance and conformance"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0685",
+          "DIP-DEC-0687"
+        ],
+        "requirements": [
+          "DIP-REQ-0311",
+          "DIP-REQ-0312"
+        ],
+        "gates": [
+          "DIP-GATE-0001",
+          "DIP-GATE-0002",
+          "DIP-GATE-0003"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0117",
+      "title": "Conformance applies to a deployment combination",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "A model alone cannot be declared globally DIP-conformant.",
+      "lifecycle_status": "approved_locked_recovered_summary",
+      "blueprint_destinations": [
+        "Architectural Foundations: AI principles",
+        "Blueprint: AI governance and conformance"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0687"
+        ],
+        "requirements": [
+          "DIP-REQ-0312"
+        ],
+        "gates": [
+          "DIP-GATE-0001",
+          "DIP-GATE-0002",
+          "DIP-GATE-0003"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0118",
+      "title": "The model is not a durable authority",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "No foundation model or provider deployment can become DIP's system of record, durable memory authority, authorization authority, or workflow authority.",
+      "lifecycle_status": "approved_locked_recovered_summary",
+      "blueprint_destinations": [
+        "Architectural Foundations: design philosophy",
+        "Blueprint: model and authority boundary"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0690",
+          "DIP-DEC-0691",
+          "DIP-DEC-0693"
+        ],
+        "requirements": [
+          "DIP-REQ-0314"
+        ],
+        "gates": [
+          "DIP-GATE-0001",
+          "DIP-GATE-0002",
+          "DIP-GATE-0003",
+          "DIP-GATE-0005"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0119",
+      "title": "Durable continuity remains outside model state",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "DIP identity, knowledge, memory, provenance, temporal state, and audit history cannot depend on continuation of a particular model session or provider.",
+      "lifecycle_status": "approved_locked_recovered_summary",
+      "blueprint_destinations": [
+        "Architectural Foundations: design philosophy",
+        "Blueprint: model and authority boundary"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0692",
+          "DIP-DEC-0694"
+        ],
+        "requirements": [
+          "DIP-REQ-0315",
+          "DIP-REQ-0318"
+        ],
+        "gates": [
+          "DIP-GATE-0001",
+          "DIP-GATE-0002",
+          "DIP-GATE-0003",
+          "DIP-GATE-0005"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0120",
+      "title": "Lower specialization cannot weaken higher governance",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Domain, Workspace, Private Strategy, or task specialization cannot silently weaken higher AIOP or DIP Core controls.",
+      "lifecycle_status": "approved_locked_recovered_summary",
+      "blueprint_destinations": [
+        "Architectural Foundations: design philosophy",
+        "Blueprint: model and authority boundary"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0697"
+        ],
+        "requirements": [
+          "DIP-REQ-0316",
+          "DIP-REQ-0317"
+        ],
+        "gates": [
+          "DIP-GATE-0001",
+          "DIP-GATE-0002",
+          "DIP-GATE-0003",
+          "DIP-GATE-0005"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0121",
+      "title": "Companion intelligence does not imply autonomous authority",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "The companion relationship cannot confer implicit authority to promote memory, approve decisions, mutate state, issue Commands, or represent a user externally.",
+      "lifecycle_status": "approved_locked_recovered_summary",
+      "blueprint_destinations": [
+        "Architectural Foundations: design philosophy",
+        "Blueprint: model and authority boundary"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0696"
+        ],
+        "requirements": [
+          "DIP-REQ-0319"
+        ],
+        "gates": [
+          "DIP-GATE-0001",
+          "DIP-GATE-0002",
+          "DIP-GATE-0003",
+          "DIP-GATE-0005"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0122",
+      "title": "Public builds never consume restricted evidence",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "No public build step may read, import, transform, or redact restricted source contents.",
+      "lifecycle_status": "approved_locked_current_capture",
+      "blueprint_destinations": [
+        "Blueprint: publication security"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0700"
+        ],
+        "requirements": [
+          "DIP-REQ-0323"
+        ],
+        "gates": [
+          "DIP-GATE-0001",
+          "DIP-GATE-0005"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0123",
+      "title": "Complete account exports never become architecture source",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Only reviewed, allowlisted DIP conversation packages may enter restricted evidence control; the complete account export may not persist in either architecture repository.",
+      "lifecycle_status": "approved_locked_current_capture",
+      "blueprint_destinations": [
+        "Blueprint: evidence intake"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0702"
+        ],
+        "requirements": [
+          "DIP-REQ-0326",
+          "DIP-REQ-0327"
+        ],
+        "gates": [
+          "DIP-GATE-0001"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0124",
+      "title": "Architecture repositories never become Private Authority or secret stores",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Neither the public nor restricted architecture repository may contain real instance state, active private configuration, or secret values, or acquire authority over them.",
+      "lifecycle_status": "approved_locked_current_capture",
+      "blueprint_destinations": [
+        "Architectural Foundations: authority boundaries",
+        "Blueprint: private authority and secrets"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0701"
+        ],
+        "requirements": [
+          "DIP-REQ-0324",
+          "DIP-REQ-0325"
+        ],
+        "gates": [
+          "DIP-GATE-0001",
+          "DIP-GATE-0005"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0125",
+      "title": "Public ADR projections neither consume restricted bodies nor reveal protected-instance existence",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "A public ADR projection shall be generated only from its explicit public inputs, shall never read the restricted ADR body, and shall neither confirm nor deny whether any real protected instance exists.",
+      "lifecycle_status": "approved_locked_current_capture",
+      "blueprint_destinations": [
+        "Blueprint: publication security",
+        "Blueprint: private authority boundary"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0704",
+          "DIP-DEC-0700"
+        ],
+        "requirements": [
+          "DIP-REQ-0329"
+        ],
+        "gates": [
+          "DIP-GATE-0001",
+          "DIP-GATE-0004",
+          "DIP-GATE-0005"
+        ]
+      }
+    },
+    {
+      "id": "DIP-INV-0126",
+      "title": "Public structured projections accept no undeclared fields",
+      "record_kind": "invariant",
+      "normalized_publication_statement": "Every public structured-register projection and every projected record shall use a closed schema shape; source-evidence, authority, restricted-location, Private Authority, and secret-bearing fields can never become valid through extension or pass-through behavior.",
+      "lifecycle_status": "approved_locked_current_capture",
+      "blueprint_destinations": [
+        "Blueprint: publication schemas",
+        "Blueprint: publication security"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0705"
+        ],
+        "requirements": [
+          "DIP-REQ-0331",
+          "DIP-REQ-0332"
+        ],
+        "gates": [
+          "DIP-GATE-0001",
+          "DIP-GATE-0004",
+          "DIP-GATE-0005"
+        ]
+      }
+    }
+  ]
+}
