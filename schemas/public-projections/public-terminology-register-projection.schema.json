@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dip.local/schemas/public-projections/public-terminology-register-projection.schema.json",
+  "title": "DIP Public Terminology Register Projection",
+  "allOf": [
+    {"$ref": "public-projection-common.schema.json#/$defs/projectionEnvelope"},
+    {
+      "type": "object",
+      "required": ["records"],
+      "properties": {
+        "projection_id": {"const": "DIP-PUBLIC-TERMINOLOGY-REGISTER"},
+        "source_register_id": {"const": "DIP-PUB-TERMINOLOGY-ALIASES"},
+        "records": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["id", "preferred_term", "aliases", "definition", "lifecycle_status", "blueprint_destinations"],
+            "properties": {
+              "id": {"type": "string", "pattern": "^DIP-TERM-[0-9]{4}$"},
+              "preferred_term": {"type": "string", "minLength": 1},
+              "aliases": {"$ref": "public-projection-common.schema.json#/$defs/stringArray"},
+              "definition": {"type": "string", "minLength": 1},
+              "lifecycle_status": {"type": "string", "minLength": 1},
+              "blueprint_destinations": {"$ref": "public-projection-common.schema.json#/$defs/stringArray"}
+            }
+          }
+        }
+      }
+    }
+  ],
+  "unevaluatedProperties": false
+}
