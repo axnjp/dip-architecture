@@ -1,0 +1,2875 @@
+{
+  "projection_id": "DIP-PUBLIC-TERMINOLOGY-REGISTER",
+  "projection_version": "0.1.0-candidate",
+  "schema_version": "0.1.0-draft",
+  "classification": "Public Reference Architecture",
+  "source_register_id": "DIP-PUB-TERMINOLOGY-ALIASES",
+  "source_revision": null,
+  "status": "approved_public_projection",
+  "disclosure_review": {
+    "semantic_review_status": "passed",
+    "prohibited_field_scan": "passed",
+    "private_instance_non_disclosure": "passed",
+    "secret_scan": "passed",
+    "reviewed_revision": null
+  },
+  "records": [
+    {
+      "id": "DIP-TERM-0001",
+      "preferred_term": "Domain Intelligence Platform",
+      "aliases": [
+        "DIP"
+      ],
+      "definition": "The governed platform that supplies durable knowledge, workflow, review, authority, strategy, explainability, and auditability around replaceable reasoning models.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Foundations glossary",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0002",
+      "preferred_term": "DIP Core",
+      "aliases": [
+        "Core"
+      ],
+      "definition": "Domain-agnostic platform capabilities and contracts beneath Domain Packages.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint platform hierarchy"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0003",
+      "preferred_term": "Domain Package",
+      "aliases": [],
+      "definition": "A portable domain-specific capability package operating on DIP Core contracts.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint platform hierarchy",
+        "Blueprint extension model"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0004",
+      "preferred_term": "Workspace",
+      "aliases": [],
+      "definition": "A governed operating context within a Domain Package. Real instances, identifiers, memberships, and bindings belong to Private Authority.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint Workspace model"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0005",
+      "preferred_term": "Private Strategy",
+      "aliases": [],
+      "definition": "An abstract platform capability for governed private strategic context beneath a Workspace; public material must not reveal whether any real instance exists.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint Private Strategy model",
+        "Security classification guidance"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0006",
+      "preferred_term": "Foundation Model",
+      "aliases": [
+        "Reasoning model"
+      ],
+      "definition": "A replaceable model provider or model used beneath the AI Operating Profile.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Foundations companion model",
+        "Blueprint AI portability"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0007",
+      "preferred_term": "AI Operating Profile",
+      "aliases": [
+        "AIOP"
+      ],
+      "definition": "The provider-neutral constitutional behavior expected of any AI interacting with DIP.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint AI governance"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0008",
+      "preferred_term": "Governed Companion Intelligence Operating System",
+      "aliases": [
+        "companion intelligence operating system"
+      ],
+      "definition": "The approved framing of DIP as the governed operating environment around replaceable AI reasoning.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Architectural Foundations"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0009",
+      "preferred_term": "Review Service",
+      "aliases": [],
+      "definition": "The common governance and review authority presented consistently through authorized interfaces.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint review and authority"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0010",
+      "preferred_term": "Operations Page",
+      "aliases": [
+        "DIP Operations Page"
+      ],
+      "definition": "A minimal operational interface that is a peer to ChatGPT at the Review Service boundary.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint interfaces"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0011",
+      "preferred_term": "Artifact",
+      "aliases": [],
+      "definition": "A stable governed information identity with one or more immutable versions.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint artifact model"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0012",
+      "preferred_term": "Artifact Version",
+      "aliases": [],
+      "definition": "An immutable version of an Artifact, addressable independently from its stable Artifact identity.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint artifact model"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0013",
+      "preferred_term": "Raw Artifact",
+      "aliases": [
+        "Raw"
+      ],
+      "definition": "An artifact class representing received source material before normalization or canonical acceptance.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint artifact taxonomy"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0014",
+      "preferred_term": "Normalized Artifact",
+      "aliases": [
+        "Normalized"
+      ],
+      "definition": "An artifact class transformed into governed structural form without yet becoming the canonical representation.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint artifact taxonomy"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0015",
+      "preferred_term": "Canonical Artifact",
+      "aliases": [
+        "Canonical"
+      ],
+      "definition": "An accepted authoritative representation within its declared authority and scope.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint artifact taxonomy"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0016",
+      "preferred_term": "Derived Artifact",
+      "aliases": [
+        "Derived"
+      ],
+      "definition": "An artifact produced from one or more exact input versions through declared lineage.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint artifact taxonomy"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0017",
+      "preferred_term": "Trigger",
+      "aliases": [],
+      "definition": "The initiating record in the durable execution hierarchy.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint workflow model"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0018",
+      "preferred_term": "Workflow",
+      "aliases": [],
+      "definition": "A governed execution instance initiated by a Trigger and decomposed into Stages.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint workflow model"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0019",
+      "preferred_term": "Stage",
+      "aliases": [],
+      "definition": "A durable phase of a Workflow containing one or more Jobs.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint workflow model"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0020",
+      "preferred_term": "Job",
+      "aliases": [],
+      "definition": "A durable executable unit within a Stage, realized through one or more Attempts.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint workflow model"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0021",
+      "preferred_term": "Attempt",
+      "aliases": [],
+      "definition": "A single execution attempt for a Job, retaining retries and outcomes without overwriting history.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint workflow model"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0022",
+      "preferred_term": "Recommendation",
+      "aliases": [],
+      "definition": "A governed advisory output that cannot itself authorize mutation.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint decision lifecycle"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0023",
+      "preferred_term": "Decision Record",
+      "aliases": [],
+      "definition": "The explicit governed record of a human or authorized decision regarding a Recommendation.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint decision lifecycle"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0024",
+      "preferred_term": "Command",
+      "aliases": [],
+      "definition": "An authorized instruction created only after applicable review and decision requirements are satisfied.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint decision lifecycle"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0025",
+      "preferred_term": "Outcome",
+      "aliases": [],
+      "definition": "The recorded result of executing or attempting an authorized Command.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint decision lifecycle"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0026",
+      "preferred_term": "Public Reference Architecture",
+      "aliases": [],
+      "definition": "Architecture content intentionally approved for public publication and safe for an explicit public-source allowlist.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Publication classification policy"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0027",
+      "preferred_term": "Restricted Architecture",
+      "aliases": [],
+      "definition": "Non-public architectural detail retained in a separately authenticated location outside the public repository.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Publication classification policy"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0028",
+      "preferred_term": "Private Authority",
+      "aliases": [],
+      "definition": "The authority plane owning real Workspace and Private Strategy instances, memberships, bindings, identifiers, and active private configuration.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint authority model",
+        "Publication classification policy"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0029",
+      "preferred_term": "Secrets",
+      "aliases": [
+        "Secret values"
+      ],
+      "definition": "Sensitive values that must never appear in documentation, repositories, prompts, logs, fixtures, generated files, or archives.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Publication classification policy",
+        "Blueprint security"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0030",
+      "preferred_term": "Minimum Operating Profile",
+      "aliases": [
+        "MOP"
+      ],
+      "definition": "The minimum coherent capability profile approved for an operational DIP deployment.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint operating profile",
+        "Kickoff Package"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0031",
+      "preferred_term": "Publication Gate",
+      "aliases": [
+        "PG"
+      ],
+      "definition": "An evidence-dependent control gate for a publication phase; planning completion alone does not pass the gate.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Publication gate register"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0032",
+      "preferred_term": "Implementation Kickoff Gate 0",
+      "aliases": [
+        "IKG0",
+        "Implementation Authorized"
+      ],
+      "definition": "The separate human authorization boundary that permits DIP product implementation coding only after its approved publication, release, pinning, location, and authority prerequisites are satisfied.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Kickoff Package",
+        "Publication control front matter"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0033",
+      "preferred_term": "Architecture Decision Record",
+      "aliases": [
+        "ADR"
+      ],
+      "definition": "A durable record for a decision that warrants formal architectural rationale and consequences; not every approved decision is retroactively converted into an ADR.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "ADR collection",
+        "Decision Register"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0034",
+      "preferred_term": "Unit of Work",
+      "aliases": [
+        "UoW"
+      ],
+      "definition": "The application-owned transaction boundary for one command or workflow transition.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: transactions",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0035",
+      "preferred_term": "Port",
+      "aliases": [],
+      "definition": "An application- or Core-owned contract through which external capability is requested without depending on infrastructure.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: application services",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0036",
+      "preferred_term": "Adapter",
+      "aliases": [],
+      "definition": "An infrastructure implementation of a Port, including connector, persistence, model, interface, and external-effect adapters.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: application services",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0037",
+      "preferred_term": "Execution Context",
+      "aliases": [],
+      "definition": "An immutable compiled execution scope carrying actor, Workspace, applicable Private Strategy, authority, causation, and pinned configuration and capability versions.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: workflow execution",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0038",
+      "preferred_term": "Capability Manifest",
+      "aliases": [],
+      "definition": "A versioned Domain Package declaration of supported analyzers, workflows, schemas, review kinds, connector mappings, and commands.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: Domain Packages",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0039",
+      "preferred_term": "Source System",
+      "aliases": [],
+      "definition": "An external provider or system from which DIP acquires information or to which an authorized effect may be directed.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: acquisition",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0040",
+      "preferred_term": "Source Connection",
+      "aliases": [],
+      "definition": "A governed configuration and authority binding between DIP and a Source System.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: acquisition",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0041",
+      "preferred_term": "Connector",
+      "aliases": [],
+      "definition": "A provider-facing adapter that retrieves or transmits provider-native information without owning domain normalization or governance decisions.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: connectors",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0042",
+      "preferred_term": "Connector Capability",
+      "aliases": [],
+      "definition": "A separately registered read or write capability exposed by a Connector with explicit scope and authorization.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: connectors",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0043",
+      "preferred_term": "Acquisition Request",
+      "aliases": [],
+      "definition": "A durable request to obtain observations from one Source Connection under declared scope, freshness, and authority.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: acquisition",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0044",
+      "preferred_term": "Acquisition Session",
+      "aliases": [],
+      "definition": "A durable grouping of related acquisition work across endpoints, with completeness and coherence metadata.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: acquisition",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0045",
+      "preferred_term": "Receipt",
+      "aliases": [],
+      "definition": "The durable record of one source observation, including provenance and payload identity, created even when payload bytes deduplicate.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: acquisition",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0046",
+      "preferred_term": "External Target",
+      "aliases": [],
+      "definition": "The provider-side object or endpoint addressed by an authorized external Command.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: external effects",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0047",
+      "preferred_term": "Source Cursor",
+      "aliases": [
+        "Cursor"
+      ],
+      "definition": "A provider-relative incremental-acquisition position advanced only after supporting raw evidence is durably stored.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: acquisition",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0048",
+      "preferred_term": "Transactional Outbox",
+      "aliases": [
+        "Outbox"
+      ],
+      "definition": "A durable event-publication pattern that records state change and pending event in the same Unit of Work.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: workflow execution",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0049",
+      "preferred_term": "Fencing Token",
+      "aliases": [],
+      "definition": "A monotonically ordered claim token used to prevent a stale worker or lease holder from committing later execution state.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: concurrency",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0050",
+      "preferred_term": "Idempotency",
+      "aliases": [],
+      "definition": "The property that repeated delivery or invocation produces no additional authoritative effect beyond the intended single logical operation.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: reliability",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0051",
+      "preferred_term": "MCP Resource",
+      "aliases": [],
+      "definition": "A stable read-oriented MCP representation of governed DIP context.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: MCP",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0052",
+      "preferred_term": "MCP Tool",
+      "aliases": [],
+      "definition": "A parameterized MCP operation routed through governed application commands or queries under explicit effect classification.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: MCP",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0053",
+      "preferred_term": "AI Execution Plan",
+      "aliases": [],
+      "definition": "The governed plan defining one AI task, its policy, inputs, budgets, model profile, and required outputs.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: governed AI execution",
+        "Blueprint: model gateway and context",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0054",
+      "preferred_term": "Context Manifest",
+      "aliases": [],
+      "definition": "An immutable record of the exact governed context assembled for one AI execution.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: governed AI execution",
+        "Blueprint: model gateway and context",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0055",
+      "preferred_term": "Prompt Package",
+      "aliases": [],
+      "definition": "A versioned governed artifact containing the task-specific instructions and output contract supplied through the Model Gateway.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: governed AI execution",
+        "Blueprint: model gateway and context",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0056",
+      "preferred_term": "Model Invocation",
+      "aliases": [],
+      "definition": "The durable record of one request submitted to a qualified model deployment.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: governed AI execution",
+        "Blueprint: model gateway and context",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0057",
+      "preferred_term": "Model Result",
+      "aliases": [],
+      "definition": "The provider result received for one Model Invocation before local acceptance decisions.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: governed AI execution",
+        "Blueprint: model gateway and context",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0058",
+      "preferred_term": "AI Output Candidate",
+      "aliases": [],
+      "definition": "A structured model-produced candidate awaiting local validation, conformance evaluation, and artifact acceptance.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: governed AI execution",
+        "Blueprint: model gateway and context",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0059",
+      "preferred_term": "Conformance Result",
+      "aliases": [],
+      "definition": "The durable outcome of evaluating an AI execution or deployment against applicable AIOP and task requirements.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: governed AI execution",
+        "Blueprint: model gateway and context",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0060",
+      "preferred_term": "Model Gateway",
+      "aliases": [],
+      "definition": "The provider-neutral application boundary through which DIP invokes qualified model deployments.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: governed AI execution",
+        "Blueprint: model gateway and context",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0061",
+      "preferred_term": "Model Profile",
+      "aliases": [],
+      "definition": "A logical governed selector for a qualified model deployment, routing rules, budgets, and provider configuration.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: governed AI execution",
+        "Blueprint: model gateway and context",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0062",
+      "preferred_term": "AI Tool Broker",
+      "aliases": [],
+      "definition": "The governed application boundary exposing allowlisted query capabilities to models without direct infrastructure access.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: governed AI execution",
+        "Blueprint: model gateway and context",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0063",
+      "preferred_term": "Model Deployment Configuration",
+      "aliases": [
+        "Model deployment"
+      ],
+      "definition": "The complete provider, model, parameters, policy, and adapter configuration qualified for a declared task.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: governed AI execution",
+        "Blueprint: model gateway and context",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0064",
+      "preferred_term": "Review Item",
+      "aliases": [],
+      "definition": "A domain-neutral review record that binds one exact immutable proposal version, authority scope, state, and allowable actions.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: Review Service",
+        "Blueprint: API and Operations Page",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0065",
+      "preferred_term": "Review Inbox",
+      "aliases": [],
+      "definition": "A scoped projection of Review Items for an authorized review purpose or information boundary.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: Review Service",
+        "Blueprint: API and Operations Page",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0066",
+      "preferred_term": "Proposal Version",
+      "aliases": [],
+      "definition": "An immutable version of content offered for governed review.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: Review Service",
+        "Blueprint: API and Operations Page",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0067",
+      "preferred_term": "Review Revision",
+      "aliases": [],
+      "definition": "A new Proposal Version that supersedes earlier reviewed content without mutating its history.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: Review Service",
+        "Blueprint: API and Operations Page",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0068",
+      "preferred_term": "Review Batch",
+      "aliases": [
+        "Batch identity"
+      ],
+      "definition": "A grouping identity for individually authorized review decisions performed through one bulk interaction.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: Review Service",
+        "Blueprint: API and Operations Page",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0069",
+      "preferred_term": "Deep Link",
+      "aliases": [],
+      "definition": "A stable navigation reference to an authorized interface resource that carries no authorization credential.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: Review Service",
+        "Blueprint: API and Operations Page",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0070",
+      "preferred_term": "Person",
+      "aliases": [],
+      "definition": "A human identity independent from authentication mechanism, runtime principal, or executing actor.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: identity and authorization",
+        "Blueprint: security and isolation",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0071",
+      "preferred_term": "Principal",
+      "aliases": [],
+      "definition": "An authenticated security identity evaluated for access and policy decisions.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: identity and authorization",
+        "Blueprint: security and isolation",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0072",
+      "preferred_term": "Actor",
+      "aliases": [],
+      "definition": "The identity attributed to a governed action, preserving both human initiator and executing mechanism where applicable.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: identity and authorization",
+        "Blueprint: security and isolation",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0073",
+      "preferred_term": "Interface Client",
+      "aliases": [],
+      "definition": "The authorized client application or interface through which a Principal invokes DIP.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: identity and authorization",
+        "Blueprint: security and isolation",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0074",
+      "preferred_term": "Membership",
+      "aliases": [],
+      "definition": "A governed association between a Person or Principal and a Workspace or other authority scope.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: identity and authorization",
+        "Blueprint: security and isolation",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0075",
+      "preferred_term": "Grant",
+      "aliases": [],
+      "definition": "An explicit authorization assignment permitting declared actions over declared resources and scope.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: identity and authorization",
+        "Blueprint: security and isolation",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0076",
+      "preferred_term": "Delegation",
+      "aliases": [],
+      "definition": "A governed transfer of bounded authority from one authorized identity to another.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: identity and authorization",
+        "Blueprint: security and isolation",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0077",
+      "preferred_term": "Workload Identity",
+      "aliases": [],
+      "definition": "A non-human identity assigned to a scheduler, worker, migration, backup, or other runtime workload.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: identity and authorization",
+        "Blueprint: security and isolation",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0078",
+      "preferred_term": "OpenID Connect",
+      "aliases": [
+        "OIDC"
+      ],
+      "definition": "The external identity protocol selected for human authentication using Authorization Code with PKCE.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: identity and authorization",
+        "Blueprint: security and isolation",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0079",
+      "preferred_term": "Browser Session",
+      "aliases": [],
+      "definition": "An opaque server-side authenticated session referenced by secure browser cookies.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: identity and authorization",
+        "Blueprint: security and isolation",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0080",
+      "preferred_term": "Row-Level Security",
+      "aliases": [
+        "RLS"
+      ],
+      "definition": "PostgreSQL policy enforcement used as defense in depth for production scope-sensitive tables.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: identity and authorization",
+        "Blueprint: security and isolation",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0081",
+      "preferred_term": "Security Audit",
+      "aliases": [],
+      "definition": "The append-oriented, content-minimized security record stream distinct from diagnostic logs and domain events.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: identity and authorization",
+        "Blueprint: security and isolation",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0082",
+      "preferred_term": "Break-glass Access",
+      "aliases": [],
+      "definition": "A temporary, exceptional, explicitly audited emergency-authority workflow.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: identity and authorization",
+        "Blueprint: security and isolation",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0083",
+      "preferred_term": "Data-Encryption Key",
+      "aliases": [
+        "DEK"
+      ],
+      "definition": "A key used to encrypt restricted payload data within a declared security realm.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: identity and authorization",
+        "Blueprint: security and isolation",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0084",
+      "preferred_term": "Security Realm",
+      "aliases": [],
+      "definition": "A cryptographic and authorization boundary within which keys and restricted-content deduplication are scoped.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: identity and authorization",
+        "Blueprint: security and isolation",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0085",
+      "preferred_term": "Step-up Authentication",
+      "aliases": [],
+      "definition": "A requirement for recent or stronger authentication before a high-risk action.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: identity and authorization",
+        "Blueprint: security and isolation",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0086",
+      "preferred_term": "OWASP Application Security Verification Standard",
+      "aliases": [
+        "OWASP ASVS",
+        "ASVS"
+      ],
+      "definition": "The application-security verification baseline for which the production application targets the current Level 2 posture.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: identity and authorization",
+        "Blueprint: security and isolation",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0087",
+      "preferred_term": "Test Layer",
+      "aliases": [],
+      "definition": "A distinct level of verification with declared scope, dependencies, speed, and failure-detection purpose.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: testing and conformance",
+        "Blueprint: observability and reliability",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0088",
+      "preferred_term": "Contract Test",
+      "aliases": [],
+      "definition": "An executable verification that an implementation conforms to an authoritative schema, Port, or shared semantic contract.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: testing and conformance",
+        "Blueprint: observability and reliability",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0089",
+      "preferred_term": "Property-Based Test",
+      "aliases": [],
+      "definition": "A test that generates input cases to verify invariants across a broad state space.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: testing and conformance",
+        "Blueprint: observability and reliability",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0090",
+      "preferred_term": "Operational Conformance",
+      "aliases": [],
+      "definition": "A scheduled or on-demand governed Workflow that evaluates operational state against approved architecture and policy.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: testing and conformance",
+        "Blueprint: observability and reliability",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0091",
+      "preferred_term": "Conformance Report",
+      "aliases": [],
+      "definition": "A versioned evidence-bearing result of a conformance evaluation, including severity and activation implications.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: testing and conformance",
+        "Blueprint: observability and reliability",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0092",
+      "preferred_term": "Structured Log",
+      "aliases": [],
+      "definition": "A typed telemetry event emitted with controlled fields rather than free-form private content.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: testing and conformance",
+        "Blueprint: observability and reliability",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0093",
+      "preferred_term": "Metric",
+      "aliases": [],
+      "definition": "A bounded numeric telemetry series whose labels exclude high-cardinality domain and security identities.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: testing and conformance",
+        "Blueprint: observability and reliability",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0094",
+      "preferred_term": "Trace",
+      "aliases": [],
+      "definition": "A correlated telemetry representation of work across interfaces, workflows, adapters, models, and messaging boundaries.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: testing and conformance",
+        "Blueprint: observability and reliability",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0095",
+      "preferred_term": "Correlation Identifier",
+      "aliases": [
+        "Correlation ID"
+      ],
+      "definition": "A propagated identifier linking related operational activity without becoming authoritative domain identity.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: testing and conformance",
+        "Blueprint: observability and reliability",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0096",
+      "preferred_term": "Liveness",
+      "aliases": [],
+      "definition": "Whether a process is running sufficiently to be restarted or supervised.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: testing and conformance",
+        "Blueprint: observability and reliability",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0097",
+      "preferred_term": "Readiness",
+      "aliases": [],
+      "definition": "Whether a process is prepared to receive its declared work safely.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: testing and conformance",
+        "Blueprint: observability and reliability",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0098",
+      "preferred_term": "Dependency Health",
+      "aliases": [],
+      "definition": "The operational availability and fitness of a required external dependency.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: testing and conformance",
+        "Blueprint: observability and reliability",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0099",
+      "preferred_term": "Product Freshness",
+      "aliases": [],
+      "definition": "Whether governed information is sufficiently current for its declared product use.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: testing and conformance",
+        "Blueprint: observability and reliability",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0100",
+      "preferred_term": "Quarantine State",
+      "aliases": [],
+      "definition": "A visible terminal holding state for irrecoverable or unsafe work requiring explicit operator action.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: testing and conformance",
+        "Blueprint: observability and reliability",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0101",
+      "preferred_term": "Circuit Breaker",
+      "aliases": [],
+      "definition": "A dependency- or capability-scoped control that stops repeated unsafe calls after qualifying failures.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: testing and conformance",
+        "Blueprint: observability and reliability",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0102",
+      "preferred_term": "Backpressure",
+      "aliases": [],
+      "definition": "A bounded control that slows or rejects incoming work when safe processing capacity is exhausted.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: testing and conformance",
+        "Blueprint: observability and reliability",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0103",
+      "preferred_term": "Service Objective",
+      "aliases": [
+        "SLO"
+      ],
+      "definition": "A measurable operational objective for availability, correctness, freshness, isolation, or recovery.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: testing and conformance",
+        "Blueprint: observability and reliability",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0104",
+      "preferred_term": "Incident Runbook",
+      "aliases": [],
+      "definition": "An operator procedure for identifying, containing, recovering from, and documenting a declared incident class.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: testing and conformance",
+        "Blueprint: observability and reliability",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0105",
+      "preferred_term": "OCI Image",
+      "aliases": [
+        "Container image"
+      ],
+      "definition": "The immutable container artifact used to package the production application.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: deployment and release",
+        "Blueprint: backup and production operations",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0106",
+      "preferred_term": "Image Digest",
+      "aliases": [],
+      "definition": "The content-derived immutable identity of a specific OCI Image.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: deployment and release",
+        "Blueprint: backup and production operations",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0107",
+      "preferred_term": "Deployment Manifest",
+      "aliases": [],
+      "definition": "An immutable record binding a deployment to image, release, configuration, migration, environment, and approval identity.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: deployment and release",
+        "Blueprint: backup and production operations",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0108",
+      "preferred_term": "Semantic Version",
+      "aliases": [
+        "SemVer"
+      ],
+      "definition": "The approved version identity format for application releases and immutable release tags.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: deployment and release",
+        "Blueprint: backup and production operations",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0109",
+      "preferred_term": "Activation",
+      "aliases": [],
+      "definition": "The governed action that makes a deployed capability, model, AIOP, configuration, or external effect available for use.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: deployment and release",
+        "Blueprint: backup and production operations",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0110",
+      "preferred_term": "Point-in-Time Recovery",
+      "aliases": [
+        "PITR"
+      ],
+      "definition": "Database recovery to a selected recent point using retained transaction history.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: deployment and release",
+        "Blueprint: backup and production operations",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0111",
+      "preferred_term": "Recovery Point Objective",
+      "aliases": [
+        "RPO"
+      ],
+      "definition": "The maximum acceptable amount of data loss measured backward from an incident.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: deployment and release",
+        "Blueprint: backup and production operations",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0112",
+      "preferred_term": "Recovery Time Objective",
+      "aliases": [
+        "RTO"
+      ],
+      "definition": "The target elapsed time to restore an acceptable operational service after an incident.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: deployment and release",
+        "Blueprint: backup and production operations",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0113",
+      "preferred_term": "Recovery Exercise",
+      "aliases": [],
+      "definition": "A rehearsed restoration of database, payload, key, configuration, and operational state in an isolated environment.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: deployment and release",
+        "Blueprint: backup and production operations",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0114",
+      "preferred_term": "Retention Class",
+      "aliases": [],
+      "definition": "A governed policy assigning information a retention duration, backup behavior, and deletion conditions.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: deployment and release",
+        "Blueprint: backup and production operations",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0115",
+      "preferred_term": "Build Gate",
+      "aliases": [],
+      "definition": "An evidence-dependent implementation-sequence gate, distinct from a Publication Gate and never passed by planning alone.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: first vertical slice",
+        "Blueprint: implementation sequence and gates",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0116",
+      "preferred_term": "Vertical Slice",
+      "aliases": [],
+      "definition": "A narrow end-to-end implementation that exercises the applicable governing architecture through a coherent user-visible outcome.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: first vertical slice",
+        "Blueprint: implementation sequence and gates",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0117",
+      "preferred_term": "Production Readiness Assessment",
+      "aliases": [],
+      "definition": "The formal evidence review and Decision Record required before production launch.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: deployment and release",
+        "Blueprint: backup and production operations",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0118",
+      "preferred_term": "Market Intelligence Qualification",
+      "aliases": [
+        "Market-intelligence gate"
+      ],
+      "definition": "The evidence threshold required before value-dependent recommendations may be activated.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: first vertical slice",
+        "Blueprint: implementation sequence and gates",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0119",
+      "preferred_term": "Modular Monorepo",
+      "aliases": [],
+      "definition": "A single implementation repository with explicit package, application, authority, and dependency boundaries.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: repository and package boundaries",
+        "Blueprint: dependency and contract foundation",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0120",
+      "preferred_term": "Composition Root",
+      "aliases": [],
+      "definition": "An application entry point that assembles dependencies and capabilities without owning reusable canonical logic.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: repository and package boundaries",
+        "Blueprint: dependency and contract foundation",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0121",
+      "preferred_term": "Public-Reproducible Source of Truth",
+      "aliases": [
+        "Public Reference Edition"
+      ],
+      "definition": "The public engineering source set sufficient to reproduce the platform without containing real private authority or secrets.",
+      "lifecycle_status": "approved_locked_refined",
+      "blueprint_destinations": [
+        "Blueprint: repository and package boundaries",
+        "Blueprint: dependency and contract foundation",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0122",
+      "preferred_term": "Private-Authoritative Source",
+      "aliases": [],
+      "definition": "An external governed source holding real Workspace or Private Strategy authority outside the public repository.",
+      "lifecycle_status": "approved_locked_refined",
+      "blueprint_destinations": [
+        "Blueprint: repository and package boundaries",
+        "Blueprint: dependency and contract foundation",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0123",
+      "preferred_term": "Generated File",
+      "aliases": [],
+      "definition": "A reproducible derivative created from an authoritative source and subject to drift verification.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: repository and package boundaries",
+        "Blueprint: dependency and contract foundation",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0124",
+      "preferred_term": "Schema Registry",
+      "aliases": [],
+      "definition": "The governed catalog of authoritative schema identities, versions, compatibility, and resolution metadata.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: runtime and technology baseline",
+        "Blueprint: engineering foundation",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0125",
+      "preferred_term": "CPython",
+      "aliases": [],
+      "definition": "The selected primary Python implementation and runtime family for DIP.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: runtime and technology baseline",
+        "Blueprint: engineering foundation",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0126",
+      "preferred_term": "Python Workspace",
+      "aliases": [
+        "uv workspace"
+      ],
+      "definition": "The reproducible multi-package Python project governed from a virtual repository root and committed lockfile.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: runtime and technology baseline",
+        "Blueprint: engineering foundation",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0127",
+      "preferred_term": "Lockfile",
+      "aliases": [],
+      "definition": "The committed dependency-resolution record used to reproduce an approved package environment.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: runtime and technology baseline",
+        "Blueprint: engineering foundation",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0128",
+      "preferred_term": "Boundary Model",
+      "aliases": [],
+      "definition": "A validated representation used at a system edge without becoming canonical domain authority.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: runtime and technology baseline",
+        "Blueprint: engineering foundation",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0129",
+      "preferred_term": "Domain Model",
+      "aliases": [],
+      "definition": "A framework-independent representation of Core or domain behavior, identity, and invariants.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: runtime and technology baseline",
+        "Blueprint: engineering foundation",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0130",
+      "preferred_term": "System of Record",
+      "aliases": [],
+      "definition": "The persistence authority that governs accepted transactional state for a declared scope.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: persistence and artifacts",
+        "Blueprint: transactions and workflow records",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0131",
+      "preferred_term": "UUIDv7",
+      "aliases": [],
+      "definition": "The time-ordered UUID format selected for new DIP-generated internal identities.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: persistence and artifacts",
+        "Blueprint: transactions and workflow records",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0132",
+      "preferred_term": "Stable Identity",
+      "aliases": [],
+      "definition": "The persistent identity of a governed entity across its immutable versions.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: persistence and artifacts",
+        "Blueprint: transactions and workflow records",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0133",
+      "preferred_term": "Version Identity",
+      "aliases": [],
+      "definition": "The immutable identity of one exact accepted version of a governed entity or artifact.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: persistence and artifacts",
+        "Blueprint: transactions and workflow records",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0134",
+      "preferred_term": "Recorded Time",
+      "aliases": [
+        "recorded_at"
+      ],
+      "definition": "The time at which DIP durably recorded a fact or record.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: persistence and artifacts",
+        "Blueprint: transactions and workflow records",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0135",
+      "preferred_term": "Observed Time",
+      "aliases": [
+        "observed_at"
+      ],
+      "definition": "The time at which a source observation was made or claimed.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: persistence and artifacts",
+        "Blueprint: transactions and workflow records",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0136",
+      "preferred_term": "Effective Time",
+      "aliases": [
+        "effective_from",
+        "effective_to"
+      ],
+      "definition": "The domain interval during which a fact applies.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: persistence and artifacts",
+        "Blueprint: transactions and workflow records",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0137",
+      "preferred_term": "Accepted Time",
+      "aliases": [
+        "accepted_at"
+      ],
+      "definition": "The time at which a governed version became accepted authority.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: persistence and artifacts",
+        "Blueprint: transactions and workflow records",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0138",
+      "preferred_term": "Event Ledger",
+      "aliases": [],
+      "definition": "The append-only transition-evidence record that does not require full event-sourced state reconstruction.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: persistence and artifacts",
+        "Blueprint: transactions and workflow records",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0139",
+      "preferred_term": "Projection",
+      "aliases": [],
+      "definition": "A rebuildable read or interaction model derived from authoritative records.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: persistence and artifacts",
+        "Blueprint: transactions and workflow records",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0140",
+      "preferred_term": "Payload Store",
+      "aliases": [],
+      "definition": "The storage abstraction for large or binary immutable payload objects referenced by governed records.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: persistence and artifacts",
+        "Blueprint: transactions and workflow records",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0141",
+      "preferred_term": "Content Address",
+      "aliases": [],
+      "definition": "A digest-derived payload locator used for integrity and deduplication without becoming artifact identity.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: persistence and artifacts",
+        "Blueprint: transactions and workflow records",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0142",
+      "preferred_term": "Orphan Payload",
+      "aliases": [],
+      "definition": "A stored payload object that has no authoritative accepted database reference and may be safely reclaimed.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: persistence and artifacts",
+        "Blueprint: transactions and workflow records",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0143",
+      "preferred_term": "Authority Graph",
+      "aliases": [],
+      "definition": "The explicit model of configuration ownership, override permission, combination, and capability ceilings across authority planes.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: configuration authority",
+        "Blueprint: secrets and private authority",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0144",
+      "preferred_term": "Authority Registry",
+      "aliases": [],
+      "definition": "The machine-readable definition of field ownership and permitted configuration combination behavior.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: configuration authority",
+        "Blueprint: secrets and private authority",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0145",
+      "preferred_term": "Configuration Bundle",
+      "aliases": [
+        "Effective bundle"
+      ],
+      "definition": "A compiled, canonical, fingerprinted configuration result produced from governed source documents.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: configuration authority",
+        "Blueprint: secrets and private authority",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0146",
+      "preferred_term": "Configuration Activation",
+      "aliases": [
+        "Activation record"
+      ],
+      "definition": "The governed historical record that makes one compiled Configuration Bundle active for declared scope.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: configuration authority",
+        "Blueprint: secrets and private authority",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0147",
+      "preferred_term": "Semantic Digest",
+      "aliases": [],
+      "definition": "A deterministic fingerprint of the canonical semantic content of a compiled configuration bundle.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: configuration authority",
+        "Blueprint: secrets and private authority",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0148",
+      "preferred_term": "Combination Strategy",
+      "aliases": [],
+      "definition": "The declared rule for replacing, restricting, deleting, or otherwise combining a specific configuration field.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: configuration authority",
+        "Blueprint: secrets and private authority",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0149",
+      "preferred_term": "Secret Reference",
+      "aliases": [],
+      "definition": "A typed non-secret identifier that allows an approved resolver to obtain secret material at a capability boundary.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: configuration authority",
+        "Blueprint: secrets and private authority",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0150",
+      "preferred_term": "Secret Resolver",
+      "aliases": [],
+      "definition": "A dedicated infrastructure adapter that resolves a Secret Reference without placing secret values into authoritative configuration.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint: configuration authority",
+        "Blueprint: secrets and private authority",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0151",
+      "preferred_term": "Dynasty Intelligence Platform",
+      "aliases": [],
+      "definition": "The earlier dynasty-specific name and framing retained only where historically meaningful; Domain Intelligence Platform is the current canonical name.",
+      "lifecycle_status": "historical",
+      "blueprint_destinations": [
+        "Architectural Foundations history",
+        "Terminology history"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0152",
+      "preferred_term": "First-Domain Viability & Implementation Readiness Review",
+      "aliases": [
+        "Viability and Readiness Review"
+      ],
+      "definition": "The canonical current name for the approved review covering the minimum viable profile, costs, vendor categories, runtime posture, scope, and readiness gates.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Architectural Foundations validation history",
+        "Blueprint terminology"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0153",
+      "preferred_term": "Publication Evidence Hierarchy",
+      "aliases": [
+        "E1–E5 Evidence Hierarchy"
+      ],
+      "definition": "The approved ordering that distinguishes accepted or approved authority, explicit approval pairs, authoritative summaries, historical discussion, and prohibited inference.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Publication evidence controls",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0154",
+      "preferred_term": "Approved Source Statement",
+      "aliases": [],
+      "definition": "The retained original decision language or faithful proposal-and-approval pair supporting a normalized publication record.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Publication normalization policy",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0155",
+      "preferred_term": "Normalized Architectural Statement",
+      "aliases": [
+        "Normalized Publication Statement"
+      ],
+      "definition": "Concise publication-ready architectural wording that preserves the meaning, force, lifecycle, activation, and scope of its approved source statement.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Publication normalization policy",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0156",
+      "preferred_term": "Normative Inventory",
+      "aliases": [],
+      "definition": "The publication inventory containing only statements whose approval authority is demonstrable under the E1–E5 evidence hierarchy.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Publication evidence controls",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0157",
+      "preferred_term": "Design History",
+      "aliases": [],
+      "definition": "The explanatory narrative of how DIP evolved from its initial problem through generalization, architecture, operational narrowing, AI governance, implementation planning, and publication.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Architectural Foundations",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0158",
+      "preferred_term": "Decision History",
+      "aliases": [],
+      "definition": "The precise traceable record of what was decided, why, when, under what authority, and what later replaced it.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Decision Register",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0159",
+      "preferred_term": "Publication Inventory Complete",
+      "aliases": [
+        "PG0",
+        "Source Corpus Controlled"
+      ],
+      "definition": "The approved P0 exit gate into full Architectural Foundations drafting; it passes only when its inventory, evidence, classification, gap, and contradiction criteria are satisfied.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Publication gate model",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0160",
+      "preferred_term": "Publication Gap",
+      "aliases": [
+        "PUB-GAP"
+      ],
+      "definition": "A controlled record of missing, incomplete, or uncertain source evidence that must remain visible rather than be reconstructed from assumption.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Publication evidence controls",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0161",
+      "preferred_term": "Potential Contradiction",
+      "aliases": [
+        "PUB-CON"
+      ],
+      "definition": "A controlled record of a possible incompatibility requiring review; a genuine contradiction blocks the affected publication area and requires formal architectural resolution.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Publication evidence controls",
+        "Blueprint glossary"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0162",
+      "preferred_term": "Architectural Foundations",
+      "aliases": [
+        "Foundations"
+      ],
+      "definition": "A durable, accessible account of why DIP exists, how its governing ideas evolved, and what the architecture is designed to protect.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint glossary",
+        "Architectural Foundations",
+        "Publication plan"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0163",
+      "preferred_term": "Architect’s Letter",
+      "aliases": [
+        "Architects Letter"
+      ],
+      "definition": "A version-specific first-person stewardship document that interprets an architecture release without creating independent normative requirements.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint glossary",
+        "Architecture v1.0 release",
+        "Architect’s Letter"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0164",
+      "preferred_term": "Living Architecture Blueprint",
+      "aliases": [
+        "Blueprint"
+      ],
+      "definition": "The modular authoritative integrated description of current DIP architecture, including normative requirements, status, conformance, and traceability.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint glossary",
+        "Living Architecture Blueprint",
+        "Blueprint governance"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0165",
+      "preferred_term": "Normative Statement Class",
+      "aliases": [
+        "Statement Class"
+      ],
+      "definition": "A controlled classification that distinguishes requirement, prohibition, recommendation, permission, rationale, example, and status content.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint glossary",
+        "Living Architecture Blueprint",
+        "Blueprint governance"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0166",
+      "preferred_term": "Conformance Profile",
+      "aliases": [
+        "Profile"
+      ],
+      "definition": "A declared set of architecture obligations and evidence requirements applicable to a platform, package, Workspace class, runtime, slice, or portability boundary.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint glossary",
+        "Living Architecture Blueprint",
+        "Blueprint governance"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0167",
+      "preferred_term": "Approved Decision Record",
+      "aliases": [
+        "DIP-DEC record",
+        "Decision Record"
+      ],
+      "definition": "An authoritative non-ADR decision with stable identity and traceability whose scope does not require a full architectural alternatives-and-consequences analysis.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint glossary",
+        "ADR collection",
+        "Decision Register"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0168",
+      "preferred_term": "Retrospective Reconstruction",
+      "aliases": [
+        "Retrospective Record"
+      ],
+      "definition": "Creation of a formal decision record after the original decision, with the decision date and reconstruction date preserved separately.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint glossary",
+        "ADR collection",
+        "Decision Register"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0169",
+      "preferred_term": "Full Supersession",
+      "aliases": [],
+      "definition": "A relationship in which a later approved decision replaces the earlier decision across its complete governing scope.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint glossary",
+        "ADR collection",
+        "Decision Register"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0170",
+      "preferred_term": "Partial Supersession",
+      "aliases": [],
+      "definition": "A relationship in which a later decision replaces only an explicit portion of an earlier decision while the unaffected scope remains active.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint glossary",
+        "ADR collection",
+        "Decision Register"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0171",
+      "preferred_term": "Architecture v1.0",
+      "aliases": [
+        "Architecture Release 1.0"
+      ],
+      "definition": "The first immutable approved DIP governing-architecture baseline; it is not a claim that implementation or production certification is complete.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint glossary",
+        "Architecture v1.0 release",
+        "Architect’s Letter"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0172",
+      "preferred_term": "Architecture Release Candidate",
+      "aliases": [
+        "Architecture RC"
+      ],
+      "definition": "A content-complete architecture candidate undergoing review that remains non-authoritative and does not authorize implementation kickoff.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint glossary",
+        "Architecture v1.0 release",
+        "Architect’s Letter"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0173",
+      "preferred_term": "Public Reference Edition",
+      "aliases": [
+        "Public-Reproducible Edition"
+      ],
+      "definition": "The structurally complete public architecture edition built exclusively from allowlisted public sources and containing no restricted or live authority information.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint glossary",
+        "Publication build and archive workflow"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0174",
+      "preferred_term": "Restricted Stewardship Edition",
+      "aliases": [
+        "Private Stewardship Edition"
+      ],
+      "definition": "The access-controlled operational stewardship publication that includes restricted architectural supplements but excludes live Private Authority state and all Secrets.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint glossary",
+        "Publication build and archive workflow"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0175",
+      "preferred_term": "Canonical Publication Source",
+      "aliases": [
+        "Canonical Source"
+      ],
+      "definition": "An authoritative editable Markdown, metadata, contract, or diagram source from which publication derivatives are generated.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint glossary",
+        "Publication build and archive workflow"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0176",
+      "preferred_term": "Generated Publication Edition",
+      "aliases": [
+        "Generated Edition"
+      ],
+      "definition": "A DOCX, PDF, compiled document, table, diagram derivative, or archive produced from canonical sources and never edited as an independent authority.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint glossary",
+        "Publication build and archive workflow"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0177",
+      "preferred_term": "Documentation Build Target",
+      "aliases": [
+        "Publication Build Target"
+      ],
+      "definition": "A classification-specific publication output assembled from an explicit permitted source set.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint glossary",
+        "Publication build and archive workflow"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0178",
+      "preferred_term": "README-FIRST",
+      "aliases": [
+        "README First"
+      ],
+      "definition": "The requirement that every offline archive begin with self-contained instructions for identity, contents, validation, reconstruction, and safe use.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint glossary",
+        "Publication build and archive workflow"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0179",
+      "preferred_term": "Existence Privacy",
+      "aliases": [
+        "Non-enumerability"
+      ],
+      "definition": "The property that public architecture neither confirms nor enables enumeration of any real private instance, membership, binding, identifier, or restricted artifact subject.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint glossary",
+        "Publication build and archive workflow"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0180",
+      "preferred_term": "Single-Classification Source",
+      "aliases": [
+        "Single-Classification File"
+      ],
+      "definition": "A source file whose content belongs entirely to one approved security classification so builds do not depend on paragraph-level redaction.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint glossary",
+        "Publication build and archive workflow"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0181",
+      "preferred_term": "Implementation Kickoff Package",
+      "aliases": [
+        "Kickoff Package"
+      ],
+      "definition": "The version-pinned, scope-bounded package that translates approved architecture into authorized work, sequencing, evidence, gates, and escalation procedures.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint glossary",
+        "Implementation Kickoff Package",
+        "Implementation gate model"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0182",
+      "preferred_term": "Kickoff Manifest",
+      "aliases": [],
+      "definition": "The machine-readable identity of the exact architecture, registers, contracts, backlog, gate versions, classifications, and approval record governing implementation.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint glossary",
+        "Implementation Kickoff Package",
+        "Implementation gate model"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0183",
+      "preferred_term": "Implementation Gate Sequence",
+      "aliases": [
+        "IKG sequence"
+      ],
+      "definition": "The overarching IKG0–IKG6 sequence that organizes specialized approved gates without replacing their identifiers or authority.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint glossary",
+        "Implementation Kickoff Package",
+        "Implementation gate model"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0184",
+      "preferred_term": "First Vertical Slice Completion Standard",
+      "aliases": [
+        "Slice Completion Standard"
+      ],
+      "definition": "The end-to-end evidence standard proving the governed lifecycle through the narrow first implementation use case.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint glossary",
+        "Implementation Kickoff Package",
+        "Implementation gate model"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0185",
+      "preferred_term": "Evidence Class",
+      "aliases": [
+        "Verification Evidence Class"
+      ],
+      "definition": "A controlled category of structural, behavioral, data, security, reliability, operational, AI-governance, portability, or human-acceptance proof.",
+      "lifecycle_status": "approved_locked",
+      "blueprint_destinations": [
+        "Blueprint glossary",
+        "Implementation Kickoff Package",
+        "Implementation gate model"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0186",
+      "preferred_term": "Platform Foundation",
+      "aliases": [
+        "Platform Thinking",
+        "How DIP Thinks"
+      ],
+      "definition": "The G0 conceptual layer defining DIP mission, hierarchy, reasoning authorities, information lifecycle, workflow, artifacts, interaction, and governance.",
+      "lifecycle_status": "approved_locked_recovered_summary",
+      "blueprint_destinations": [
+        "Blueprint glossary",
+        "Architectural Foundations"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0187",
+      "preferred_term": "Information Lifecycle",
+      "aliases": [
+        "Receive–Observe Lifecycle"
+      ],
+      "definition": "The ordered progression Receive → Validate → Accept → Version → Propagate → Observe.",
+      "lifecycle_status": "approved_locked_recovered_summary",
+      "blueprint_destinations": [
+        "Blueprint glossary",
+        "Architectural Foundations"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0188",
+      "preferred_term": "Workflow Hierarchy",
+      "aliases": [
+        "Durable Workflow Hierarchy"
+      ],
+      "definition": "The ordered execution identity hierarchy Trigger → Workflow → Stage → Job → Attempt.",
+      "lifecycle_status": "approved_locked_recovered_summary",
+      "blueprint_destinations": [
+        "Blueprint glossary",
+        "Architectural Foundations"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0189",
+      "preferred_term": "Semantic Message Family",
+      "aliases": [
+        "Message Family"
+      ],
+      "definition": "One of the governed Domain Event, Orchestration Signal, Command, or Outcome semantic categories.",
+      "lifecycle_status": "approved_locked_recovered_summary",
+      "blueprint_destinations": [
+        "Blueprint glossary",
+        "Architectural Foundations"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0190",
+      "preferred_term": "Artifact Representation Class",
+      "aliases": [
+        "Artifact Class"
+      ],
+      "definition": "One of the Raw, Normalized, Canonical, or Derived information representations.",
+      "lifecycle_status": "approved_locked_recovered_summary",
+      "blueprint_destinations": [
+        "Blueprint glossary",
+        "Architectural Foundations"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0191",
+      "preferred_term": "Governed Execution Chain",
+      "aliases": [
+        "Recommendation-to-Outcome Chain"
+      ],
+      "definition": "The controlled progression Recommendation → Decision Record → Command → Outcome.",
+      "lifecycle_status": "approved_locked_recovered_summary",
+      "blueprint_destinations": [
+        "Blueprint glossary",
+        "Architectural Foundations"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0192",
+      "preferred_term": "Logical Authority",
+      "aliases": [
+        "Authority Owner"
+      ],
+      "definition": "The single accountable subsystem that owns the accepted meaning and durable transition rules for an information category.",
+      "lifecycle_status": "approved_locked_recovered_summary",
+      "blueprint_destinations": [
+        "Blueprint glossary",
+        "Architectural Foundations"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0193",
+      "preferred_term": "Authoritative Commit Owner",
+      "aliases": [
+        "Commit Owner"
+      ],
+      "definition": "The one logical authority responsible for committing a durable state transition before propagation.",
+      "lifecycle_status": "approved_locked_recovered_summary",
+      "blueprint_destinations": [
+        "Blueprint glossary",
+        "Architectural Foundations"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0194",
+      "preferred_term": "Bitemporal Interpretation",
+      "aliases": [
+        "Bitemporal State"
+      ],
+      "definition": "Interpretation that preserves both when information was recorded and when it was effective.",
+      "lifecycle_status": "approved_locked_recovered_summary",
+      "blueprint_destinations": [
+        "Blueprint glossary",
+        "Architectural Foundations"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0195",
+      "preferred_term": "Managed-First Operating Posture",
+      "aliases": [
+        "Managed-First"
+      ],
+      "definition": "Use managed commodity infrastructure by default while retaining DIP-controlled semantics, portability, and evidence-based self-hosting exceptions.",
+      "lifecycle_status": "approved_locked_recovered_summary",
+      "blueprint_destinations": [
+        "Blueprint glossary",
+        "Architectural Foundations"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0196",
+      "preferred_term": "Technology Qualification",
+      "aliases": [
+        "Technology Gate"
+      ],
+      "definition": "Evidence-based evaluation of architecture, security, recovery, portability, cost, and operator burden before selection.",
+      "lifecycle_status": "approved_locked_recovered_summary",
+      "blueprint_destinations": [
+        "Blueprint glossary",
+        "Architectural Foundations"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0197",
+      "preferred_term": "Architecture and Governance Complete",
+      "aliases": [
+        "Historical Gate G0"
+      ],
+      "definition": "The historical G0 completion state confirming that conceptual architecture and governance were approved; distinct from publication gate PG0.",
+      "lifecycle_status": "approved_locked_recovered_summary",
+      "blueprint_destinations": [
+        "Blueprint glossary",
+        "Architectural Foundations"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0198",
+      "preferred_term": "First-Domain Operating Profile",
+      "aliases": [
+        "Historical Gate G1"
+      ],
+      "definition": "The approved operational architecture applying DIP to the first Domain Package without narrowing governing architecture.",
+      "lifecycle_status": "approved_locked_recovered_summary",
+      "blueprint_destinations": [
+        "Blueprint glossary",
+        "Blueprint: operational design"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0199",
+      "preferred_term": "Minimum Domain Package",
+      "aliases": [
+        "Minimum First Domain Package"
+      ],
+      "definition": "The smallest coherent domain-specific set of contracts, sources, workflows, knowledge, intelligence, and interfaces that conforms to DIP.",
+      "lifecycle_status": "approved_locked_recovered_summary",
+      "blueprint_destinations": [
+        "Blueprint glossary",
+        "Blueprint: operational design"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0200",
+      "preferred_term": "First-Domain Mission",
+      "aliases": [
+        "Domain Mission"
+      ],
+      "definition": "The approved user and operational purpose against which first-domain scope and usefulness are evaluated.",
+      "lifecycle_status": "approved_locked_recovered_summary",
+      "blueprint_destinations": [
+        "Blueprint glossary",
+        "Blueprint: operational design"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0201",
+      "preferred_term": "Highest-Value Initial Journey",
+      "aliases": [
+        "Initial User Journey"
+      ],
+      "definition": "An approved end-to-end user outcome used to bound the first useful operating profile.",
+      "lifecycle_status": "approved_locked_recovered_summary",
+      "blueprint_destinations": [
+        "Blueprint glossary",
+        "Blueprint: operational design"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0202",
+      "preferred_term": "Authority Implementation Profile",
+      "aliases": [
+        "Authority Profile"
+      ],
+      "definition": "The first-domain mapping of facts and transitions to DIP authorities, external evidence sources, and resolution paths.",
+      "lifecycle_status": "approved_locked_recovered_summary",
+      "blueprint_destinations": [
+        "Blueprint glossary",
+        "Blueprint: operational design"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0203",
+      "preferred_term": "Source Acquisition and Refresh Profile",
+      "aliases": [
+        "Acquisition Profile",
+        "Refresh Profile"
+      ],
+      "definition": "The first-domain rules for acquiring, validating, refreshing, attributing, and reconciling external evidence.",
+      "lifecycle_status": "approved_locked_recovered_summary",
+      "blueprint_destinations": [
+        "Blueprint glossary",
+        "Blueprint: operational design"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0204",
+      "preferred_term": "First Operational Workspace Boundary",
+      "aliases": [
+        "First-Workspace Boundary"
+      ],
+      "definition": "The restricted-identity boundary at which the first real operational Workspace may be activated after its approved gate.",
+      "lifecycle_status": "approved_locked_recovered_summary",
+      "blueprint_destinations": [
+        "Blueprint glossary",
+        "Blueprint: operational design"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0205",
+      "preferred_term": "Portability Workspace Boundary",
+      "aliases": [
+        "Second-Workspace Boundary"
+      ],
+      "definition": "The restricted-identity boundary used to verify Workspace portability without Core or Domain Package forking.",
+      "lifecycle_status": "approved_locked_recovered_summary",
+      "blueprint_destinations": [
+        "Blueprint glossary",
+        "Blueprint: operational design"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0206",
+      "preferred_term": "Strategic Intelligence Partner",
+      "aliases": [
+        "Companion Intelligence"
+      ],
+      "definition": "The AIOP role in which governed AI improves human judgment and agency through evidence, challenge, explanation, and recommendation without displacing authority.",
+      "lifecycle_status": "approved_locked_recovered_summary",
+      "blueprint_destinations": [
+        "Blueprint glossary",
+        "Architectural Foundations: governed companion intelligence"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0207",
+      "preferred_term": "Evidence Fitness",
+      "aliases": [],
+      "definition": "The suitability of evidence for a decision based on provenance, freshness, applicability, quality, and relevant limitations.",
+      "lifecycle_status": "approved_locked_recovered_summary",
+      "blueprint_destinations": [
+        "Blueprint glossary",
+        "Architectural Foundations: governed companion intelligence"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0208",
+      "preferred_term": "Evidence Confidence",
+      "aliases": [],
+      "definition": "Confidence in the fitness and support supplied by the available evidence.",
+      "lifecycle_status": "approved_locked_recovered_summary",
+      "blueprint_destinations": [
+        "Blueprint glossary",
+        "Architectural Foundations: governed companion intelligence"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0209",
+      "preferred_term": "Inference Confidence",
+      "aliases": [],
+      "definition": "Confidence that an inference follows from the evaluated evidence and stated assumptions.",
+      "lifecycle_status": "approved_locked_recovered_summary",
+      "blueprint_destinations": [
+        "Blueprint glossary",
+        "Architectural Foundations: governed companion intelligence"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0210",
+      "preferred_term": "Decision Confidence",
+      "aliases": [],
+      "definition": "Confidence that a recommendation or decision is appropriate after evidence, inference, goals, tradeoffs, authority, and risk are considered.",
+      "lifecycle_status": "approved_locked_recovered_summary",
+      "blueprint_destinations": [
+        "Blueprint glossary",
+        "Architectural Foundations: governed companion intelligence"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0211",
+      "preferred_term": "Working Context",
+      "aliases": [],
+      "definition": "Authorized transient information assembled for an active governed task but not accepted as durable memory.",
+      "lifecycle_status": "approved_locked_recovered_summary",
+      "blueprint_destinations": [
+        "Blueprint glossary",
+        "Architectural Foundations: governed companion intelligence"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0212",
+      "preferred_term": "Memory Candidate",
+      "aliases": [],
+      "definition": "Information proposed for durable memory that has not yet passed governed review and acceptance.",
+      "lifecycle_status": "approved_locked_recovered_summary",
+      "blueprint_destinations": [
+        "Blueprint glossary",
+        "Architectural Foundations: governed companion intelligence"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0213",
+      "preferred_term": "Accepted Memory",
+      "aliases": [],
+      "definition": "Durable memory accepted through governed review, classification, scope, and authority controls.",
+      "lifecycle_status": "approved_locked_recovered_summary",
+      "blueprint_destinations": [
+        "Blueprint glossary",
+        "Architectural Foundations: governed companion intelligence"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0214",
+      "preferred_term": "Governed Context",
+      "aliases": [],
+      "definition": "Task context whose inclusion is authorized by actor, scope, information realm, purpose, permissions, and policy.",
+      "lifecycle_status": "approved_locked_recovered_summary",
+      "blueprint_destinations": [
+        "Blueprint glossary",
+        "Architectural Foundations: governed companion intelligence"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0215",
+      "preferred_term": "Initiative Level",
+      "aliases": [],
+      "definition": "An AIOP classification of AI activity such as Observe, Analyze, Propose, Prepare, or Execute, each with distinct authority requirements.",
+      "lifecycle_status": "approved_locked_recovered_summary",
+      "blueprint_destinations": [
+        "Blueprint glossary",
+        "Architectural Foundations: governed companion intelligence"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0216",
+      "preferred_term": "Interface Parity",
+      "aliases": [],
+      "definition": "The rule that authorized interfaces preserve equivalent governance, authority, review, status, and audit semantics.",
+      "lifecycle_status": "approved_locked_recovered_summary",
+      "blueprint_destinations": [
+        "Blueprint glossary",
+        "Architectural Foundations: governed companion intelligence"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0217",
+      "preferred_term": "Visible Failure",
+      "aliases": [],
+      "definition": "A material failure represented as explicit platform state rather than hidden substitution, suppression, or unsupported success.",
+      "lifecycle_status": "approved_locked_recovered_summary",
+      "blueprint_destinations": [
+        "Blueprint glossary",
+        "Architectural Foundations: governed companion intelligence"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0218",
+      "preferred_term": "Governed Learning",
+      "aliases": [],
+      "definition": "Learning or adaptation processed as explicit, attributable, reviewable, versioned change rather than silent behavioral mutation.",
+      "lifecycle_status": "approved_locked_recovered_summary",
+      "blueprint_destinations": [
+        "Blueprint glossary",
+        "Architectural Foundations: governed companion intelligence"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0219",
+      "preferred_term": "Model Replaceability",
+      "aliases": [],
+      "definition": "The AIOP property that foundation models and providers remain replaceable components beneath stable governance contracts.",
+      "lifecycle_status": "approved_locked_recovered_summary",
+      "blueprint_destinations": [
+        "Blueprint glossary",
+        "Architectural Foundations: governed companion intelligence"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0220",
+      "preferred_term": "Deployment-Level AI Conformance",
+      "aliases": [],
+      "definition": "Qualification of a complete versioned provider, model, adapter, AIOP, prompt, tool, schema, privacy, and runtime combination for defined tasks.",
+      "lifecycle_status": "approved_locked_recovered_summary",
+      "blueprint_destinations": [
+        "Blueprint glossary",
+        "Architectural Foundations: governed companion intelligence"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0221",
+      "preferred_term": "DIP AI Constitution",
+      "aliases": [],
+      "definition": "The 22 binding highest-order principles governing AI behavior, authority, evidence, boundaries, failure, learning, portability, and outcomes in DIP.",
+      "lifecycle_status": "approved_locked_recovered_summary",
+      "blueprint_destinations": [
+        "Blueprint glossary",
+        "Architectural Foundations: governed companion intelligence"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0222",
+      "preferred_term": "Goal Alignment",
+      "aliases": [],
+      "definition": "Alignment to authorized human and Workspace goals while preserving evidence-based challenge, uncertainty, and non-deceptive dissent.",
+      "lifecycle_status": "approved_locked_recovered_summary",
+      "blueprint_destinations": [
+        "Blueprint glossary",
+        "Architectural Foundations: governed companion intelligence"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0223",
+      "preferred_term": "Governed Companion Intelligence Operating System",
+      "aliases": [
+        "Governed Intelligence Operating System"
+      ],
+      "definition": "The approved DIP framing: a governed durable operating environment around replaceable reasoning models that supplies knowledge, memory, authority, workflows, review, strategy, explainability, controlled execution, and auditability.",
+      "lifecycle_status": "approved_locked_recovered_summary",
+      "blueprint_destinations": [
+        "Blueprint glossary",
+        "Architectural Foundations: purpose and framing"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0224",
+      "preferred_term": "Intelligence Substrate",
+      "aliases": [],
+      "definition": "The durable DIP capabilities and authorities that support governed reasoning independently of a particular foundation model or provider.",
+      "lifecycle_status": "approved_locked_recovered_summary",
+      "blueprint_destinations": [
+        "Blueprint glossary",
+        "Architectural Foundations: purpose and framing"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0225",
+      "preferred_term": "Governed AI Participant",
+      "aliases": [],
+      "definition": "An AI execution role that reasons and interacts through DIP contracts without becoming the system of record or acquiring implicit authority.",
+      "lifecycle_status": "approved_locked_recovered_summary",
+      "blueprint_destinations": [
+        "Blueprint glossary",
+        "Architectural Foundations: purpose and framing"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0226",
+      "preferred_term": "Public Canonical Architecture Repository",
+      "aliases": [
+        "public architecture repository"
+      ],
+      "definition": "The approved public repository, named dip-architecture, that becomes authoritative for allowlisted canonical architecture publication sources after owner and immutable revision binding.",
+      "lifecycle_status": "approved_locked_current_capture",
+      "blueprint_destinations": [
+        "Blueprint glossary",
+        "Publication governance"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0227",
+      "preferred_term": "Restricted Evidence Repository",
+      "aliases": [
+        "restricted architecture repository"
+      ],
+      "definition": "A separately authenticated repository for restricted architectural evidence and metadata; it is neither Private Authority nor a secret store.",
+      "lifecycle_status": "approved_locked_current_capture",
+      "blueprint_destinations": [
+        "Blueprint glossary",
+        "Publication governance"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0228",
+      "preferred_term": "Restricted-Source Pointer Registry",
+      "aliases": [
+        "restricted pointer registry"
+      ],
+      "definition": "A restricted metadata registry keyed by existing DIP-SRC identifiers that resolves authorized evidence locations, revisions, hashes, approvals, access controls, retention, and verification state without exposing restricted content publicly.",
+      "lifecycle_status": "approved_locked_current_capture",
+      "blueprint_destinations": [
+        "Blueprint glossary",
+        "Blueprint: evidence control"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0229",
+      "preferred_term": "Approval-Event Locator",
+      "aliases": [
+        "approval locator"
+      ],
+      "definition": "A stable hash-bearing reference that binds an explicit human approval message to its controlled source identifier and immutable evidence revision.",
+      "lifecycle_status": "approved_locked_current_capture",
+      "blueprint_destinations": [
+        "Blueprint glossary",
+        "Blueprint: provenance"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0230",
+      "preferred_term": "Public ADR Projection",
+      "aliases": [
+        "public ADR",
+        "abstract ADR projection"
+      ],
+      "definition": "The public-safe representation of one approved ADR that preserves its stable identity, status, abstract decision, and public consequences while excluding restricted evidence and protected architectural detail.",
+      "lifecycle_status": "approved_locked_current_capture",
+      "blueprint_destinations": [
+        "Blueprint glossary",
+        "Blueprint: ADR publication"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0231",
+      "preferred_term": "Restricted ADR Body",
+      "aliases": [
+        "complete ADR body",
+        "restricted ADR"
+      ],
+      "definition": "The complete normalized representation of the same approved ADR retained within the separately authenticated restricted architecture boundary, while still excluding Private Authority data and secrets.",
+      "lifecycle_status": "approved_locked_current_capture",
+      "blueprint_destinations": [
+        "Blueprint glossary",
+        "Blueprint: ADR and evidence governance"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0232",
+      "preferred_term": "Public Structured-Register Projection",
+      "aliases": [
+        "public register projection",
+        "machine-readable public projection"
+      ],
+      "definition": "A schema-valid, semantically reviewed, public-safe machine-readable representation of a canonical DIP register that contains only explicitly approved projection fields and public relationships.",
+      "lifecycle_status": "approved_locked_current_capture",
+      "blueprint_destinations": [
+        "Blueprint glossary",
+        "Blueprint: structured register publication"
+      ]
+    },
+    {
+      "id": "DIP-TERM-0233",
+      "preferred_term": "Projection Class",
+      "aliases": [
+        "public projection class"
+      ],
+      "definition": "The controlled method assigned to a public register projection: deterministic field projection, field projection with semantic review, or authored public projection.",
+      "lifecycle_status": "approved_locked_current_capture",
+      "blueprint_destinations": [
+        "Blueprint glossary",
+        "Publication build controls"
+      ]
+    }
+  ]
+}
