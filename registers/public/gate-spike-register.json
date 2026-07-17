@@ -1,0 +1,876 @@
+{
+  "projection_id": "DIP-PUBLIC-GATE-SPIKE-REGISTER",
+  "projection_version": "0.1.0-candidate",
+  "schema_version": "0.1.0-draft",
+  "classification": "Public Reference Architecture",
+  "source_register_id": "DIP-PUB-GATE-SPIKE-REGISTER",
+  "source_revision": null,
+  "status": "approved_public_projection",
+  "disclosure_review": {
+    "semantic_review_status": "passed",
+    "prohibited_field_scan": "passed",
+    "private_instance_non_disclosure": "passed",
+    "secret_scan": "passed",
+    "reviewed_revision": null
+  },
+  "gates": [
+    {
+      "id": "DIP-GATE-0001",
+      "alias": "PG0",
+      "title": "Publication Inventory Complete",
+      "lifecycle_status": "defined_not_passed",
+      "normalized_publication_statement": "PG0 is the evidence-based exit gate from P0 into full Architectural Foundations drafting. It remains unpassed until the approved inventory, identifier, evidence, terminology, scope, classification, gap, and contradiction conditions are verified.",
+      "owning_phase": "P0 — Publication Inventory and Normalization",
+      "public_pass_criteria": [
+        "Every completed phase has a catalog entry.",
+        "ADR-IMP-001 through ADR-IMP-029 are accounted for.",
+        "Requirements, principles, invariants, gates, and spikes have stable identifiers.",
+        "Terminology conflicts have canonical resolutions and retained aliases.",
+        "Every normative item has approval evidence.",
+        "Deferred and conditional capabilities are identified.",
+        "Public/private classification is recorded.",
+        "Gaps and potential contradictions are visible.",
+        "No unresolved gap prevents accurate drafting of Architectural Foundations.",
+        "No genuine contradiction has been concealed through editorial normalization."
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0002",
+          "DIP-DEC-0003",
+          "DIP-DEC-0471",
+          "DIP-DEC-0472",
+          "DIP-DEC-0473",
+          "DIP-DEC-0474",
+          "DIP-DEC-0475",
+          "DIP-DEC-0476",
+          "DIP-DEC-0477",
+          "DIP-DEC-0478",
+          "DIP-DEC-0479",
+          "DIP-DEC-0480"
+        ],
+        "requirements": [
+          "DIP-REQ-0001",
+          "DIP-REQ-0002",
+          "DIP-REQ-0003",
+          "DIP-REQ-0004",
+          "DIP-REQ-0005",
+          "DIP-REQ-0155",
+          "DIP-REQ-0156",
+          "DIP-REQ-0157",
+          "DIP-REQ-0158",
+          "DIP-REQ-0159",
+          "DIP-REQ-0160",
+          "DIP-REQ-0161",
+          "DIP-REQ-0162",
+          "DIP-REQ-0163",
+          "DIP-REQ-0164",
+          "DIP-REQ-0165",
+          "DIP-REQ-0166",
+          "DIP-REQ-0167"
+        ],
+        "gaps": [
+          "PUB-GAP-0004",
+          "PUB-GAP-0005",
+          "PUB-GAP-0008"
+        ]
+      }
+    },
+    {
+      "id": "DIP-GATE-0002",
+      "alias": "PG1",
+      "title": "Architectural Foundations Approved",
+      "lifecycle_status": "defined_not_passed",
+      "normalized_publication_statement": "PG1 is formally evaluable but remains unpassed until every approved criterion is produced, verified, and approved.",
+      "owning_phase": "Architecture Publication Planning P1",
+      "public_pass_criteria": [
+        "all chapters are drafted from approved or properly cited sources.",
+        "historical narrative and normative decisions are distinguishable.",
+        "the companion-intelligence framing is understandable without the Blueprint.",
+        "the relationship between AI and DIP avoids model-as-authority ambiguity.",
+        "the first-domain story does not narrow the platform’s governing purpose.",
+        "no private Workspace or Private Strategy information is exposed.",
+        "every architectural summary links to its normative source.",
+        "deferred capabilities are not presented as implemented.",
+        "unsupported novelty or market claims have been removed or qualified.",
+        "terminology matches the P0 register.",
+        "Word and PDF renderings pass visual review."
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0481",
+          "DIP-DEC-0482",
+          "DIP-DEC-0483",
+          "DIP-DEC-0484",
+          "DIP-DEC-0485",
+          "DIP-DEC-0486",
+          "DIP-DEC-0487",
+          "DIP-DEC-0488",
+          "DIP-DEC-0489",
+          "DIP-DEC-0490",
+          "DIP-DEC-0491"
+        ],
+        "requirements": [
+          "DIP-REQ-0168",
+          "DIP-REQ-0169",
+          "DIP-REQ-0170",
+          "DIP-REQ-0171",
+          "DIP-REQ-0172",
+          "DIP-REQ-0173",
+          "DIP-REQ-0174",
+          "DIP-REQ-0175",
+          "DIP-REQ-0176",
+          "DIP-REQ-0177",
+          "DIP-REQ-0178"
+        ]
+      }
+    },
+    {
+      "id": "DIP-GATE-0003",
+      "alias": "PG2",
+      "title": "Living Architecture Blueprint Approved",
+      "lifecycle_status": "defined_not_passed",
+      "normalized_publication_statement": "PG2 is formally evaluable but remains unpassed until every approved criterion is produced, verified, and approved.",
+      "owning_phase": "Architecture Publication Planning P2",
+      "public_pass_criteria": [
+        "all 18 modules are complete.",
+        "every approved architecture area is represented.",
+        "all normative requirements have stable identifiers.",
+        "all implementation ADRs are linked.",
+        "logical architecture and initial deployment are clearly distinguished.",
+        "initial, conditional, deferred, and portability statuses are complete.",
+        "diagrams agree with prose and contracts.",
+        "public examples use synthetic fixtures.",
+        "no private authority content is exposed.",
+        "contradiction and gap logs contain no unresolved publication blocker.",
+        "conformance profiles and evidence requirements are complete.",
+        "cross-reference validation passes.",
+        "Word and PDF editions pass visual review.",
+        "the Blueprint can direct implementation without requiring engineers to recover decisions from prior conversations."
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0492",
+          "DIP-DEC-0493",
+          "DIP-DEC-0494",
+          "DIP-DEC-0495",
+          "DIP-DEC-0496",
+          "DIP-DEC-0497",
+          "DIP-DEC-0498",
+          "DIP-DEC-0499",
+          "DIP-DEC-0500",
+          "DIP-DEC-0501",
+          "DIP-DEC-0502",
+          "DIP-DEC-0503",
+          "DIP-DEC-0504",
+          "DIP-DEC-0505",
+          "DIP-DEC-0506"
+        ],
+        "requirements": [
+          "DIP-REQ-0179",
+          "DIP-REQ-0180",
+          "DIP-REQ-0181",
+          "DIP-REQ-0182",
+          "DIP-REQ-0183",
+          "DIP-REQ-0184",
+          "DIP-REQ-0185",
+          "DIP-REQ-0186",
+          "DIP-REQ-0187",
+          "DIP-REQ-0188",
+          "DIP-REQ-0189",
+          "DIP-REQ-0190",
+          "DIP-REQ-0191",
+          "DIP-REQ-0192"
+        ]
+      }
+    },
+    {
+      "id": "DIP-GATE-0004",
+      "alias": "PG3",
+      "title": "ADR and Decision Register Approved",
+      "lifecycle_status": "defined_not_passed",
+      "normalized_publication_statement": "PG3 is formally evaluable but remains unpassed until every approved criterion is produced, verified, and approved.",
+      "owning_phase": "Architecture Publication Planning P3",
+      "public_pass_criteria": [
+        "all known ADRs are inventoried.",
+        "ADR-IMP-001 through ADR-IMP-029 are present and correctly titled.",
+        "existing identifiers are preserved.",
+        "non-ADR approved decisions have stable decision identifiers.",
+        "every retrospective record has evidence and reconstruction metadata.",
+        "accepted decisions are separated from unapproved recommendations.",
+        "lifecycle and implementation statuses are distinct.",
+        "supersession relationships are complete.",
+        "every governing decision links to the Blueprint.",
+        "every normative Blueprint area links back to governing decisions.",
+        "public records contain no private evidence or Workspace data.",
+        "the private evidence ledger is complete enough to support future audit.",
+        "consolidated Markdown, JSON, and CSV registers generate successfully.",
+        "Architecture v1.0 can pin the exact decision corpus."
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0507",
+          "DIP-DEC-0508",
+          "DIP-DEC-0509",
+          "DIP-DEC-0510",
+          "DIP-DEC-0511",
+          "DIP-DEC-0512",
+          "DIP-DEC-0513",
+          "DIP-DEC-0514",
+          "DIP-DEC-0515",
+          "DIP-DEC-0516",
+          "DIP-DEC-0517",
+          "DIP-DEC-0518",
+          "DIP-DEC-0519",
+          "DIP-DEC-0520",
+          "DIP-DEC-0521",
+          "DIP-DEC-0522"
+        ],
+        "requirements": [
+          "DIP-REQ-0193",
+          "DIP-REQ-0194",
+          "DIP-REQ-0195",
+          "DIP-REQ-0196",
+          "DIP-REQ-0197",
+          "DIP-REQ-0198",
+          "DIP-REQ-0199",
+          "DIP-REQ-0200",
+          "DIP-REQ-0201",
+          "DIP-REQ-0202",
+          "DIP-REQ-0203",
+          "DIP-REQ-0204",
+          "DIP-REQ-0205",
+          "DIP-REQ-0206"
+        ]
+      }
+    },
+    {
+      "id": "DIP-GATE-0005",
+      "alias": "PG4",
+      "title": "Architecture v1.0 Released",
+      "lifecycle_status": "defined_not_passed",
+      "normalized_publication_statement": "PG4 is formally evaluable but remains unpassed until every approved criterion is produced, verified, and approved.",
+      "owning_phase": "Architecture Publication Planning P4",
+      "public_pass_criteria": [
+        "PG0 through PG3 have passed.",
+        "every required release component is included.",
+        "all six review tracks are complete.",
+        "no unresolved contradiction affects governing behavior.",
+        "all known limitations are classified and disclosed.",
+        "the Architect’s Letter is approved.",
+        "the release manifest identifies every artifact.",
+        "checksums verify.",
+        "Public-reference and restricted-stewardship editions contain only appropriately classified material; live Private Authority remains external and Secrets are excluded.",
+        "Word and PDF editions pass visual review.",
+        "the release is pinned to an immutable source revision.",
+        "the human approval record is complete.",
+        "the implementation kickoff package can reference the release without ambiguity."
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0004",
+          "DIP-DEC-0523",
+          "DIP-DEC-0524",
+          "DIP-DEC-0525",
+          "DIP-DEC-0526",
+          "DIP-DEC-0527",
+          "DIP-DEC-0528",
+          "DIP-DEC-0529",
+          "DIP-DEC-0530",
+          "DIP-DEC-0531",
+          "DIP-DEC-0532",
+          "DIP-DEC-0533",
+          "DIP-DEC-0534",
+          "DIP-DEC-0535",
+          "DIP-DEC-0536",
+          "DIP-DEC-0537",
+          "DIP-DEC-0538",
+          "DIP-DEC-0539",
+          "DIP-DEC-0540"
+        ],
+        "requirements": [
+          "DIP-REQ-0207",
+          "DIP-REQ-0208",
+          "DIP-REQ-0209",
+          "DIP-REQ-0210",
+          "DIP-REQ-0211",
+          "DIP-REQ-0212",
+          "DIP-REQ-0213",
+          "DIP-REQ-0214",
+          "DIP-REQ-0215",
+          "DIP-REQ-0216",
+          "DIP-REQ-0217",
+          "DIP-REQ-0218",
+          "DIP-REQ-0219"
+        ],
+        "gaps": [
+          "PUB-GAP-0008"
+        ]
+      }
+    },
+    {
+      "id": "DIP-GATE-0006",
+      "alias": "PG5",
+      "title": "Publication Package Reproducible and Archived",
+      "lifecycle_status": "defined_not_passed",
+      "normalized_publication_statement": "PG5 is formally evaluable but remains unpassed until every approved criterion is produced, verified, and approved.",
+      "owning_phase": "Architecture Publication Planning P5",
+      "public_pass_criteria": [
+        "all canonical sources are editable and complete.",
+        "the build works from a clean environment.",
+        "Public-reference and restricted-stewardship build separation passes; live Private Authority remains external and Secrets remain excluded.",
+        "all structural validations pass.",
+        "all DOCX and PDF pages have been visually reviewed.",
+        "modular and compiled editions agree semantically.",
+        "manifests identify every release file.",
+        "checksums validate.",
+        "archives extract successfully.",
+        "archive recovery testing passes.",
+        "README-FIRST instructions are complete.",
+        "generation dependencies and versions are recorded.",
+        "no generated file has become an independent source of truth.",
+        "the package remains understandable without access to the original conversations.",
+        "The public edition is proven independent of restricted sources.",
+        "The restricted stewardship edition is access-controlled."
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0002",
+          "DIP-DEC-0004",
+          "DIP-DEC-0005",
+          "DIP-DEC-0541",
+          "DIP-DEC-0542",
+          "DIP-DEC-0543",
+          "DIP-DEC-0544",
+          "DIP-DEC-0545",
+          "DIP-DEC-0546",
+          "DIP-DEC-0547",
+          "DIP-DEC-0548",
+          "DIP-DEC-0549",
+          "DIP-DEC-0550",
+          "DIP-DEC-0551",
+          "DIP-DEC-0552",
+          "DIP-DEC-0553",
+          "DIP-DEC-0554",
+          "DIP-DEC-0555",
+          "DIP-DEC-0556",
+          "DIP-DEC-0557",
+          "DIP-DEC-0558",
+          "DIP-DEC-0559",
+          "DIP-DEC-0560",
+          "DIP-DEC-0561",
+          "DIP-DEC-0562",
+          "DIP-DEC-0563",
+          "DIP-DEC-0564",
+          "DIP-DEC-0565",
+          "DIP-DEC-0566",
+          "DIP-DEC-0567",
+          "DIP-DEC-0568",
+          "DIP-DEC-0569",
+          "DIP-DEC-0570",
+          "DIP-DEC-0571",
+          "DIP-DEC-0572",
+          "DIP-DEC-0573"
+        ],
+        "requirements": [
+          "DIP-REQ-0220",
+          "DIP-REQ-0221",
+          "DIP-REQ-0222",
+          "DIP-REQ-0223",
+          "DIP-REQ-0224",
+          "DIP-REQ-0225",
+          "DIP-REQ-0226",
+          "DIP-REQ-0227",
+          "DIP-REQ-0228",
+          "DIP-REQ-0229",
+          "DIP-REQ-0230",
+          "DIP-REQ-0231",
+          "DIP-REQ-0232",
+          "DIP-REQ-0233",
+          "DIP-REQ-0234",
+          "DIP-REQ-0235"
+        ],
+        "gaps": [
+          "PUB-GAP-0008"
+        ]
+      }
+    },
+    {
+      "id": "DIP-GATE-0007",
+      "alias": "PG6",
+      "title": "Implementation Kickoff Package Approved",
+      "lifecycle_status": "defined_not_passed",
+      "normalized_publication_statement": "PG6 is formally evaluable but remains unpassed until every approved criterion is produced, verified, and approved.",
+      "owning_phase": "Architecture Publication Planning P6",
+      "public_pass_criteria": [
+        "the kickoff manifest pins Architecture v1.0.",
+        "every authorized work item traces to approved architecture.",
+        "every work item has acceptance criteria and evidence expectations.",
+        "initial and excluded scope are unambiguous.",
+        "public, restricted, private-authority, and secret boundaries are represented.",
+        "build-gate dependencies are complete.",
+        "the first vertical slice has an end-to-end completion definition.",
+        "contradiction and scope-change procedures are approved.",
+        "the public package contains no private operational information.",
+        "restricted implementation material is access-controlled.",
+        "the human implementation-start checklist is ready."
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0574",
+          "DIP-DEC-0575",
+          "DIP-DEC-0576",
+          "DIP-DEC-0577",
+          "DIP-DEC-0578",
+          "DIP-DEC-0579",
+          "DIP-DEC-0580",
+          "DIP-DEC-0581",
+          "DIP-DEC-0582",
+          "DIP-DEC-0583",
+          "DIP-DEC-0584",
+          "DIP-DEC-0585",
+          "DIP-DEC-0586",
+          "DIP-DEC-0587",
+          "DIP-DEC-0588",
+          "DIP-DEC-0589",
+          "DIP-DEC-0590",
+          "DIP-DEC-0591",
+          "DIP-DEC-0592",
+          "DIP-DEC-0593"
+        ],
+        "requirements": [
+          "DIP-REQ-0236",
+          "DIP-REQ-0237",
+          "DIP-REQ-0238",
+          "DIP-REQ-0239",
+          "DIP-REQ-0240",
+          "DIP-REQ-0241",
+          "DIP-REQ-0242",
+          "DIP-REQ-0243",
+          "DIP-REQ-0244",
+          "DIP-REQ-0245",
+          "DIP-REQ-0246"
+        ]
+      }
+    },
+    {
+      "id": "DIP-GATE-0008",
+      "alias": "IKG0",
+      "title": "Implementation Authorized",
+      "lifecycle_status": "not_granted",
+      "normalized_publication_statement": "DIP product/runtime implementation remains prohibited until a separate explicit human approval event satisfies every IKG0 prerequisite.",
+      "owning_phase": "DIP program governance",
+      "public_pass_criteria": [
+        "PG0 through PG5 passed.",
+        "P6 package approved.",
+        "Architecture v1.0 released.",
+        "kickoff manifest pinned.",
+        "human authorization recorded.",
+        "public and restricted work locations established."
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0593",
+          "DIP-DEC-0574",
+          "DIP-DEC-0590"
+        ],
+        "requirements": [
+          "DIP-REQ-0236",
+          "DIP-REQ-0246"
+        ]
+      }
+    },
+    {
+      "id": "DIP-GATE-0009",
+      "alias": "Production Readiness Assessment",
+      "title": "Production Launch Readiness Gate",
+      "lifecycle_status": "approved_defined_not_passed",
+      "normalized_publication_statement": "Production launch shall remain prohibited until CI and activation, release identity, migrations, isolation, security, key and secret operation, backup and restore, incident response, operational conformance, cost controls, model qualification, MCP disposition, external-write state, and critical-failure clearance are evidenced and approved.",
+      "owning_phase": "DIP program governance",
+      "public_pass_criteria": [],
+      "relationships": {
+        "adrs": [
+          "ADR-IMP-019",
+          "ADR-IMP-020",
+          "ADR-IMP-022",
+          "ADR-IMP-024",
+          "ADR-IMP-025",
+          "ADR-IMP-026"
+        ]
+      }
+    },
+    {
+      "id": "DIP-GATE-0010",
+      "alias": "Security Readiness Gate",
+      "title": "Remote Production Security Gate",
+      "lifecycle_status": "approved_defined_not_passed",
+      "normalized_publication_statement": "Remote production exposure shall remain prohibited until identity, session, authorization, RLS, isolation, encryption, secret, audit, network-edge, threat-model, ASVS-targeted, step-up, and fail-closed controls are evidenced and approved.",
+      "owning_phase": "DIP program governance",
+      "public_pass_criteria": [],
+      "relationships": {
+        "adrs": [
+          "ADR-IMP-016",
+          "ADR-IMP-017",
+          "ADR-IMP-018",
+          "ADR-IMP-019"
+        ]
+      }
+    },
+    {
+      "id": "DIP-GATE-0011",
+      "alias": "B0",
+      "title": "Published Architecture Gate",
+      "lifecycle_status": "approved_defined_not_passed",
+      "normalized_publication_statement": "Published Architecture Gate remains not passed until every normalized criterion is evidenced and approved.",
+      "owning_phase": "DIP program governance",
+      "public_pass_criteria": [
+        "Implementation Planning Section 12 is approved.",
+        "The ADR ledger is reconciled.",
+        "Required publication artifacts are complete.",
+        "No unresolved contradiction exists among the locked architecture, AI governance, Constitution, and Implementation Planning."
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0273"
+        ],
+        "requirements": [
+          "DIP-REQ-0098"
+        ],
+        "gates": [
+          "DIP-GATE-0007"
+        ]
+      }
+    },
+    {
+      "id": "DIP-GATE-0012",
+      "alias": "B1",
+      "title": "Foundation Conformance Gate",
+      "lifecycle_status": "approved_defined_not_passed",
+      "normalized_publication_statement": "Foundation Conformance Gate remains not passed until every normalized criterion is evidenced and approved.",
+      "owning_phase": "DIP program governance",
+      "public_pass_criteria": [
+        "Repository bootstrap succeeds from documented instructions.",
+        "Strict typing and required tests pass.",
+        "Migrations apply to an empty database.",
+        "Configuration bundles compile and activate atomically.",
+        "Private Authority and Secrets remain outside the public repository.",
+        "Workflow retry and recovery tests pass."
+      ],
+      "relationships": {
+        "adrs": [
+          "ADR-IMP-001",
+          "ADR-IMP-004",
+          "ADR-IMP-006",
+          "ADR-IMP-008"
+        ],
+        "requirements": [
+          "DIP-REQ-0063",
+          "DIP-REQ-0069"
+        ]
+      }
+    },
+    {
+      "id": "DIP-GATE-0013",
+      "alias": "B2",
+      "title": "First Vertical Slice Gate",
+      "lifecycle_status": "approved_defined_not_passed",
+      "normalized_publication_statement": "First Vertical Slice Gate remains not passed until every normalized criterion is evidenced and approved.",
+      "owning_phase": "DIP program governance",
+      "public_pass_criteria": [
+        "The first Workspace refresh traverses the entire lifecycle.",
+        "Every canonical fact has accepted-artifact lineage.",
+        "Deterministic findings and the governed AI brief are reproducible from pinned inputs.",
+        "The Review Service receives the result.",
+        "At least one internal Decision, Command, and Outcome path is demonstrated.",
+        "Duplicate triggers do not create duplicate semantic effects.",
+        "Failure injection and recovery pass."
+      ],
+      "relationships": {
+        "adrs": [
+          "ADR-IMP-027"
+        ],
+        "decisions": [
+          "DIP-DEC-0262",
+          "DIP-DEC-0263"
+        ],
+        "requirements": [
+          "DIP-REQ-0090",
+          "DIP-REQ-0092"
+        ]
+      }
+    },
+    {
+      "id": "DIP-GATE-0014",
+      "alias": "B3",
+      "title": "First Workspace Usefulness Gate",
+      "lifecycle_status": "approved_defined_not_passed",
+      "normalized_publication_statement": "First Workspace Usefulness Gate remains not passed until every normalized criterion is evidenced and approved.",
+      "owning_phase": "DIP program governance",
+      "public_pass_criteria": [
+        "Recurring refresh and available historical backfill operate.",
+        "Core first-domain entity, transaction, and change intelligence is useful.",
+        "Market-intelligence qualification requirements pass.",
+        "Value-dependent analyzers abstain when evidence is unavailable.",
+        "Public Workspace and Private Strategy analysis remain separated."
+      ],
+      "relationships": {
+        "adrs": [
+          "ADR-IMP-028"
+        ],
+        "requirements": [
+          "DIP-REQ-0095",
+          "DIP-REQ-0103"
+        ],
+        "gates": [
+          "DIP-GATE-0018"
+        ]
+      }
+    },
+    {
+      "id": "DIP-GATE-0015",
+      "alias": "B4",
+      "title": "Interaction Gate",
+      "lifecycle_status": "approved_defined_not_passed",
+      "normalized_publication_statement": "Interaction Gate remains not passed until every normalized criterion is evidenced and approved.",
+      "owning_phase": "DIP program governance",
+      "public_pass_criteria": [
+        "MCP capability is verified and activated or explicitly deferred.",
+        "The Operations Page supports launch-critical actions.",
+        "Every active interface calls the same application services.",
+        "Stable deep links and actor attribution work."
+      ],
+      "relationships": {
+        "adrs": [
+          "ADR-IMP-010",
+          "ADR-IMP-015"
+        ],
+        "requirements": [
+          "DIP-REQ-0080",
+          "DIP-REQ-0096"
+        ],
+        "spikes": [
+          "DIP-SPIKE-0001"
+        ]
+      }
+    },
+    {
+      "id": "DIP-GATE-0016",
+      "alias": "B5",
+      "title": "Portability Gate",
+      "lifecycle_status": "approved_defined_not_passed",
+      "normalized_publication_statement": "Portability Gate remains not passed until every normalized criterion is evidenced and approved.",
+      "owning_phase": "DIP program governance",
+      "public_pass_criteria": [
+        "The second Workspace activates through configuration and Domain Package registration.",
+        "Its identity crosswalk and source data remain private.",
+        "Synthetic equivalents cover public contract testing.",
+        "No platform-core branching is required.",
+        "Workspace isolation tests pass in both directions."
+      ],
+      "relationships": {
+        "adrs": [
+          "ADR-IMP-029"
+        ],
+        "decisions": [
+          "DIP-DEC-0261"
+        ],
+        "requirements": [
+          "DIP-REQ-0094",
+          "DIP-REQ-0102"
+        ]
+      }
+    },
+    {
+      "id": "DIP-GATE-0017",
+      "alias": "B6",
+      "title": "Production Readiness Gate",
+      "lifecycle_status": "approved_defined_not_passed",
+      "normalized_publication_statement": "Production Readiness Gate remains not passed until every normalized criterion is evidenced and approved.",
+      "owning_phase": "DIP program governance",
+      "public_pass_criteria": [
+        "Production deployment is reproducible by immutable image digest.",
+        "Migrations and activation procedures are rehearsed.",
+        "Backup and restore objectives are demonstrated.",
+        "Threat-model and security controls pass.",
+        "Operational alerts and runbooks exist.",
+        "Actual monthly cost fits the approved envelope or has explicit approval.",
+        "The formal Production Readiness Assessment is accepted."
+      ],
+      "relationships": {
+        "adrs": [
+          "ADR-IMP-024",
+          "ADR-IMP-026"
+        ],
+        "requirements": [
+          "DIP-REQ-0076",
+          "DIP-REQ-0082",
+          "DIP-REQ-0087"
+        ],
+        "gates": [
+          "DIP-GATE-0009",
+          "DIP-GATE-0010"
+        ]
+      }
+    },
+    {
+      "id": "DIP-GATE-0018",
+      "alias": "Market Intelligence Gate",
+      "title": "Market Intelligence Qualification Gate",
+      "lifecycle_status": "approved_defined_not_passed",
+      "normalized_publication_statement": "Market Intelligence Qualification Gate remains not passed until every normalized criterion is evidenced and approved.",
+      "owning_phase": "DIP program governance",
+      "public_pass_criteria": [
+        "At least one qualified automated market-value source is operational.",
+        "At least one additional automated or imported comparison source is available.",
+        "Provenance, observation time, entity identity, format, and source terms are recorded.",
+        "Stale, missing, and conflicting valuations are explicit.",
+        "Source acquisition is compliant and operationally supportable.",
+        "Analyzers abstain when evidence is inadequate.",
+        "Model intuition is never substituted silently for missing market data."
+      ],
+      "relationships": {
+        "adrs": [
+          "ADR-IMP-028"
+        ],
+        "decisions": [
+          "DIP-DEC-0269",
+          "DIP-DEC-0270"
+        ],
+        "requirements": [
+          "DIP-REQ-0095",
+          "DIP-REQ-0103"
+        ]
+      }
+    },
+    {
+      "id": "DIP-GATE-0019",
+      "alias": "IKG1",
+      "title": "Engineering Foundation Ready",
+      "lifecycle_status": "approved_defined_not_passed",
+      "normalized_publication_statement": "IKG1 remains not passed until every approved criterion is evidenced and approved.",
+      "owning_phase": "DIP program governance",
+      "public_pass_criteria": [
+        "repository structure.",
+        "uv workspace.",
+        "Python runtime.",
+        "linting and formatting.",
+        "strict type checking.",
+        "test execution.",
+        "contract validation.",
+        "public/private source separation.",
+        "secret detection.",
+        "clean-build reproducibility."
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0581",
+          "DIP-DEC-0582"
+        ]
+      }
+    },
+    {
+      "id": "DIP-GATE-0020",
+      "alias": "IKG2",
+      "title": "Contract and Persistence Foundation Ready",
+      "lifecycle_status": "approved_defined_not_passed",
+      "normalized_publication_statement": "IKG2 remains not passed until every approved criterion is evidenced and approved.",
+      "owning_phase": "DIP program governance",
+      "public_pass_criteria": [
+        "authoritative schemas.",
+        "Pydantic boundaries.",
+        "database migrations.",
+        "artifact and version identities.",
+        "payload addressing.",
+        "provenance and lineage.",
+        "Unit of Work.",
+        "outbox and inbox behavior.",
+        "idempotency.",
+        "transaction and rollback behavior."
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0581",
+          "DIP-DEC-0582"
+        ]
+      }
+    },
+    {
+      "id": "DIP-GATE-0021",
+      "alias": "IKG3",
+      "title": "Ingestion and Workflow Foundation Ready",
+      "lifecycle_status": "approved_defined_not_passed",
+      "normalized_publication_statement": "IKG3 remains not passed until every approved criterion is evidenced and approved.",
+      "owning_phase": "DIP program governance",
+      "public_pass_criteria": [
+        "Trigger → Workflow → Stage → Job → Attempt durability.",
+        "in-process runner.",
+        "retry and failure behavior.",
+        "configuration pinning.",
+        "receipt, validation, acceptance, and propagation separation.",
+        "read-only connector behavior.",
+        "authorization enforcement.",
+        "workflow observability."
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0581",
+          "DIP-DEC-0582"
+        ]
+      }
+    },
+    {
+      "id": "DIP-GATE-0022",
+      "alias": "IKG4",
+      "title": "First Vertical Slice Verified",
+      "lifecycle_status": "approved_defined_not_passed",
+      "normalized_publication_statement": "IKG4 remains not passed until every approved criterion is evidenced and approved.",
+      "owning_phase": "DIP program governance",
+      "public_pass_criteria": [
+        "acquire approved read-only approved domain-state inputs.",
+        "preserve source payloads.",
+        "validate and accept data separately.",
+        "construct canonical league state.",
+        "preserve exact provenance.",
+        "identify versioned state changes.",
+        "retain historical interpretation.",
+        "expose authorized state and workflow status.",
+        "operate idempotently.",
+        "explain errors and rejected inputs.",
+        "complete the slice using synthetic public fixtures."
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0581",
+          "DIP-DEC-0582"
+        ]
+      }
+    }
+  ],
+  "research_spikes": [
+    {
+      "id": "DIP-SPIKE-0001",
+      "alias": "Architecture Spike 001",
+      "title": "ChatGPT and Remote MCP Production Compatibility",
+      "lifecycle_status": "approved_required_not_executed",
+      "normalized_publication_statement": "Before remote assistant integration is claimed, verify authorized-account compatibility, supported transport and identity behavior, governed read and write interaction, actor attribution, isolation, review integration, and fallback-interface continuity.",
+      "public_exit_criteria": [
+        "Authorized-account and entitlement compatibility is verified.",
+        "Transport, identity, governed interaction, attribution, isolation, and review behavior conform.",
+        "Fallback interfaces remain authenticated and governed."
+      ],
+      "relationships": {
+        "adrs": [
+          "ADR-IMP-010",
+          "ADR-IMP-016",
+          "ADR-IMP-017",
+          "ADR-IMP-023",
+          "ADR-IMP-026"
+        ],
+        "gates": [
+          "DIP-GATE-0009",
+          "PG6",
+          "IKG0"
+        ]
+      }
+    }
+  ]
+}
