@@ -1,7 +1,7 @@
 # Public Structured-Register Projection Schemas
 
-Status: `defined / generation and semantic approval pending`  
-Batch: `P0-B28`  
+Status: `active / twelve approved projections installed`  
+Batch: `P0-B30`  
 Classification: Public Reference Architecture
 
 These JSON Schemas define the only permitted machine-readable shapes for structured registers entering the public publication corpus. They do not authorize a projection merely because it validates structurally.
@@ -18,4 +18,4 @@ These JSON Schemas define the only permitted machine-readable shapes for structu
 
 The schema registry maps each canonical register to its schema, projection class, eligibility rule, and intended public output path. `build/public-structured-register-projection-policy.md` defines the operating policy.
 
-Schema definition closes only the schema-design portion of `PUB-GAP-0012`. Projection generation, semantic review, repository installation, and immutable readback verification remain pending.
+P0-B30 installs all twelve approved projections after schema validation, semantic/security review, explicit approval, immutable public working-revision binding, and byte-for-byte repository readback. `PUB-GAP-0012` is closed; final Architecture v1.0 source and release pinning remains separate.
