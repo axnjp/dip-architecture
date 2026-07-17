@@ -1,0 +1,70 @@
+{
+  "policy_id": "DIP-PUBLIC-STAGING-POLICY",
+  "version": "0.5.0",
+  "production_batch": "P0-B30",
+  "status": "controlled_working_policy",
+  "classification": "Public Reference Architecture",
+  "public_source_ids": [
+    "DIP-SRC-0001",
+    "DIP-SRC-0002",
+    "DIP-SRC-0003",
+    "DIP-SRC-0004",
+    "DIP-SRC-0005",
+    "DIP-SRC-0006",
+    "DIP-SRC-0007",
+    "DIP-SRC-0008",
+    "DIP-SRC-0009",
+    "DIP-SRC-0010"
+  ],
+  "direct_public_inputs": [
+    "build/templates/public-repository-README.md",
+    "build/public-staging-policy.json",
+    "build/public-structured-register-projection-policy.md",
+    "generated public ADR projections",
+    "blueprint/README.md",
+    "build/README.md",
+    "foundations/README.md",
+    "kickoff/README.md",
+    "releases/README.md",
+    "schemas/public-projections/README.md",
+    "schemas/public-projections/*.schema.json",
+    "schemas/public-projections/public-projection-schema-registry.json",
+    "sources/public/README.md",
+    "sources/public/program-directives/p0-production-and-publication-governance-directive.md",
+    "sources/public/publication-controls/two-tier-adr-publication-model.md"
+  ],
+  "projected_public_inputs": [
+    "registers/public/source-catalog.json",
+    "registers/public/decision-register.json",
+    "registers/public/requirement-register.json",
+    "registers/public/principle-invariant-register.json",
+    "registers/public/terminology-register.json",
+    "registers/public/adr-inventory.json",
+    "registers/public/gate-spike-register.json",
+    "registers/public/scope-deferral-matrix.json",
+    "registers/public/phase-source-family-inventory.json",
+    "registers/public/gap-log.json",
+    "registers/public/contradiction-log.json",
+    "registers/public/traceability-map.json"
+  ],
+  "structured_register_projection": {
+    "schema_registry": "schemas/public-projections/public-projection-schema-registry.json",
+    "operating_policy": "build/public-structured-register-projection-policy.md",
+    "schema_status": "defined_fixture_validated_and_candidate_validated",
+    "generation_status": "completed_review_passed_and_approved",
+    "installation_status": "installed_in_this_working_corpus",
+    "blocking_gap_id": "PUB-GAP-0012"
+  },
+  "prohibited_input_roots": [
+    "evidence",
+    "project_sources",
+    "upload"
+  ],
+  "prohibited_classifications_as_records": [
+    "Restricted Architecture",
+    "Private Authority",
+    "Secrets"
+  ],
+  "approval_locator_policy": "Public ADRs are abstract projections under the approved two-tier model. Structured registers may enter the public slice only through the P0-B28 per-register schemas after semantic disclosure review; detailed approval and verification locators remain prohibited.",
+  "release_status": "draft_working_revision_not_architecture_release"
+}
