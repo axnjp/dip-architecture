@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dip.local/schemas/public-projections/public-decision-register-projection.schema.json",
+  "title": "DIP Public Decision Register Projection",
+  "allOf": [
+    {"$ref": "public-projection-common.schema.json#/$defs/projectionEnvelope"},
+    {
+      "type": "object",
+      "required": ["records"],
+      "properties": {
+        "projection_id": {"const": "DIP-PUBLIC-DECISION-REGISTER"},
+        "source_register_id": {"const": "DIP-PUB-DECISION-REGISTER"},
+        "records": {
+          "type": "array",
+          "items": {
+            "allOf": [
+              {"$ref": "public-projection-common.schema.json#/$defs/normativeRecord"},
+              {"properties": {"id": {"pattern": "^DIP-DEC-[0-9]{4}$"}, "record_kind": {"const": "decision"}}}
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "unevaluatedProperties": false
+}
