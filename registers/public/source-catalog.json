@@ -1,0 +1,730 @@
+{
+  "projection_id": "DIP-PUBLIC-SOURCE-CATALOG",
+  "projection_version": "0.1.0-candidate",
+  "schema_version": "0.1.0-draft",
+  "classification": "Public Reference Architecture",
+  "source_register_id": "DIP-PUB-SOURCE-CATALOG",
+  "source_revision": null,
+  "status": "approved_public_projection",
+  "disclosure_review": {
+    "semantic_review_status": "passed",
+    "prohibited_field_scan": "passed",
+    "private_instance_non_disclosure": "passed",
+    "secret_scan": "passed",
+    "reviewed_revision": null
+  },
+  "records": [
+    {
+      "id": "DIP-SRC-0001",
+      "title": "P0 Production and Publication Governance Directive",
+      "normalized_publication_statement": "P0 publication production is authorized; documentation sources and publication tooling are permitted; DIP runtime implementation remains unauthorized until IKG0.",
+      "lifecycle_status": "approved_locked_controlled",
+      "public_build_eligible": true,
+      "blueprint_destinations": [
+        "Publication control front matter",
+        "Implementation Kickoff Package authorization status"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0001",
+          "DIP-DEC-0002",
+          "DIP-DEC-0003",
+          "DIP-DEC-0004",
+          "DIP-DEC-0005",
+          "DIP-DEC-0006"
+        ],
+        "requirements": [
+          "DIP-REQ-0001",
+          "DIP-REQ-0002",
+          "DIP-REQ-0003",
+          "DIP-REQ-0004",
+          "DIP-REQ-0005",
+          "DIP-REQ-0006",
+          "DIP-REQ-0007",
+          "DIP-REQ-0008",
+          "DIP-REQ-0009"
+        ],
+        "gates": [
+          "PG0",
+          "PG1",
+          "PG2",
+          "PG3",
+          "PG4",
+          "PG5",
+          "PG6",
+          "IKG0"
+        ]
+      }
+    },
+    {
+      "id": "DIP-SRC-0002",
+      "title": "Architecture Publication Planning P0–P6",
+      "normalized_publication_statement": "The publication program proceeds through controlled inventory, Foundations, Blueprint, decision publication, Architecture v1.0, generated editions and archives, and the Implementation Kickoff Package; every publication gate remains evidence-dependent.",
+      "lifecycle_status": "approved_locked_source_family_controlled",
+      "public_build_eligible": true,
+      "blueprint_destinations": [
+        "Publication plan",
+        "Release and gate model",
+        "Implementation Kickoff Package"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0471",
+          "DIP-DEC-0472",
+          "DIP-DEC-0473",
+          "DIP-DEC-0474",
+          "DIP-DEC-0475",
+          "DIP-DEC-0476",
+          "DIP-DEC-0477",
+          "DIP-DEC-0478",
+          "DIP-DEC-0479",
+          "DIP-DEC-0480"
+        ],
+        "requirements": [
+          "DIP-REQ-0155",
+          "DIP-REQ-0156",
+          "DIP-REQ-0157",
+          "DIP-REQ-0158",
+          "DIP-REQ-0159",
+          "DIP-REQ-0160",
+          "DIP-REQ-0161",
+          "DIP-REQ-0162",
+          "DIP-REQ-0163",
+          "DIP-REQ-0164",
+          "DIP-REQ-0165",
+          "DIP-REQ-0166",
+          "DIP-REQ-0167"
+        ],
+        "gates": [
+          "PG0",
+          "PG1",
+          "PG2",
+          "PG3",
+          "PG4",
+          "PG5",
+          "PG6",
+          "IKG0"
+        ]
+      }
+    },
+    {
+      "id": "DIP-SRC-0003",
+      "title": "G0 — Conceptual Architecture",
+      "normalized_publication_statement": "G0 establishes the durable conceptual architecture and governing platform hierarchy for DIP.",
+      "lifecycle_status": "approved_partial_record_extraction",
+      "public_build_eligible": true,
+      "blueprint_destinations": [
+        "Architectural Foundations",
+        "Blueprint: conceptual model and hierarchy"
+      ],
+      "relationships": {
+        "gaps": [
+          "PUB-GAP-0004"
+        ],
+        "decisions": [
+          "DIP-DEC-0594",
+          "DIP-DEC-0595",
+          "DIP-DEC-0596",
+          "DIP-DEC-0597",
+          "DIP-DEC-0598",
+          "DIP-DEC-0599",
+          "DIP-DEC-0600",
+          "DIP-DEC-0601",
+          "DIP-DEC-0602",
+          "DIP-DEC-0603",
+          "DIP-DEC-0604",
+          "DIP-DEC-0605",
+          "DIP-DEC-0606",
+          "DIP-DEC-0607",
+          "DIP-DEC-0608",
+          "DIP-DEC-0609",
+          "DIP-DEC-0610",
+          "DIP-DEC-0611",
+          "DIP-DEC-0612",
+          "DIP-DEC-0613",
+          "DIP-DEC-0614",
+          "DIP-DEC-0615",
+          "DIP-DEC-0616",
+          "DIP-DEC-0617",
+          "DIP-DEC-0618",
+          "DIP-DEC-0619",
+          "DIP-DEC-0620",
+          "DIP-DEC-0621",
+          "DIP-DEC-0622",
+          "DIP-DEC-0623",
+          "DIP-DEC-0624",
+          "DIP-DEC-0625"
+        ],
+        "requirements": [
+          "DIP-REQ-0247",
+          "DIP-REQ-0248",
+          "DIP-REQ-0249",
+          "DIP-REQ-0250",
+          "DIP-REQ-0251",
+          "DIP-REQ-0252",
+          "DIP-REQ-0253",
+          "DIP-REQ-0254",
+          "DIP-REQ-0255",
+          "DIP-REQ-0256",
+          "DIP-REQ-0257",
+          "DIP-REQ-0258",
+          "DIP-REQ-0259",
+          "DIP-REQ-0260",
+          "DIP-REQ-0261",
+          "DIP-REQ-0262",
+          "DIP-REQ-0263",
+          "DIP-REQ-0264",
+          "DIP-REQ-0265",
+          "DIP-REQ-0266"
+        ],
+        "principles": [
+          "DIP-PRN-0062",
+          "DIP-PRN-0063",
+          "DIP-PRN-0064",
+          "DIP-PRN-0065",
+          "DIP-PRN-0066",
+          "DIP-PRN-0067",
+          "DIP-PRN-0068",
+          "DIP-PRN-0069"
+        ],
+        "invariants": [
+          "DIP-INV-0088",
+          "DIP-INV-0089",
+          "DIP-INV-0090",
+          "DIP-INV-0091",
+          "DIP-INV-0092",
+          "DIP-INV-0093",
+          "DIP-INV-0094",
+          "DIP-INV-0095"
+        ],
+        "terms": [
+          "DIP-TERM-0186",
+          "DIP-TERM-0187",
+          "DIP-TERM-0188",
+          "DIP-TERM-0189",
+          "DIP-TERM-0190",
+          "DIP-TERM-0191",
+          "DIP-TERM-0192",
+          "DIP-TERM-0193",
+          "DIP-TERM-0194",
+          "DIP-TERM-0195",
+          "DIP-TERM-0196",
+          "DIP-TERM-0197"
+        ],
+        "gates": [
+          "PG0",
+          "PG1",
+          "PG2"
+        ]
+      }
+    },
+    {
+      "id": "DIP-SRC-0004",
+      "title": "G1 — Operational Design",
+      "normalized_publication_statement": "G1 operationalizes the conceptual model through lifecycle, workflow, artifact, governance, knowledge, review, Workspace, Private Strategy, scheduling, collaboration, and Minimum Operating Profile designs.",
+      "lifecycle_status": "approved_partial_record_extraction",
+      "public_build_eligible": true,
+      "blueprint_destinations": [
+        "Architectural Foundations",
+        "Blueprint modules",
+        "Registers"
+      ],
+      "relationships": {
+        "gaps": [
+          "PUB-GAP-0004"
+        ],
+        "decisions": [
+          "DIP-DEC-0626",
+          "DIP-DEC-0627",
+          "DIP-DEC-0628",
+          "DIP-DEC-0629",
+          "DIP-DEC-0630",
+          "DIP-DEC-0631",
+          "DIP-DEC-0632",
+          "DIP-DEC-0633",
+          "DIP-DEC-0634",
+          "DIP-DEC-0635",
+          "DIP-DEC-0636",
+          "DIP-DEC-0637",
+          "DIP-DEC-0638",
+          "DIP-DEC-0639",
+          "DIP-DEC-0640",
+          "DIP-DEC-0641",
+          "DIP-DEC-0642",
+          "DIP-DEC-0643",
+          "DIP-DEC-0644",
+          "DIP-DEC-0645"
+        ],
+        "requirements": [
+          "DIP-REQ-0267",
+          "DIP-REQ-0268",
+          "DIP-REQ-0269",
+          "DIP-REQ-0270",
+          "DIP-REQ-0271",
+          "DIP-REQ-0272",
+          "DIP-REQ-0273",
+          "DIP-REQ-0274",
+          "DIP-REQ-0275",
+          "DIP-REQ-0276",
+          "DIP-REQ-0277",
+          "DIP-REQ-0278"
+        ],
+        "principles": [
+          "DIP-PRN-0001",
+          "DIP-PRN-0002",
+          "DIP-PRN-0003",
+          "DIP-PRN-0004",
+          "DIP-PRN-0005",
+          "DIP-PRN-0009"
+        ],
+        "invariants": [
+          "DIP-INV-0096",
+          "DIP-INV-0097",
+          "DIP-INV-0098",
+          "DIP-INV-0099"
+        ],
+        "terms": [
+          "DIP-TERM-0198",
+          "DIP-TERM-0199",
+          "DIP-TERM-0200",
+          "DIP-TERM-0201",
+          "DIP-TERM-0202",
+          "DIP-TERM-0203",
+          "DIP-TERM-0204",
+          "DIP-TERM-0205"
+        ],
+        "gates": [
+          "PG0",
+          "PG1",
+          "PG2"
+        ]
+      }
+    },
+    {
+      "id": "DIP-SRC-0005",
+      "title": "First-Domain Viability and Implementation Readiness Review",
+      "normalized_publication_statement": "The approved architecture passed first-domain viability and implementation-readiness review at Very High confidence, subject to Version 1 scope discipline and AIOP completion before implementation planning.",
+      "lifecycle_status": "approved_partial_record_extraction",
+      "public_build_eligible": true,
+      "blueprint_destinations": [
+        "Architectural Foundations: validation history",
+        "Blueprint: Minimum Operating Profile",
+        "Kickoff Package"
+      ],
+      "relationships": {
+        "gaps": [
+          "PUB-GAP-0004"
+        ],
+        "decisions": [
+          "DIP-DEC-0646",
+          "DIP-DEC-0647",
+          "DIP-DEC-0648",
+          "DIP-DEC-0649",
+          "DIP-DEC-0650",
+          "DIP-DEC-0651"
+        ],
+        "requirements": [
+          "DIP-REQ-0279",
+          "DIP-REQ-0280",
+          "DIP-REQ-0281",
+          "DIP-REQ-0282",
+          "DIP-REQ-0283",
+          "DIP-REQ-0284"
+        ],
+        "invariants": [
+          "DIP-INV-0100",
+          "DIP-INV-0101",
+          "DIP-INV-0102"
+        ],
+        "terms": [
+          "DIP-TERM-0030",
+          "DIP-TERM-0152",
+          "DIP-TERM-0198"
+        ],
+        "gates": [
+          "PG0",
+          "PG1",
+          "PG6",
+          "IKG0"
+        ]
+      }
+    },
+    {
+      "id": "DIP-SRC-0006",
+      "title": "AI Operating Profile v1.0",
+      "normalized_publication_statement": "AIOP v1.0 is the versioned provider-neutral constitutional behavioral contract governing evidence, confidence, explanation, memory, authority, initiative, interaction, failure, learning, portability, and conformance for AI interacting with DIP.",
+      "lifecycle_status": "approved_partial_record_extraction",
+      "public_build_eligible": true,
+      "blueprint_destinations": [
+        "Architectural Foundations: companion intelligence",
+        "Blueprint: AI governance and conformance"
+      ],
+      "relationships": {
+        "gaps": [
+          "PUB-GAP-0005"
+        ],
+        "decisions": [
+          "DIP-DEC-0652",
+          "DIP-DEC-0653",
+          "DIP-DEC-0654",
+          "DIP-DEC-0655",
+          "DIP-DEC-0656",
+          "DIP-DEC-0657",
+          "DIP-DEC-0658",
+          "DIP-DEC-0659",
+          "DIP-DEC-0660",
+          "DIP-DEC-0661",
+          "DIP-DEC-0662",
+          "DIP-DEC-0663",
+          "DIP-DEC-0664",
+          "DIP-DEC-0665",
+          "DIP-DEC-0666",
+          "DIP-DEC-0667",
+          "DIP-DEC-0668",
+          "DIP-DEC-0669",
+          "DIP-DEC-0670",
+          "DIP-DEC-0671",
+          "DIP-DEC-0672",
+          "DIP-DEC-0673",
+          "DIP-DEC-0674",
+          "DIP-DEC-0675",
+          "DIP-DEC-0676",
+          "DIP-DEC-0677",
+          "DIP-DEC-0678",
+          "DIP-DEC-0679",
+          "DIP-DEC-0680",
+          "DIP-DEC-0681",
+          "DIP-DEC-0682",
+          "DIP-DEC-0683",
+          "DIP-DEC-0684",
+          "DIP-DEC-0685",
+          "DIP-DEC-0686",
+          "DIP-DEC-0687",
+          "DIP-DEC-0688"
+        ],
+        "requirements": [
+          "DIP-REQ-0285",
+          "DIP-REQ-0286",
+          "DIP-REQ-0287",
+          "DIP-REQ-0288",
+          "DIP-REQ-0289",
+          "DIP-REQ-0290",
+          "DIP-REQ-0291",
+          "DIP-REQ-0292",
+          "DIP-REQ-0293",
+          "DIP-REQ-0294",
+          "DIP-REQ-0295",
+          "DIP-REQ-0296",
+          "DIP-REQ-0297",
+          "DIP-REQ-0298",
+          "DIP-REQ-0299",
+          "DIP-REQ-0300",
+          "DIP-REQ-0301",
+          "DIP-REQ-0302",
+          "DIP-REQ-0303",
+          "DIP-REQ-0304",
+          "DIP-REQ-0305",
+          "DIP-REQ-0306",
+          "DIP-REQ-0307",
+          "DIP-REQ-0308",
+          "DIP-REQ-0309",
+          "DIP-REQ-0310",
+          "DIP-REQ-0311",
+          "DIP-REQ-0312"
+        ],
+        "principles": [
+          "DIP-PRN-0070",
+          "DIP-PRN-0071",
+          "DIP-PRN-0072",
+          "DIP-PRN-0073",
+          "DIP-PRN-0074",
+          "DIP-PRN-0075",
+          "DIP-PRN-0076",
+          "DIP-PRN-0077",
+          "DIP-PRN-0078",
+          "DIP-PRN-0079",
+          "DIP-PRN-0080",
+          "DIP-PRN-0081",
+          "DIP-PRN-0082",
+          "DIP-PRN-0083",
+          "DIP-PRN-0084",
+          "DIP-PRN-0085",
+          "DIP-PRN-0086",
+          "DIP-PRN-0087",
+          "DIP-PRN-0088",
+          "DIP-PRN-0089",
+          "DIP-PRN-0090",
+          "DIP-PRN-0091"
+        ],
+        "invariants": [
+          "DIP-INV-0103",
+          "DIP-INV-0104",
+          "DIP-INV-0105",
+          "DIP-INV-0106",
+          "DIP-INV-0107",
+          "DIP-INV-0108",
+          "DIP-INV-0109",
+          "DIP-INV-0110",
+          "DIP-INV-0111",
+          "DIP-INV-0112",
+          "DIP-INV-0113",
+          "DIP-INV-0114",
+          "DIP-INV-0115",
+          "DIP-INV-0116",
+          "DIP-INV-0117"
+        ],
+        "terms": [
+          "DIP-TERM-0206",
+          "DIP-TERM-0207",
+          "DIP-TERM-0208",
+          "DIP-TERM-0209",
+          "DIP-TERM-0210",
+          "DIP-TERM-0211",
+          "DIP-TERM-0212",
+          "DIP-TERM-0213",
+          "DIP-TERM-0214",
+          "DIP-TERM-0215",
+          "DIP-TERM-0216",
+          "DIP-TERM-0217",
+          "DIP-TERM-0218",
+          "DIP-TERM-0219",
+          "DIP-TERM-0220",
+          "DIP-TERM-0221",
+          "DIP-TERM-0222"
+        ],
+        "gates": [
+          "PG0",
+          "PG1",
+          "PG2"
+        ]
+      }
+    },
+    {
+      "id": "DIP-SRC-0007",
+      "title": "DIP AI Constitution",
+      "normalized_publication_statement": "The DIP AI Constitution supplies 22 binding highest-order principles for governed AI behavior and conformance.",
+      "lifecycle_status": "approved_partial_record_extraction",
+      "public_build_eligible": true,
+      "blueprint_destinations": [
+        "Architectural Foundations: principles",
+        "Blueprint: AI conformance",
+        "Principle and Invariant Register"
+      ],
+      "relationships": {
+        "gaps": [
+          "PUB-GAP-0005"
+        ],
+        "decisions": [
+          "DIP-DEC-0688"
+        ],
+        "requirements": [
+          "DIP-REQ-0312"
+        ],
+        "principles": [
+          "DIP-PRN-0070",
+          "DIP-PRN-0071",
+          "DIP-PRN-0072",
+          "DIP-PRN-0073",
+          "DIP-PRN-0074",
+          "DIP-PRN-0075",
+          "DIP-PRN-0076",
+          "DIP-PRN-0077",
+          "DIP-PRN-0078",
+          "DIP-PRN-0079",
+          "DIP-PRN-0080",
+          "DIP-PRN-0081",
+          "DIP-PRN-0082",
+          "DIP-PRN-0083",
+          "DIP-PRN-0084",
+          "DIP-PRN-0085",
+          "DIP-PRN-0086",
+          "DIP-PRN-0087",
+          "DIP-PRN-0088",
+          "DIP-PRN-0089",
+          "DIP-PRN-0090",
+          "DIP-PRN-0091"
+        ],
+        "invariants": [
+          "DIP-INV-0103",
+          "DIP-INV-0108",
+          "DIP-INV-0110",
+          "DIP-INV-0113",
+          "DIP-INV-0115",
+          "DIP-INV-0117"
+        ],
+        "terms": [
+          "DIP-TERM-0221"
+        ],
+        "gates": [
+          "PG0",
+          "PG1",
+          "PG2"
+        ]
+      }
+    },
+    {
+      "id": "DIP-SRC-0008",
+      "title": "Governed Companion Intelligence Operating System Framing",
+      "normalized_publication_statement": "DIP is the governed operating environment and durable intelligence substrate around replaceable reasoning models; AI participates through governed contracts and does not become the platform's authority or system of record.",
+      "lifecycle_status": "approved_locked",
+      "public_build_eligible": true,
+      "blueprint_destinations": [
+        "Architectural Foundations: purpose and framing",
+        "Architecture v1.0 front matter"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0689",
+          "DIP-DEC-0690",
+          "DIP-DEC-0691",
+          "DIP-DEC-0692",
+          "DIP-DEC-0693",
+          "DIP-DEC-0694",
+          "DIP-DEC-0695",
+          "DIP-DEC-0696",
+          "DIP-DEC-0697",
+          "DIP-DEC-0698"
+        ],
+        "requirements": [
+          "DIP-REQ-0313",
+          "DIP-REQ-0314",
+          "DIP-REQ-0315",
+          "DIP-REQ-0316",
+          "DIP-REQ-0317",
+          "DIP-REQ-0318",
+          "DIP-REQ-0319",
+          "DIP-REQ-0320"
+        ],
+        "principles": [
+          "DIP-PRN-0070",
+          "DIP-PRN-0075",
+          "DIP-PRN-0088",
+          "DIP-PRN-0089"
+        ],
+        "invariants": [
+          "DIP-INV-0118",
+          "DIP-INV-0119",
+          "DIP-INV-0120",
+          "DIP-INV-0121"
+        ],
+        "terms": [
+          "DIP-TERM-0223",
+          "DIP-TERM-0224",
+          "DIP-TERM-0225"
+        ],
+        "gates": [
+          "PG0",
+          "PG1",
+          "PG2",
+          "PG4"
+        ]
+      }
+    },
+    {
+      "id": "DIP-SRC-0009",
+      "title": "Implementation Planning Sections 1–12",
+      "normalized_publication_statement": "The implementation planning corpus translates the approved architecture into a public-reproducible, private-authoritative engineering baseline while retaining formal implementation authorization gates.",
+      "lifecycle_status": "approved_extract_pending",
+      "public_build_eligible": true,
+      "blueprint_destinations": [
+        "Blueprint technical modules",
+        "ADR corpus",
+        "Kickoff Package"
+      ],
+      "relationships": {
+        "gaps": [
+          "PUB-GAP-0003"
+        ],
+        "adrs": [
+          "ADR-IMP-001",
+          "ADR-IMP-002",
+          "ADR-IMP-003",
+          "ADR-IMP-004",
+          "ADR-IMP-005",
+          "ADR-IMP-006",
+          "ADR-IMP-007",
+          "ADR-IMP-008",
+          "ADR-IMP-009",
+          "ADR-IMP-010",
+          "ADR-IMP-011",
+          "ADR-IMP-012",
+          "ADR-IMP-013",
+          "ADR-IMP-014",
+          "ADR-IMP-015",
+          "ADR-IMP-016",
+          "ADR-IMP-017",
+          "ADR-IMP-018",
+          "ADR-IMP-019",
+          "ADR-IMP-020",
+          "ADR-IMP-021",
+          "ADR-IMP-022",
+          "ADR-IMP-023",
+          "ADR-IMP-024",
+          "ADR-IMP-025",
+          "ADR-IMP-026",
+          "ADR-IMP-027",
+          "ADR-IMP-028",
+          "ADR-IMP-029"
+        ],
+        "gates": [
+          "PG0",
+          "PG2",
+          "PG3",
+          "PG6",
+          "IKG0"
+        ]
+      }
+    },
+    {
+      "id": "DIP-SRC-0010",
+      "title": "Implementation ADR Corpus ADR-IMP-001 through ADR-IMP-029",
+      "normalized_publication_statement": "The implementation ADR corpus contains 29 preserved, accepted, and locked identifiers with verified titles and normalized bodies; public ADR projections preserve minimum-necessary disclosure while complete bodies remain restricted.",
+      "lifecycle_status": "approved_extract_pending",
+      "public_build_eligible": true,
+      "blueprint_destinations": [
+        "ADR collection",
+        "Decision Register",
+        "Blueprint cross-references",
+        "Kickoff Package"
+      ],
+      "relationships": {
+        "adrs": [
+          "ADR-IMP-001",
+          "ADR-IMP-002",
+          "ADR-IMP-003",
+          "ADR-IMP-004",
+          "ADR-IMP-005",
+          "ADR-IMP-006",
+          "ADR-IMP-007",
+          "ADR-IMP-008",
+          "ADR-IMP-009",
+          "ADR-IMP-010",
+          "ADR-IMP-011",
+          "ADR-IMP-012",
+          "ADR-IMP-013",
+          "ADR-IMP-014",
+          "ADR-IMP-015",
+          "ADR-IMP-016",
+          "ADR-IMP-017",
+          "ADR-IMP-018",
+          "ADR-IMP-019",
+          "ADR-IMP-020",
+          "ADR-IMP-021",
+          "ADR-IMP-022",
+          "ADR-IMP-023",
+          "ADR-IMP-024",
+          "ADR-IMP-025",
+          "ADR-IMP-026",
+          "ADR-IMP-027",
+          "ADR-IMP-028",
+          "ADR-IMP-029"
+        ],
+        "gates": [
+          "PG0",
+          "PG3",
+          "PG6"
+        ]
+      }
+    }
+  ]
+}
