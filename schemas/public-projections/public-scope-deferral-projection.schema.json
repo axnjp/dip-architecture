@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dip.local/schemas/public-projections/public-scope-deferral-projection.schema.json",
+  "title": "DIP Public Scope and Deferral Projection",
+  "allOf": [
+    {"$ref": "public-projection-common.schema.json#/$defs/projectionEnvelope"},
+    {
+      "type": "object",
+      "required": ["activation_classifications", "in_scope", "out_of_scope", "deferrals"],
+      "properties": {
+        "projection_id": {"const": "DIP-PUBLIC-SCOPE-DEFERRAL-MATRIX"},
+        "source_register_id": {"const": "DIP-PUB-SCOPE-DEFERRAL-MATRIX"},
+        "activation_classifications": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["name", "definition", "lifecycle_status"],
+            "properties": {
+              "name": {"type": "string", "minLength": 1},
+              "definition": {"type": "string", "minLength": 1},
+              "lifecycle_status": {"type": "string", "minLength": 1}
+            }
+          }
+        },
+        "in_scope": {"$ref": "#/$defs/scopeItems"},
+        "out_of_scope": {"$ref": "#/$defs/scopeItems"},
+        "deferrals": {
+          "type": "array",
+          "items": {
+            "allOf": [
+              {"$ref": "public-projection-common.schema.json#/$defs/normativeRecord"},
+              {"properties": {"id": {"pattern": "^DIP-DEF-[0-9]{4}$"}, "record_kind": {"const": "deferral"}}}
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "scopeItems": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["statement"],
+        "properties": {"statement": {"type": "string", "minLength": 1}}
+      }
+    }
+  },
+  "unevaluatedProperties": false
+}
