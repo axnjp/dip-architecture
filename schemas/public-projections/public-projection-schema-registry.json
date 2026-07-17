@@ -1,9 +1,9 @@
 {
   "registry_id": "DIP-PUBLIC-PROJECTION-SCHEMA-REGISTRY",
   "registry_version": "0.1.0-draft",
-  "production_batch": "P0-B28",
+  "production_batch": "P0-B30",
   "classification": "Public Reference Architecture",
-  "status": "schemas_defined_generation_pending",
+  "status": "schemas_active_twelve_projections_installed",
   "governing_policy": "build/public-structured-register-projection-policy.md",
   "common_schema": "schemas/public-projections/public-projection-common.schema.json",
   "global_prohibited_source_fields": [
