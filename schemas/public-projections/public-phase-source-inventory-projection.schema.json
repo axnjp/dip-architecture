@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dip.local/schemas/public-projections/public-phase-source-inventory-projection.schema.json",
+  "title": "DIP Public Phase and Source-Family Inventory Projection",
+  "allOf": [
+    {"$ref": "public-projection-common.schema.json#/$defs/projectionEnvelope"},
+    {
+      "type": "object",
+      "required": ["completed_phases", "source_families", "publication_phases"],
+      "properties": {
+        "projection_id": {"const": "DIP-PUBLIC-PHASE-SOURCE-INVENTORY"},
+        "source_register_id": {"const": "DIP-PUB-PHASE-SOURCE-INVENTORY"},
+        "completed_phases": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["sequence", "name", "status", "public_record_extraction_summary"],
+            "properties": {
+              "sequence": {"type": "integer", "minimum": 1},
+              "name": {"type": "string", "minLength": 1},
+              "status": {"type": "string", "minLength": 1},
+              "public_record_extraction_summary": {"type": "string", "minLength": 1}
+            }
+          }
+        },
+        "source_families": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["family", "classification_summary", "public_record_extraction_summary"],
+            "properties": {
+              "family": {"type": "string", "minLength": 1},
+              "classification_summary": {"type": "string", "minLength": 1},
+              "public_record_extraction_summary": {"type": "string", "minLength": 1}
+            }
+          }
+        },
+        "publication_phases": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["id", "name", "planning_status", "production_status", "gate"],
+            "properties": {
+              "id": {"type": "string", "pattern": "^P[0-6]$"},
+              "name": {"type": "string", "minLength": 1},
+              "planning_status": {"type": "string", "minLength": 1},
+              "production_status": {"type": "string", "minLength": 1},
+              "gate": {"type": "string", "pattern": "^PG[0-6]$"}
+            }
+          }
+        }
+      }
+    }
+  ],
+  "unevaluatedProperties": false
+}
