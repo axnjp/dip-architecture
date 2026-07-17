@@ -1,0 +1,135 @@
+{
+  "registry_id": "DIP-PUBLIC-PROJECTION-SCHEMA-REGISTRY",
+  "registry_version": "0.1.0-draft",
+  "production_batch": "P0-B28",
+  "classification": "Public Reference Architecture",
+  "status": "schemas_defined_generation_pending",
+  "governing_policy": "build/public-structured-register-projection-policy.md",
+  "common_schema": "schemas/public-projections/public-projection-common.schema.json",
+  "global_prohibited_source_fields": [
+    "approved_source_statement",
+    "approval_evidence",
+    "authority",
+    "authority_and_scope",
+    "evidence_state",
+    "source_ids",
+    "verification_evidence",
+    "verification_evidence_required",
+    "resolution_evidence",
+    "resolution_evidence_required",
+    "progress_evidence",
+    "opaque_location_reference",
+    "repository_binding",
+    "repository_url",
+    "access_policy_reference",
+    "fallback",
+    "criteria_assessment"
+  ],
+  "global_semantic_checks": [
+    "No statement confirms or denies whether any real protected instance exists.",
+    "No restricted repository name, location, authentication detail, or revision is disclosed.",
+    "No approval-message quotation, conversation locator, account identifier, email address, or attachment identifier is disclosed.",
+    "No provider-specific protected topology, authority root, configuration path, membership, binding, or active private configuration is disclosed.",
+    "No secret value or secret-shaped token is disclosed.",
+    "Every relationship identifier is independently public-safe and resolves to a public projection or public gate alias.",
+    "A missing public-safe value is omitted; it is never filled by inference from restricted evidence."
+  ],
+  "schemas": [
+    {
+      "projection_id": "DIP-PUBLIC-SOURCE-CATALOG",
+      "schema_path": "schemas/public-projections/public-source-catalog-projection.schema.json",
+      "source_path": "catalogs/source-catalog.json",
+      "output_path": "registers/public/source-catalog.json",
+      "projection_class": "field_projection_with_semantic_review",
+      "record_eligibility": "classification equals Public Reference Architecture and public_build_eligible is true"
+    },
+    {
+      "projection_id": "DIP-PUBLIC-DECISION-REGISTER",
+      "schema_path": "schemas/public-projections/public-decision-register-projection.schema.json",
+      "source_path": "registers/decision-register-seed.json",
+      "output_path": "registers/public/decision-register.json",
+      "projection_class": "deterministic_field_projection",
+      "record_eligibility": "classification equals Public Reference Architecture"
+    },
+    {
+      "projection_id": "DIP-PUBLIC-REQUIREMENT-REGISTER",
+      "schema_path": "schemas/public-projections/public-requirement-register-projection.schema.json",
+      "source_path": "registers/requirement-register.json",
+      "output_path": "registers/public/requirement-register.json",
+      "projection_class": "deterministic_field_projection",
+      "record_eligibility": "classification equals Public Reference Architecture"
+    },
+    {
+      "projection_id": "DIP-PUBLIC-PRINCIPLE-INVARIANT-REGISTER",
+      "schema_path": "schemas/public-projections/public-principle-invariant-register-projection.schema.json",
+      "source_path": "registers/principle-invariant-register.json",
+      "output_path": "registers/public/principle-invariant-register.json",
+      "projection_class": "deterministic_field_projection",
+      "record_eligibility": "classification equals Public Reference Architecture"
+    },
+    {
+      "projection_id": "DIP-PUBLIC-TERMINOLOGY-REGISTER",
+      "schema_path": "schemas/public-projections/public-terminology-register-projection.schema.json",
+      "source_path": "registers/terminology-aliases.json",
+      "output_path": "registers/public/terminology-register.json",
+      "projection_class": "deterministic_field_projection",
+      "record_eligibility": "classification equals Public Reference Architecture"
+    },
+    {
+      "projection_id": "DIP-PUBLIC-ADR-INVENTORY",
+      "schema_path": "schemas/public-projections/public-adr-inventory-projection.schema.json",
+      "source_path": "registers/adr-inventory.json",
+      "output_path": "registers/public/adr-inventory.json",
+      "projection_class": "deterministic_field_projection",
+      "record_eligibility": "accepted and locked ADR with an installed public projection"
+    },
+    {
+      "projection_id": "DIP-PUBLIC-GATE-SPIKE-REGISTER",
+      "schema_path": "schemas/public-projections/public-gate-spike-register-projection.schema.json",
+      "source_path": "registers/gate-spike-register.json",
+      "output_path": "registers/public/gate-spike-register.json",
+      "projection_class": "field_projection_with_semantic_review",
+      "record_eligibility": "classification equals Public Reference Architecture"
+    },
+    {
+      "projection_id": "DIP-PUBLIC-SCOPE-DEFERRAL-MATRIX",
+      "schema_path": "schemas/public-projections/public-scope-deferral-projection.schema.json",
+      "source_path": "registers/scope-deferral-matrix.json",
+      "output_path": "registers/public/scope-deferral-matrix.json",
+      "projection_class": "authored_public_projection",
+      "record_eligibility": "public-safe scope statement or Public Reference Architecture deferral"
+    },
+    {
+      "projection_id": "DIP-PUBLIC-PHASE-SOURCE-INVENTORY",
+      "schema_path": "schemas/public-projections/public-phase-source-inventory-projection.schema.json",
+      "source_path": "registers/phase-source-family-inventory.json",
+      "output_path": "registers/public/phase-source-family-inventory.json",
+      "projection_class": "authored_public_projection",
+      "record_eligibility": "public-safe phase or source-family summary"
+    },
+    {
+      "projection_id": "DIP-PUBLIC-GAP-LOG",
+      "schema_path": "schemas/public-projections/public-gap-log-projection.schema.json",
+      "source_path": "logs/gap-log.json",
+      "output_path": "registers/public/gap-log.json",
+      "projection_class": "field_projection_with_semantic_review",
+      "record_eligibility": "gap has an approved public-safe summary"
+    },
+    {
+      "projection_id": "DIP-PUBLIC-CONTRADICTION-LOG",
+      "schema_path": "schemas/public-projections/public-contradiction-log-projection.schema.json",
+      "source_path": "logs/contradiction-log.json",
+      "output_path": "registers/public/contradiction-log.json",
+      "projection_class": "field_projection_with_semantic_review",
+      "record_eligibility": "potential contradiction has an approved public-safe summary"
+    },
+    {
+      "projection_id": "DIP-PUBLIC-TRACEABILITY-MAP",
+      "schema_path": "schemas/public-projections/public-traceability-map-projection.schema.json",
+      "source_path": "traceability/initial-traceability-map.md",
+      "output_path": "registers/public/traceability-map.json",
+      "projection_class": "authored_public_projection",
+      "record_eligibility": "relationship and every referenced identifier are public-safe"
+    }
+  ]
+}
