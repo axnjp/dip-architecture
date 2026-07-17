@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dip.local/schemas/public-projections/public-principle-invariant-register-projection.schema.json",
+  "title": "DIP Public Principle and Invariant Register Projection",
+  "allOf": [
+    {"$ref": "public-projection-common.schema.json#/$defs/projectionEnvelope"},
+    {
+      "type": "object",
+      "required": ["principles", "invariants"],
+      "properties": {
+        "projection_id": {"const": "DIP-PUBLIC-PRINCIPLE-INVARIANT-REGISTER"},
+        "source_register_id": {"const": "DIP-PUB-PRINCIPLE-INVARIANT-REGISTER"},
+        "principles": {
+          "type": "array",
+          "items": {
+            "allOf": [
+              {"$ref": "public-projection-common.schema.json#/$defs/normativeRecord"},
+              {"properties": {"id": {"pattern": "^DIP-PRN-[0-9]{4}$"}, "record_kind": {"const": "principle"}}}
+            ]
+          }
+        },
+        "invariants": {
+          "type": "array",
+          "items": {
+            "allOf": [
+              {"$ref": "public-projection-common.schema.json#/$defs/normativeRecord"},
+              {"properties": {"id": {"pattern": "^DIP-INV-[0-9]{4}$"}, "record_kind": {"const": "invariant"}}}
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "unevaluatedProperties": false
+}
