@@ -1,0 +1,1004 @@
+{
+  "projection_id": "DIP-PUBLIC-SCOPE-DEFERRAL-MATRIX",
+  "projection_version": "0.1.0-candidate",
+  "schema_version": "0.1.0-draft",
+  "classification": "Public Reference Architecture",
+  "source_register_id": "DIP-PUB-SCOPE-DEFERRAL-MATRIX",
+  "source_revision": null,
+  "status": "approved_public_projection",
+  "disclosure_review": {
+    "semantic_review_status": "passed",
+    "prohibited_field_scan": "passed",
+    "private_instance_non_disclosure": "passed",
+    "secret_scan": "passed",
+    "reviewed_revision": null
+  },
+  "activation_classifications": [
+    {
+      "name": "Initial",
+      "definition": "Required for the first production implementation.",
+      "lifecycle_status": "approved_locked"
+    },
+    {
+      "name": "First vertical slice",
+      "definition": "Required specifically for the approved first vertical slice.",
+      "lifecycle_status": "approved_locked"
+    },
+    {
+      "name": "Portability gate",
+      "definition": "Required to demonstrate portability through the approved second-Workspace validation boundary.",
+      "lifecycle_status": "approved_locked"
+    },
+    {
+      "name": "Conditional launch capability",
+      "definition": "Included only when its approved qualification conditions are met.",
+      "lifecycle_status": "approved_locked"
+    },
+    {
+      "name": "Post-initial deferred",
+      "definition": "Retained as governed architecture but not built in the initial implementation.",
+      "lifecycle_status": "approved_locked"
+    },
+    {
+      "name": "Reassessment-boundary capability",
+      "definition": "Considered when scale, security, cost, or operating evidence crosses an approved threshold.",
+      "lifecycle_status": "approved_locked"
+    }
+  ],
+  "in_scope": [
+    {
+      "statement": "P0 publication inventory and normalization"
+    },
+    {
+      "statement": "Canonical documentation sources and publication tooling"
+    },
+    {
+      "statement": "First governed execution slice: one process, one database, one Domain Package, and a no-op command adapter while exercising the full governing chain"
+    },
+    {
+      "statement": "Initial connector and MCP proof: live and fixture-based read-only acquisition, governed query and refresh, Review Service access, and no-op Command/Outcome loop"
+    },
+    {
+      "statement": "First governed AI slice using one provider, one narrow task, accepted evidence, structured output, and Review Service handoff"
+    },
+    {
+      "statement": "First Operations Page limited to review, refresh, workflow inspection, data quality, strategy review, and Command/Outcome status"
+    },
+    {
+      "statement": "Initial production security posture: allowlisted enrollment, external OIDC, server-side sessions, typed authorization, RLS, encryption, audit, and security readiness gate"
+    },
+    {
+      "statement": "Layered testing, provider-neutral observability, reliability, reconciliation, operational conformance, and production runbooks"
+    },
+    {
+      "statement": "Single-process production, immutable release identity, rehearsed recovery, governed activation, and formal production readiness"
+    },
+    {
+      "statement": "Initial vertical slice, measurable build gates, read-only first-domain acquisition, governed review/action, and authoritative fallback interfaces"
+    },
+    {
+      "statement": "Modular monorepo, package boundaries, inward dependency direction, authoritative contracts, minimal local/test foundation, and governed first slice"
+    },
+    {
+      "statement": "Python 3.14 and uv baseline, strict typing, CLI-first interaction, PostgreSQL persistence, provider-neutral model boundary, and portable development"
+    },
+    {
+      "statement": "Single PostgreSQL transactional foundation, immutable artifacts, hybrid payloads, durable workflows, replay-safe propagation, relational Memory/Knowledge, and reviewed migrations"
+    },
+    {
+      "statement": "Compiled authority graph, strict configuration schemas, governed activation, environment narrowing, typed secret references, and explicit Private Strategy scope"
+    }
+  ],
+  "out_of_scope": [
+    {
+      "statement": "DIP product and runtime implementation coding"
+    },
+    {
+      "statement": "Exactly-once execution guarantee"
+    },
+    {
+      "statement": "Initial dependency on draft MCP features or custom transports"
+    },
+    {
+      "statement": "Initial vector retrieval"
+    },
+    {
+      "statement": "Initial autonomous model tool loop"
+    },
+    {
+      "statement": "Initial single-page-application framework"
+    },
+    {
+      "statement": "Initial realtime UI transport"
+    },
+    {
+      "statement": "Local password database and public self-registration"
+    },
+    {
+      "statement": "Remote production exposure before the security readiness gate"
+    },
+    {
+      "statement": "Numeric service objectives before deployment evidence"
+    },
+    {
+      "statement": "Initial multi-region or high-availability production"
+    },
+    {
+      "statement": "Initial Kubernetes, Redis, brokers, vector databases, or separate workers"
+    },
+    {
+      "statement": "Initial external first-domain source mutation"
+    },
+    {
+      "statement": "Market-valued recommendations before qualification"
+    },
+    {
+      "statement": "Direct cross-Domain-Package imports"
+    },
+    {
+      "statement": "SQLite as a PostgreSQL behavioral-test substitute"
+    },
+    {
+      "statement": "Foundational dependency on a third-party agent framework"
+    },
+    {
+      "statement": "Universal full event sourcing"
+    },
+    {
+      "statement": "Unrestricted recursive configuration merge, network includes, executable templates, or arbitrary authority-root scanning"
+    }
+  ],
+  "deferrals": [
+    {
+      "id": "DIP-DEF-0001",
+      "title": "DIP product/runtime implementation",
+      "record_kind": "deferral",
+      "normalized_publication_statement": "All product and runtime implementation work is deferred until IKG0 is formally granted.",
+      "lifecycle_status": "active",
+      "blueprint_destinations": [
+        "Kickoff Package"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0006"
+        ],
+        "requirements": [
+          "DIP-REQ-0009"
+        ],
+        "gates": [
+          "DIP-GATE-0008"
+        ]
+      }
+    },
+    {
+      "id": "DIP-DEF-0002",
+      "title": "Separate command/query infrastructure",
+      "record_kind": "deferral",
+      "normalized_publication_statement": "Separate command and query infrastructure is deferred; the initial architecture uses CQRS-lite within the shared application and persistence foundation.",
+      "lifecycle_status": "active",
+      "blueprint_destinations": [
+        "Blueprint: application services",
+        "Kickoff Package"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0008"
+        ],
+        "adrs": [
+          "ADR-IMP-005"
+        ],
+        "gates": [
+          "DIP-GATE-0007",
+          "DIP-GATE-0008"
+        ]
+      }
+    },
+    {
+      "id": "DIP-DEF-0003",
+      "title": "Out-of-process and distributed workflow execution",
+      "record_kind": "deferral",
+      "normalized_publication_statement": "Distributed execution is deferred; the initial runner is in-process and sequential behind durable dispatcher and runner interfaces.",
+      "lifecycle_status": "active",
+      "blueprint_destinations": [
+        "Blueprint: application services",
+        "Kickoff Package"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0015"
+        ],
+        "adrs": [
+          "ADR-IMP-006"
+        ],
+        "gates": [
+          "DIP-GATE-0007",
+          "DIP-GATE-0008"
+        ]
+      }
+    },
+    {
+      "id": "DIP-DEF-0004",
+      "title": "Dynamic Domain Package registration",
+      "record_kind": "deferral",
+      "normalized_publication_statement": "Dynamic package discovery is deferred; initial capability registration is explicit, allowlisted, and static at the composition root.",
+      "lifecycle_status": "active",
+      "blueprint_destinations": [
+        "Blueprint: application services",
+        "Kickoff Package"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0028"
+        ],
+        "adrs": [
+          "ADR-IMP-005"
+        ],
+        "gates": [
+          "DIP-GATE-0007",
+          "DIP-GATE-0008"
+        ]
+      }
+    },
+    {
+      "id": "DIP-DEF-0005",
+      "title": "Webhook-based acquisition",
+      "record_kind": "deferral",
+      "normalized_publication_statement": "Webhook delivery remains a future acquisition mode; initial acquisition uses scheduled and manual pull through the Receipt pipeline.",
+      "lifecycle_status": "active",
+      "blueprint_destinations": [
+        "Blueprint: acquisition and MCP",
+        "Kickoff Package"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0046"
+        ],
+        "adrs": [
+          "ADR-IMP-009"
+        ],
+        "gates": [
+          "DIP-GATE-0007",
+          "DIP-GATE-0008"
+        ]
+      }
+    },
+    {
+      "id": "DIP-DEF-0006",
+      "title": "Distributed rate limiting",
+      "record_kind": "deferral",
+      "normalized_publication_statement": "Distributed rate limiting is deferred; the initial limiter is process-local with durable source cooldown metadata.",
+      "lifecycle_status": "active",
+      "blueprint_destinations": [
+        "Blueprint: acquisition and MCP",
+        "Kickoff Package"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0049"
+        ],
+        "adrs": [
+          "ADR-IMP-009"
+        ],
+        "gates": [
+          "DIP-GATE-0007",
+          "DIP-GATE-0008"
+        ]
+      }
+    },
+    {
+      "id": "DIP-DEF-0007",
+      "title": "Draft MCP features and custom transports",
+      "record_kind": "deferral",
+      "normalized_publication_statement": "Draft MCP features and custom transports are deferred until stable compatibility evidence justifies adoption.",
+      "lifecycle_status": "active",
+      "blueprint_destinations": [
+        "Blueprint: acquisition and MCP",
+        "Kickoff Package"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0063"
+        ],
+        "adrs": [
+          "ADR-IMP-010"
+        ],
+        "gates": [
+          "DIP-GATE-0007",
+          "DIP-GATE-0008"
+        ]
+      }
+    },
+    {
+      "id": "DIP-DEF-0008",
+      "title": "Vector retrieval",
+      "record_kind": "deferral",
+      "normalized_publication_statement": "Vector retrieval is deferred until demonstrated retrieval need justifies it; initial retrieval uses PostgreSQL relational, lineage, graph, and metadata search.",
+      "lifecycle_status": "active",
+      "blueprint_destinations": [
+        "Blueprint: governed AI execution",
+        "Blueprint: model gateway and context",
+        "Kickoff Package"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0082"
+        ],
+        "adrs": [
+          "ADR-IMP-011",
+          "ADR-IMP-012",
+          "ADR-IMP-013"
+        ],
+        "gates": [
+          "DIP-GATE-0007",
+          "DIP-GATE-0008"
+        ]
+      }
+    },
+    {
+      "id": "DIP-DEF-0009",
+      "title": "Autonomous AI tool loop",
+      "record_kind": "deferral",
+      "normalized_publication_statement": "An autonomous model tool loop is deferred; initial AI tools are read-only and the first slice requires no autonomous loop.",
+      "lifecycle_status": "active",
+      "blueprint_destinations": [
+        "Blueprint: governed AI execution",
+        "Blueprint: model gateway and context",
+        "Kickoff Package"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0095"
+        ],
+        "adrs": [
+          "ADR-IMP-011",
+          "ADR-IMP-012",
+          "ADR-IMP-013"
+        ],
+        "gates": [
+          "DIP-GATE-0007",
+          "DIP-GATE-0008"
+        ]
+      }
+    },
+    {
+      "id": "DIP-DEF-0010",
+      "title": "Multi-provider production routing",
+      "record_kind": "deferral",
+      "normalized_publication_statement": "Multi-provider production routing is deferred; initial routing is deterministic and the first AI slice uses one provider behind the provider-neutral gateway.",
+      "lifecycle_status": "active",
+      "blueprint_destinations": [
+        "Blueprint: governed AI execution",
+        "Blueprint: model gateway and context",
+        "Kickoff Package"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0077",
+          "DIP-DEC-0102"
+        ],
+        "adrs": [
+          "ADR-IMP-011",
+          "ADR-IMP-012",
+          "ADR-IMP-013"
+        ],
+        "gates": [
+          "DIP-GATE-0007",
+          "DIP-GATE-0008"
+        ]
+      }
+    },
+    {
+      "id": "DIP-DEF-0011",
+      "title": "Single-page-application framework",
+      "record_kind": "deferral",
+      "normalized_publication_statement": "A SPA framework is deferred; the Operations Page is server-rendered and progressively enhanced.",
+      "lifecycle_status": "active",
+      "blueprint_destinations": [
+        "Blueprint: Review Service",
+        "Blueprint: API and Operations Page",
+        "Kickoff Package"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0127"
+        ],
+        "adrs": [
+          "ADR-IMP-014",
+          "ADR-IMP-015"
+        ],
+        "gates": [
+          "DIP-GATE-0007",
+          "DIP-GATE-0008"
+        ]
+      }
+    },
+    {
+      "id": "DIP-DEF-0012",
+      "title": "Realtime UI transport",
+      "record_kind": "deferral",
+      "normalized_publication_statement": "Realtime UI transport is deferred; initial interface updates use reloads or polling.",
+      "lifecycle_status": "active",
+      "blueprint_destinations": [
+        "Blueprint: Review Service",
+        "Blueprint: API and Operations Page",
+        "Kickoff Package"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0133"
+        ],
+        "adrs": [
+          "ADR-IMP-014",
+          "ADR-IMP-015"
+        ],
+        "gates": [
+          "DIP-GATE-0007",
+          "DIP-GATE-0008"
+        ]
+      }
+    },
+    {
+      "id": "DIP-DEF-0013",
+      "title": "External policy-engine product",
+      "record_kind": "deferral",
+      "normalized_publication_statement": "An external policy-engine product is deferred; initial authorization uses typed hybrid role- and attribute-based policy within DIP.",
+      "lifecycle_status": "active",
+      "blueprint_destinations": [
+        "Blueprint: identity and authorization",
+        "Blueprint: security and isolation",
+        "Kickoff Package"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0151"
+        ],
+        "adrs": [
+          "ADR-IMP-016",
+          "ADR-IMP-017",
+          "ADR-IMP-018",
+          "ADR-IMP-019"
+        ],
+        "gates": [
+          "DIP-GATE-0007",
+          "DIP-GATE-0008",
+          "DIP-GATE-0010"
+        ]
+      }
+    },
+    {
+      "id": "DIP-DEF-0014",
+      "title": "Broader and public enrollment",
+      "record_kind": "deferral",
+      "normalized_publication_statement": "Broader enrollment and public self-registration are deferred; initial production enrollment is allowlisted and single-owner operationally.",
+      "lifecycle_status": "active",
+      "blueprint_destinations": [
+        "Blueprint: identity and authorization",
+        "Blueprint: security and isolation",
+        "Kickoff Package"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0140",
+          "DIP-DEC-0141"
+        ],
+        "adrs": [
+          "ADR-IMP-016",
+          "ADR-IMP-017",
+          "ADR-IMP-018",
+          "ADR-IMP-019"
+        ],
+        "gates": [
+          "DIP-GATE-0007",
+          "DIP-GATE-0008",
+          "DIP-GATE-0010"
+        ]
+      }
+    },
+    {
+      "id": "DIP-DEF-0015",
+      "title": "Remote production exposure",
+      "record_kind": "deferral",
+      "normalized_publication_statement": "Remote production exposure is deferred until the security readiness gate passes.",
+      "lifecycle_status": "active",
+      "blueprint_destinations": [
+        "Blueprint: identity and authorization",
+        "Blueprint: security and isolation",
+        "Kickoff Package"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0178"
+        ],
+        "adrs": [
+          "ADR-IMP-016",
+          "ADR-IMP-017",
+          "ADR-IMP-018",
+          "ADR-IMP-019"
+        ],
+        "gates": [
+          "DIP-GATE-0007",
+          "DIP-GATE-0008",
+          "DIP-GATE-0010"
+        ]
+      }
+    },
+    {
+      "id": "DIP-DEF-0016",
+      "title": "Numeric service objectives",
+      "record_kind": "deferral",
+      "normalized_publication_statement": "Numeric service objectives are deferred until deployment evidence establishes meaningful baselines.",
+      "lifecycle_status": "active",
+      "blueprint_destinations": [
+        "Blueprint: testing and conformance",
+        "Blueprint: observability and reliability",
+        "Kickoff Package"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0206"
+        ],
+        "adrs": [
+          "ADR-IMP-020",
+          "ADR-IMP-021",
+          "ADR-IMP-022"
+        ],
+        "gates": [
+          "DIP-GATE-0007",
+          "DIP-GATE-0008"
+        ]
+      }
+    },
+    {
+      "id": "DIP-DEF-0017",
+      "title": "Multi-region and high-availability topology",
+      "record_kind": "deferral",
+      "normalized_publication_statement": "Multi-region and high-availability production topology are deferred; initial production is single-region and non-HA.",
+      "lifecycle_status": "active",
+      "blueprint_destinations": [
+        "Blueprint: deployment and release",
+        "Blueprint: backup and production operations",
+        "Kickoff Package"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0222"
+        ],
+        "adrs": [
+          "ADR-IMP-023",
+          "ADR-IMP-024",
+          "ADR-IMP-025",
+          "ADR-IMP-026"
+        ],
+        "gates": [
+          "DIP-GATE-0007",
+          "DIP-GATE-0008"
+        ]
+      }
+    },
+    {
+      "id": "DIP-DEF-0018",
+      "title": "Additional distributed infrastructure",
+      "record_kind": "deferral",
+      "normalized_publication_statement": "Kubernetes, Redis, brokers, vector databases, and separate workers are deferred from the initial topology.",
+      "lifecycle_status": "active",
+      "blueprint_destinations": [
+        "Blueprint: deployment and release",
+        "Blueprint: backup and production operations",
+        "Kickoff Package"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0229"
+        ],
+        "adrs": [
+          "ADR-IMP-023",
+          "ADR-IMP-024",
+          "ADR-IMP-025",
+          "ADR-IMP-026"
+        ],
+        "gates": [
+          "DIP-GATE-0007",
+          "DIP-GATE-0008"
+        ]
+      }
+    },
+    {
+      "id": "DIP-DEF-0019",
+      "title": "Always-on staging",
+      "record_kind": "deferral",
+      "normalized_publication_statement": "An always-on staging environment is deferred; local, CI, and production remain isolated.",
+      "lifecycle_status": "active",
+      "blueprint_destinations": [
+        "Blueprint: deployment and release",
+        "Blueprint: backup and production operations",
+        "Kickoff Package"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0233"
+        ],
+        "adrs": [
+          "ADR-IMP-023",
+          "ADR-IMP-024",
+          "ADR-IMP-025",
+          "ADR-IMP-026"
+        ],
+        "gates": [
+          "DIP-GATE-0007",
+          "DIP-GATE-0008"
+        ]
+      }
+    },
+    {
+      "id": "DIP-DEF-0020",
+      "title": "ChatGPT/MCP launch activation",
+      "record_kind": "deferral",
+      "normalized_publication_statement": "ChatGPT/MCP launch activation is conditional on the compatibility spike; the authenticated API and Operations Page remain the fallback.",
+      "lifecycle_status": "active",
+      "blueprint_destinations": [
+        "Blueprint: first vertical slice",
+        "Blueprint: implementation sequence and gates",
+        "Kickoff Package"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0271",
+          "DIP-DEC-0272"
+        ],
+        "adrs": [
+          "ADR-IMP-027",
+          "ADR-IMP-028",
+          "ADR-IMP-029"
+        ],
+        "gates": [
+          "DIP-GATE-0007",
+          "DIP-GATE-0008"
+        ]
+      }
+    },
+    {
+      "id": "DIP-DEF-0021",
+      "title": "Market-valued recommendations",
+      "record_kind": "deferral",
+      "normalized_publication_statement": "Market-valued recommendations are deferred until the market-intelligence qualification gate passes.",
+      "lifecycle_status": "active",
+      "blueprint_destinations": [
+        "Blueprint: first vertical slice",
+        "Blueprint: implementation sequence and gates",
+        "Kickoff Package"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0264",
+          "DIP-DEC-0269",
+          "DIP-DEC-0270"
+        ],
+        "adrs": [
+          "ADR-IMP-027",
+          "ADR-IMP-028",
+          "ADR-IMP-029"
+        ],
+        "gates": [
+          "DIP-GATE-0007",
+          "DIP-GATE-0008"
+        ]
+      }
+    },
+    {
+      "id": "DIP-DEF-0022",
+      "title": "External first-domain mutation",
+      "record_kind": "deferral",
+      "normalized_publication_statement": "External first-domain mutation is deferred; the initial release is read-only and demonstrates an internal or no-op Command/Outcome path.",
+      "lifecycle_status": "active",
+      "blueprint_destinations": [
+        "Blueprint: first vertical slice",
+        "Blueprint: implementation sequence and gates",
+        "Kickoff Package"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0265",
+          "DIP-DEC-0266"
+        ],
+        "adrs": [
+          "ADR-IMP-027",
+          "ADR-IMP-028",
+          "ADR-IMP-029"
+        ],
+        "gates": [
+          "DIP-GATE-0007",
+          "DIP-GATE-0008"
+        ]
+      }
+    },
+    {
+      "id": "DIP-DEF-0023",
+      "title": "Calendar-locked implementation schedule",
+      "record_kind": "deferral",
+      "normalized_publication_statement": "Calendar-locked scheduling is deferred until completed-work evidence supports reliable estimation.",
+      "lifecycle_status": "active",
+      "blueprint_destinations": [
+        "Blueprint: first vertical slice",
+        "Blueprint: implementation sequence and gates",
+        "Kickoff Package"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0273"
+        ],
+        "adrs": [
+          "ADR-IMP-027",
+          "ADR-IMP-028",
+          "ADR-IMP-029"
+        ],
+        "gates": [
+          "DIP-GATE-0007",
+          "DIP-GATE-0008"
+        ]
+      }
+    },
+    {
+      "id": "DIP-DEF-0024",
+      "title": "Unmeasured infrastructure expansion",
+      "record_kind": "deferral",
+      "normalized_publication_statement": "Additional infrastructure is deferred until measured need or a new ADR justifies it.",
+      "lifecycle_status": "active",
+      "blueprint_destinations": [
+        "Blueprint: first vertical slice",
+        "Blueprint: implementation sequence and gates",
+        "Kickoff Package"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0276"
+        ],
+        "adrs": [
+          "ADR-IMP-027",
+          "ADR-IMP-028",
+          "ADR-IMP-029"
+        ],
+        "gates": [
+          "DIP-GATE-0007",
+          "DIP-GATE-0008"
+        ]
+      }
+    },
+    {
+      "id": "DIP-DEF-0025",
+      "title": "Governed cross-Domain-Package composition",
+      "record_kind": "deferral",
+      "normalized_publication_statement": "Cross-Domain-Package composition is deferred until a governed mechanism replaces direct imports.",
+      "lifecycle_status": "active",
+      "blueprint_destinations": [
+        "Blueprint: repository and package boundaries",
+        "Blueprint: dependency and contract foundation",
+        "Kickoff Package"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0291"
+        ],
+        "adrs": [
+          "ADR-IMP-001",
+          "ADR-IMP-007",
+          "ADR-IMP-008"
+        ],
+        "gates": [
+          "DIP-GATE-0007",
+          "DIP-GATE-0008",
+          "DIP-GATE-0012"
+        ]
+      }
+    },
+    {
+      "id": "DIP-DEF-0026",
+      "title": "Browser-facing TypeScript runtime",
+      "record_kind": "deferral",
+      "normalized_publication_statement": "TypeScript and Node.js are deferred until the Operations Page or another browser-facing interface begins.",
+      "lifecycle_status": "active",
+      "blueprint_destinations": [
+        "Blueprint: runtime and technology baseline",
+        "Blueprint: engineering foundation",
+        "Kickoff Package"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0305",
+          "DIP-DEC-0306"
+        ],
+        "adrs": [
+          "ADR-IMP-001"
+        ],
+        "gates": [
+          "DIP-GATE-0007",
+          "DIP-GATE-0008",
+          "DIP-GATE-0012"
+        ]
+      }
+    },
+    {
+      "id": "DIP-DEF-0027",
+      "title": "FastAPI installation and API slice",
+      "record_kind": "deferral",
+      "normalized_publication_statement": "FastAPI installation is deferred until the HTTP API slice requires it.",
+      "lifecycle_status": "active",
+      "blueprint_destinations": [
+        "Blueprint: runtime and technology baseline",
+        "Blueprint: engineering foundation",
+        "Kickoff Package"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0323"
+        ],
+        "adrs": [
+          "ADR-IMP-001"
+        ],
+        "gates": [
+          "DIP-GATE-0007",
+          "DIP-GATE-0008",
+          "DIP-GATE-0012"
+        ]
+      }
+    },
+    {
+      "id": "DIP-DEF-0028",
+      "title": "Out-of-process workflow execution",
+      "record_kind": "deferral",
+      "normalized_publication_statement": "Out-of-process workflow execution is deferred; initial execution remains in-process behind durable records.",
+      "lifecycle_status": "active",
+      "blueprint_destinations": [
+        "Blueprint: runtime and technology baseline",
+        "Blueprint: engineering foundation",
+        "Kickoff Package"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0327"
+        ],
+        "adrs": [
+          "ADR-IMP-001"
+        ],
+        "gates": [
+          "DIP-GATE-0007",
+          "DIP-GATE-0008",
+          "DIP-GATE-0012"
+        ]
+      }
+    },
+    {
+      "id": "DIP-DEF-0029",
+      "title": "Graph database",
+      "record_kind": "deferral",
+      "normalized_publication_statement": "A graph database is deferred; initial Knowledge uses relational graph structures.",
+      "lifecycle_status": "active",
+      "blueprint_destinations": [
+        "Blueprint: persistence and artifacts",
+        "Blueprint: transactions and workflow records",
+        "Kickoff Package"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0386"
+        ],
+        "adrs": [
+          "ADR-IMP-002",
+          "ADR-IMP-003",
+          "ADR-IMP-007"
+        ],
+        "gates": [
+          "DIP-GATE-0007",
+          "DIP-GATE-0008",
+          "DIP-GATE-0012"
+        ]
+      }
+    },
+    {
+      "id": "DIP-DEF-0030",
+      "title": "Search and embedding infrastructure",
+      "record_kind": "deferral",
+      "normalized_publication_statement": "Dedicated search and embedding infrastructure is deferred until demonstrated need.",
+      "lifecycle_status": "active",
+      "blueprint_destinations": [
+        "Blueprint: persistence and artifacts",
+        "Blueprint: transactions and workflow records",
+        "Kickoff Package"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0388"
+        ],
+        "adrs": [
+          "ADR-IMP-002",
+          "ADR-IMP-003",
+          "ADR-IMP-007"
+        ],
+        "gates": [
+          "DIP-GATE-0007",
+          "DIP-GATE-0008",
+          "DIP-GATE-0012"
+        ]
+      }
+    },
+    {
+      "id": "DIP-DEF-0031",
+      "title": "Production retention, encryption, backup, and deletion policy completion",
+      "record_kind": "deferral",
+      "normalized_publication_statement": "Production lifecycle policies are deferred to their approved security and operations decisions.",
+      "lifecycle_status": "active",
+      "blueprint_destinations": [
+        "Blueprint: persistence and artifacts",
+        "Blueprint: transactions and workflow records",
+        "Kickoff Package"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0394"
+        ],
+        "adrs": [
+          "ADR-IMP-002",
+          "ADR-IMP-003",
+          "ADR-IMP-007"
+        ],
+        "gates": [
+          "DIP-GATE-0007",
+          "DIP-GATE-0008",
+          "DIP-GATE-0012"
+        ]
+      }
+    },
+    {
+      "id": "DIP-DEF-0032",
+      "title": "Production environment activation",
+      "record_kind": "deferral",
+      "normalized_publication_statement": "Production profiles and activation are deferred until recompilation and production validation requirements can be satisfied.",
+      "lifecycle_status": "active",
+      "blueprint_destinations": [
+        "Blueprint: configuration authority",
+        "Blueprint: secrets and private authority",
+        "Kickoff Package"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0444",
+          "DIP-DEC-0447"
+        ],
+        "adrs": [
+          "ADR-IMP-004",
+          "ADR-IMP-008"
+        ],
+        "gates": [
+          "DIP-GATE-0007",
+          "DIP-GATE-0008",
+          "DIP-GATE-0012"
+        ]
+      }
+    },
+    {
+      "id": "DIP-DEF-0033",
+      "title": "Production-grade secret resolver",
+      "record_kind": "deferral",
+      "normalized_publication_statement": "Production secret-provider integration is deferred; environment-variable and mock resolvers are implemented first.",
+      "lifecycle_status": "active",
+      "blueprint_destinations": [
+        "Blueprint: configuration authority",
+        "Blueprint: secrets and private authority",
+        "Kickoff Package"
+      ],
+      "relationships": {
+        "decisions": [
+          "DIP-DEC-0452"
+        ],
+        "adrs": [
+          "ADR-IMP-004",
+          "ADR-IMP-008"
+        ],
+        "gates": [
+          "DIP-GATE-0007",
+          "DIP-GATE-0008",
+          "DIP-GATE-0012"
+        ]
+      }
+    }
+  ]
+}
