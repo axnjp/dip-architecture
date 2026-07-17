@@ -225,63 +225,63 @@
     },
     {
       "path": "registers/public/adr-inventory.json",
-      "size_bytes": 6575,
-      "sha256": "8d07775994b4ea7e493f7a1e63514a6587f680033f98d2d1f1f1cdfb3bf44840"
+      "size_bytes": 6565,
+      "sha256": "44457442b1cfce773ac087901c0318327b32f560931f73714e7299e3c9a9c8e7"
     },
     {
       "path": "registers/public/contradiction-log.json",
-      "size_bytes": 3486,
-      "sha256": "8c2338d68b618e379beab7f6a8878f1f5de68184b9bbdc3f411a3704f57a24fc"
+      "size_bytes": 3476,
+      "sha256": "fcce24e7ace0a6000419558517dfbe488c842b4a883699887cab5dcb9d67a70c"
     },
     {
       "path": "registers/public/decision-register.json",
-      "size_bytes": 518612,
-      "sha256": "e947975069d928725d550b4ed0416e971657a870823c82b1bd68252a5ddd44f1"
+      "size_bytes": 518602,
+      "sha256": "3936128e3ac0dcdcd0abfe3294440b7b35385e5eea90ca79b7e97df5b042482d"
     },
     {
       "path": "registers/public/gap-log.json",
-      "size_bytes": 5550,
-      "sha256": "71893d84b7d293fd028dd72f3c3c673ce595ac4e9d6e2465594509f2d3f22473"
+      "size_bytes": 5540,
+      "sha256": "0ebb683a381ba7c029ddc87a673365f56db03a1a35e1306a2e4389744dbf802d"
     },
     {
       "path": "registers/public/gate-spike-register.json",
-      "size_bytes": 31995,
-      "sha256": "230c6b3c800d5d9bf581542eb3898e80f0cf5d2c60484f3299200ccaa359a157"
+      "size_bytes": 31985,
+      "sha256": "7d25fe30edf8f7431b79fd9d6167d846029044b62e978636456261125f43a7ea"
     },
     {
       "path": "registers/public/phase-source-family-inventory.json",
-      "size_bytes": 5697,
-      "sha256": "978810c9cea369eac1667fda1a7479734284398f29d6b29c036e2ee2f684870e"
+      "size_bytes": 5687,
+      "sha256": "7ce20847b07d3c19bd7bf7ad755da767981d9d883bf385a87d91776cb1cb1a1b"
     },
     {
       "path": "registers/public/principle-invariant-register.json",
-      "size_bytes": 162846,
-      "sha256": "3201ea10ecb2d99fb5eea97da6501dae31d3a7ab9b860233a9ae430c82bb9641"
+      "size_bytes": 162836,
+      "sha256": "a92e3c33cba031f7dfd642bb67e5473f77cd29ad2ea5fcfb6cbb6a7af26db47b"
     },
     {
       "path": "registers/public/requirement-register.json",
-      "size_bytes": 250276,
-      "sha256": "09ff834fef45cce1705996dd188b38a68ed80fe2a4bba26bcbc78fbdc32114a0"
+      "size_bytes": 250266,
+      "sha256": "04491c2459af3b198e13d1457f0232b2ec257d8974c57aa8b173ee17f16e91ad"
     },
     {
       "path": "registers/public/scope-deferral-matrix.json",
-      "size_bytes": 30519,
-      "sha256": "9b297035abe4d2adf027bb35e7e2ea4dd56f0095b051b84ed7c368ff44fc83c9"
+      "size_bytes": 30509,
+      "sha256": "ffb461435e39d736aab4588dc5c07e9cfae7b051a653e73274ae6af84b27bd5b"
     },
     {
       "path": "registers/public/source-catalog.json",
-      "size_bytes": 20205,
-      "sha256": "562d437e85c56da0230845eac993e857ec032dde8b3c79843a89592ebbe04e2e"
+      "size_bytes": 20195,
+      "sha256": "1559c5640f093432260d6b35c6faa2260e7058a9ce205c6b0a5b2de8a1bde1d2"
     },
     {
       "path": "registers/public/terminology-register.json",
-      "size_bytes": 104664,
-      "sha256": "2bda12b64fa74438450fd7d949c0ab7b0814fe2e6e6aac0cbbc7f59b8c94fc52"
+      "size_bytes": 104654,
+      "sha256": "a64ee2f6093a0837c46aea0549b5e5e1ad9e7809fcd0781fc0c9c9b8c4fcc884"
     },
     {
       "path": "registers/public/traceability-map.json",
-      "size_bytes": 47950,
-      "sha256": "da9384cef0f27054182ac8d1ff5d5ceb3f86c0a4b7d4bb0a8fdcecb80f568bcf"
+      "size_bytes": 47940,
+      "sha256": "b91f5df3afdd5fc635ae55eec313a418343915ffab931c885f7a3628e07c794c"
     },
     {
       "path": "releases/README.md",
@@ -335,8 +335,8 @@
     },
     {
       "path": "schemas/public-projections/public-projection-schema-registry.json",
-      "size_bytes": 6981,
-      "sha256": "7210f6365c5c55bd6a210e16bde48172265a9e279eba839f1b8a0f1052f37ed7"
+      "size_bytes": 6990,
+      "sha256": "40c64818bd0e4c3e805c0e17b0bdd4738c51828f35cf10aff825cd45d693b594"
     },
     {
       "path": "schemas/public-projections/public-requirement-register-projection.schema.json",
