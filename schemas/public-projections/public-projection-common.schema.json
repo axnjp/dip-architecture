@@ -1,0 +1,104 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dip.local/schemas/public-projections/public-projection-common.schema.json",
+  "title": "DIP Public Structured-Register Projection Common Definitions",
+  "$defs": {
+    "sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "identifier": {
+      "type": "string",
+      "pattern": "^(DIP-(SRC|REQ|PRN|INV|DEC|GATE|SPIKE|DEF|TERM)-[0-9]{4}|ADR-IMP-[0-9]{3}|PUB-(GAP|CON)-[0-9]{4}|PG[0-6]|IKG[0-6])$"
+    },
+    "identifierArray": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/identifier"},
+      "uniqueItems": true
+    },
+    "stringArray": {
+      "type": "array",
+      "items": {"type": "string", "minLength": 1},
+      "uniqueItems": true
+    },
+    "relationships": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "decisions": {"$ref": "#/$defs/identifierArray"},
+        "requirements": {"$ref": "#/$defs/identifierArray"},
+        "principles": {"$ref": "#/$defs/identifierArray"},
+        "invariants": {"$ref": "#/$defs/identifierArray"},
+        "terms": {"$ref": "#/$defs/identifierArray"},
+        "adrs": {"$ref": "#/$defs/identifierArray"},
+        "gates": {"$ref": "#/$defs/identifierArray"},
+        "spikes": {"$ref": "#/$defs/identifierArray"},
+        "deferrals": {"$ref": "#/$defs/identifierArray"},
+        "gaps": {"$ref": "#/$defs/identifierArray"},
+        "contradictions": {"$ref": "#/$defs/identifierArray"}
+      }
+    },
+    "disclosureReview": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "semantic_review_status",
+        "prohibited_field_scan",
+        "private_instance_non_disclosure",
+        "secret_scan"
+      ],
+      "properties": {
+        "semantic_review_status": {"enum": ["pending", "passed", "failed"]},
+        "prohibited_field_scan": {"enum": ["pending", "passed", "failed"]},
+        "private_instance_non_disclosure": {"enum": ["pending", "passed", "failed"]},
+        "secret_scan": {"enum": ["pending", "passed", "failed"]},
+        "reviewed_revision": {"anyOf": [{"$ref": "#/$defs/sha256"}, {"type": "null"}]}
+      }
+    },
+    "projectionEnvelope": {
+      "type": "object",
+      "required": [
+        "projection_id",
+        "projection_version",
+        "schema_version",
+        "classification",
+        "source_register_id",
+        "source_revision",
+        "status",
+        "disclosure_review"
+      ],
+      "properties": {
+        "projection_id": {"type": "string", "pattern": "^DIP-PUBLIC-[A-Z0-9-]+$"},
+        "projection_version": {"type": "string", "minLength": 1},
+        "schema_version": {"type": "string", "minLength": 1},
+        "classification": {"const": "Public Reference Architecture"},
+        "source_register_id": {"type": "string", "pattern": "^DIP-PUB-[A-Z0-9-]+$"},
+        "source_revision": {"anyOf": [{"$ref": "#/$defs/sha256"}, {"type": "null"}]},
+        "status": {"enum": ["draft_projection", "review_ready", "approved_public_projection", "superseded"]},
+        "disclosure_review": {"$ref": "#/$defs/disclosureReview"}
+      }
+    },
+    "normativeRecord": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "title",
+        "record_kind",
+        "normalized_publication_statement",
+        "lifecycle_status",
+        "blueprint_destinations",
+        "relationships"
+      ],
+      "properties": {
+        "id": {"$ref": "#/$defs/identifier"},
+        "title": {"type": "string", "minLength": 1},
+        "record_kind": {"enum": ["decision", "requirement", "principle", "invariant", "deferral"]},
+        "normalized_publication_statement": {"type": "string", "minLength": 1},
+        "lifecycle_status": {"type": "string", "minLength": 1},
+        "blueprint_destinations": {"$ref": "#/$defs/stringArray"},
+        "relationships": {"$ref": "#/$defs/relationships"}
+      }
+    }
+  }
+}
