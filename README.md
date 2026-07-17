@@ -21,3 +21,7 @@ The current commit is a controlled working revision, not the final authoritative
 ## Governance
 
 Approved architecture and implementation decisions remain authoritative. Publication normalization preserves stable identifiers, classification boundaries, traceability, and lifecycle state. Detailed restricted approval locators remain outside the public build.
+
+## Structured registers
+
+Machine-readable public registers are closed-schema projections of the canonical publication records. They contain only approved public fields and relationships, passed semantic and security review, and are built without loading complete canonical or restricted register content.
