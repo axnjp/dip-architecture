@@ -1,0 +1,193 @@
+{
+  "projection_id": "DIP-PUBLIC-ADR-INVENTORY",
+  "projection_version": "0.1.0-candidate",
+  "schema_version": "0.1.0-draft",
+  "classification": "Public Reference Architecture",
+  "source_register_id": "DIP-PUB-ADR-INVENTORY",
+  "source_revision": null,
+  "status": "approved_public_projection",
+  "disclosure_review": {
+    "semantic_review_status": "passed",
+    "prohibited_field_scan": "passed",
+    "private_instance_non_disclosure": "passed",
+    "secret_scan": "passed",
+    "reviewed_revision": null
+  },
+  "publication_model": "two_tier_public_projection_and_restricted_complete_body",
+  "records": [
+    {
+      "id": "ADR-IMP-001",
+      "title": "Primary Language and Runtime",
+      "lifecycle_status": "accepted_locked",
+      "public_projection_path": "adrs/ADR-IMP-001.md"
+    },
+    {
+      "id": "ADR-IMP-002",
+      "title": "Initial Persistence Architecture",
+      "lifecycle_status": "accepted_locked",
+      "public_projection_path": "adrs/ADR-IMP-002.md"
+    },
+    {
+      "id": "ADR-IMP-003",
+      "title": "Artifact Storage Boundary",
+      "lifecycle_status": "accepted_locked",
+      "public_projection_path": "adrs/ADR-IMP-003.md"
+    },
+    {
+      "id": "ADR-IMP-004",
+      "title": "Configuration and Authority Loading",
+      "lifecycle_status": "accepted_locked",
+      "public_projection_path": "adrs/ADR-IMP-004.md"
+    },
+    {
+      "id": "ADR-IMP-005",
+      "title": "Application Service, Port, and Transaction Boundary",
+      "lifecycle_status": "accepted_locked",
+      "public_projection_path": "adrs/ADR-IMP-005.md"
+    },
+    {
+      "id": "ADR-IMP-006",
+      "title": "Durable Workflow Execution and Recovery Semantics",
+      "lifecycle_status": "accepted_locked",
+      "public_projection_path": "adrs/ADR-IMP-006.md"
+    },
+    {
+      "id": "ADR-IMP-007",
+      "title": "Initial Workflow Execution Profile",
+      "lifecycle_status": "accepted_locked",
+      "public_projection_path": "adrs/ADR-IMP-007.md"
+    },
+    {
+      "id": "ADR-IMP-008",
+      "title": "Initial Private-Authority Source and Secret Posture",
+      "lifecycle_status": "accepted_locked",
+      "public_projection_path": "adrs/ADR-IMP-008.md"
+    },
+    {
+      "id": "ADR-IMP-009",
+      "title": "Source Connector and Acquisition Boundary",
+      "lifecycle_status": "accepted_locked",
+      "public_projection_path": "adrs/ADR-IMP-009.md"
+    },
+    {
+      "id": "ADR-IMP-010",
+      "title": "MCP and Governed External Interaction Boundary",
+      "lifecycle_status": "accepted_locked",
+      "public_projection_path": "adrs/ADR-IMP-010.md"
+    },
+    {
+      "id": "ADR-IMP-011",
+      "title": "AIOP Runtime and Governed AI Execution Records",
+      "lifecycle_status": "accepted_locked",
+      "public_projection_path": "adrs/ADR-IMP-011.md"
+    },
+    {
+      "id": "ADR-IMP-012",
+      "title": "Model Gateway, Routing, and Deployment Conformance",
+      "lifecycle_status": "accepted_locked",
+      "public_projection_path": "adrs/ADR-IMP-012.md"
+    },
+    {
+      "id": "ADR-IMP-013",
+      "title": "Context Assembly, Isolation, and AI Tool Boundary",
+      "lifecycle_status": "accepted_locked",
+      "public_projection_path": "adrs/ADR-IMP-013.md"
+    },
+    {
+      "id": "ADR-IMP-014",
+      "title": "Review Service, Review State, and Interface Parity",
+      "lifecycle_status": "accepted_locked",
+      "public_projection_path": "adrs/ADR-IMP-014.md"
+    },
+    {
+      "id": "ADR-IMP-015",
+      "title": "Private HTTP API and Minimal Operations Page",
+      "lifecycle_status": "accepted_locked",
+      "public_projection_path": "adrs/ADR-IMP-015.md"
+    },
+    {
+      "id": "ADR-IMP-016",
+      "title": "Principal, Actor, Authentication, and Session Boundary",
+      "lifecycle_status": "accepted_locked",
+      "public_projection_path": "adrs/ADR-IMP-016.md"
+    },
+    {
+      "id": "ADR-IMP-017",
+      "title": "Authorization, Workspace Isolation, and PostgreSQL Row Security",
+      "lifecycle_status": "accepted_locked",
+      "public_projection_path": "adrs/ADR-IMP-017.md"
+    },
+    {
+      "id": "ADR-IMP-018",
+      "title": "Data Classification, Encryption, Keys, and Secrets",
+      "lifecycle_status": "accepted_locked",
+      "public_projection_path": "adrs/ADR-IMP-018.md"
+    },
+    {
+      "id": "ADR-IMP-019",
+      "title": "Security Audit, Threat Model, and Production Security Gate",
+      "lifecycle_status": "accepted_locked",
+      "public_projection_path": "adrs/ADR-IMP-019.md"
+    },
+    {
+      "id": "ADR-IMP-020",
+      "title": "Test Architecture and CI Quality Gates",
+      "lifecycle_status": "accepted_locked",
+      "public_projection_path": "adrs/ADR-IMP-020.md"
+    },
+    {
+      "id": "ADR-IMP-021",
+      "title": "Observability, Telemetry, and Sensitive Data Handling",
+      "lifecycle_status": "accepted_locked",
+      "public_projection_path": "adrs/ADR-IMP-021.md"
+    },
+    {
+      "id": "ADR-IMP-022",
+      "title": "Reliability, Reconciliation, and Operational Conformance",
+      "lifecycle_status": "accepted_locked",
+      "public_projection_path": "adrs/ADR-IMP-022.md"
+    },
+    {
+      "id": "ADR-IMP-023",
+      "title": "Initial Production Deployment Topology and Provider Baseline",
+      "lifecycle_status": "accepted_locked",
+      "public_projection_path": "adrs/ADR-IMP-023.md"
+    },
+    {
+      "id": "ADR-IMP-024",
+      "title": "Build, Release, Migration, and Activation",
+      "lifecycle_status": "accepted_locked",
+      "public_projection_path": "adrs/ADR-IMP-024.md"
+    },
+    {
+      "id": "ADR-IMP-025",
+      "title": "Backup, Restore, Retention, and Governed Deletion",
+      "lifecycle_status": "accepted_locked",
+      "public_projection_path": "adrs/ADR-IMP-025.md"
+    },
+    {
+      "id": "ADR-IMP-026",
+      "title": "Production Operations, Cost Guardrails, and Readiness Gate",
+      "lifecycle_status": "accepted_locked",
+      "public_projection_path": "adrs/ADR-IMP-026.md"
+    },
+    {
+      "id": "ADR-IMP-027",
+      "title": "First Vertical Slice and Initial Operational Release Scope",
+      "lifecycle_status": "accepted_locked",
+      "public_projection_path": "adrs/ADR-IMP-027.md"
+    },
+    {
+      "id": "ADR-IMP-028",
+      "title": "First-Domain Data and Market-Intelligence Qualification",
+      "lifecycle_status": "accepted_locked",
+      "public_projection_path": "adrs/ADR-IMP-028.md"
+    },
+    {
+      "id": "ADR-IMP-029",
+      "title": "Initial Workspace Rollout and Private Fixture Policy",
+      "lifecycle_status": "accepted_locked",
+      "public_projection_path": "adrs/ADR-IMP-029.md"
+    }
+  ]
+}
