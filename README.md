@@ -4,7 +4,7 @@ This repository is the canonical public architecture publication workspace for t
 
 ## Publication status
 
-This is a draft P0 working corpus. Publication Gate PG0 has not passed, Architecture v1.0 has not been released, and implementation authorization IKG0 has not been granted.
+Architecture v1.0 is released and pinned to immutable mainline commit `13332696e8e4a1403bb986af8dc25410a9aba596`. Publication Gate PG0 has passed under the approved PG0-E001 provenance exception. Implementation authorization IKG0 has not been granted.
 
 This repository contains architecture and publication material only. It does not authorize or contain DIP application/runtime implementation.
 
@@ -14,9 +14,13 @@ Only explicitly allowlisted Public Reference Architecture sources and derived pu
 
 Public documentation may describe protected capability classes abstractly. It must not disclose whether any real protected instance exists.
 
-## Working-revision notice
+## Release pin
 
-The current commit is a controlled working revision, not the final authoritative public source revision or an Architecture v1.0 release pin. Missing evidence is represented by explicit lifecycle and gap status; it is never reconstructed from assumption.
+- Release: Architecture v1.0
+- Immutable release commit: `13332696e8e4a1403bb986af8dc25410a9aba596`
+- Provenance exception: PG0-E001
+- IKG0: not granted
+- Runtime/platform coding: prohibited
 
 ## Governance
 

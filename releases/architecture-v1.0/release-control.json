@@ -2,7 +2,7 @@
   "release_id": "DIP-P0-B49-ARCHITECTURE-V1.0",
   "version": "1.0.0",
   "date": "2026-07-21",
-  "status": "release_candidate_on_b49_branch",
+  "status": "released_pinned_pg0_passed",
   "release_name": "Architecture v1.0",
   "proposed_tag": "architecture-v1.0",
   "approval_basis": "P0-B46 source approval and user-approved P0-B48 Architecture v1.0 candidate",
@@ -11,7 +11,7 @@
   "restricted_repository": "axnjp/dip-architecture-restricted",
   "public_source_set": "releases/architecture-v1.0/architecture-v1.0-source-manifest.json",
   "gate_assessment": {
-    "PG0": "pending_immutable_release_pin_and_mainline_readback",
+    "PG0": "passed_against_immutable_release_commit",
     "IKG0": "not_granted",
     "runtime_coding": "prohibited"
   },
@@ -22,10 +22,16 @@
     "secrets": "excluded"
   },
   "remaining_actions": [
-    "merge the reviewed B49 release PR",
-    "read back the merged release source set and exact mainline commit",
-    "record the immutable release commit",
-    "formally close PG0 against that commit",
-    "retain IKG0 as a later explicit decision"
-  ]
+    "retain IKG0 as a later explicit authorization decision",
+    "produce P5 editable/DOCX/PDF/archive editions under the approved publication sequence"
+  ],
+  "immutable_release_pin": {
+    "type": "immutable_commit",
+    "repository": "axnjp/dip-architecture",
+    "commit": "13332696e8e4a1403bb986af8dc25410a9aba596",
+    "release": "Architecture v1.0",
+    "version": "1.0.0"
+  },
+  "release_tag": null,
+  "release_tag_status": "not_required_for_immutable_commit_pin"
 }
