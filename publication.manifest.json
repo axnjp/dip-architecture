@@ -432,7 +432,7 @@
   ],
   "authority_controls": {
     "source_revision": "13332696e8e4a1403bb986af8dc25410a9aba596",
-    "repository_file_count_including_manifest": 78,
+    "repository_file_count_including_manifest": 77,
     "generated_from_verified_readback": true,
     "requires_human_review_before_commit": false,
     "requires_post_merge_readback": true,
