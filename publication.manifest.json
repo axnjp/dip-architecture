@@ -1,9 +1,9 @@
 {
   "manifest_id": "DIP-PUBLIC-WORKING-CORPUS",
-  "manifest_version": "0.5.1-draft-candidate",
+  "manifest_version": "0.5.1-draft",
   "production_batch": "P0-B37",
   "classification": "Public Reference Architecture",
-  "status": "controlled_working_revision_corrective_candidate_not_release",
+  "status": "controlled_working_revision_not_release",
   "authorization": {
     "pg0_passed": false,
     "ikg0_granted": false,
@@ -33,7 +33,7 @@
     "repository-control and restricted-repository metadata",
     "conversation-export ingestion tooling"
   ],
-  "source_revision_status": "candidate_for_controlled_commit_at_7e40a5e8347652a4ff9402004305404522b78095",
+  "source_revision_status": "working_revision_verified_at_p0_b39",
   "structured_register_projection_status": "twelve_approved_public_projections_installed_and_readback_verified",
   "release_pin": null,
   "manifest_self_hash_excluded": true,
@@ -379,10 +379,12 @@
       "sha256": "4bc76702391a423e0a3a805f4b592caeab2f433a56779be654b7821123d8294d"
     }
   ],
-  "candidate_controls": {
+  "authority_controls": {
     "source_revision": "7e40a5e8347652a4ff9402004305404522b78095",
     "repository_file_count_including_manifest": 69,
     "generated_from_verified_readback": true,
-    "requires_human_review_before_commit": true
+    "requires_human_review_before_commit": false,
+    "requires_post_merge_readback": true,
+    "release_authority": false
   }
 }
