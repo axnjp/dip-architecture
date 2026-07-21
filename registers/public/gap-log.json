@@ -1,98 +1,35 @@
 {
   "projection_id": "DIP-PUBLIC-GAP-LOG",
-  "projection_version": "0.1.0",
+  "projection_version": "0.2.0-b48-candidate",
   "schema_version": "0.1.0-draft",
   "classification": "Public Reference Architecture",
   "source_register_id": "DIP-PUB-GAP-LOG",
-  "source_revision": null,
-  "status": "approved_public_projection",
+  "source_revision": "96251ea6df4ed3bb98e53f72de5a5761cb0eb490",
+  "status": "reconciled_candidate_pending_controlled_commit",
   "disclosure_review": {
     "semantic_review_status": "passed",
     "prohibited_field_scan": "passed",
     "private_instance_non_disclosure": "passed",
     "secret_scan": "passed",
-    "reviewed_revision": null
+    "reviewed_revision": "P0-B48-local-candidate"
   },
   "records": [
-    {
-      "id": "PUB-GAP-0002",
-      "title": "ADR-IMP-024 title is not evidenced",
-      "description": "ADR-IMP-024 was confirmed accepted and locked but its exact approved title was not available in earlier evidence.",
-      "impact": "Resolved in P0-B06; ADR-IMP-024 is now publishable under its approved title.",
-      "lifecycle_status": "closed",
-      "blocking_gate_ids": []
-    },
-    {
-      "id": "PUB-GAP-0003",
-      "title": "Implementation ADR decision bodies and section decisions remain partially unextracted",
-      "description": "Earlier batches lacked complete approved sources and normalized bodies for the implementation ADR corpus.",
-      "impact": "Resolved at the ADR-body level in P0-B08; all 29 accepted implementation ADRs now have complete normalized bodies. Non-ADR section decomposition remains part of broader P0 extraction under the applicable source-family gaps.",
-      "lifecycle_status": "closed",
-      "blocking_gate_ids": []
-    },
-    {
-      "id": "PUB-GAP-0004",
-      "title": "G0, G1, and complete viability source bodies remain uncontrolled",
-      "description": "G0 and G1 have controlled public-safe record-level summaries. The viability review now has a controlled executive disposition, findings, transition conditions, approval evidence, and historical numbering reconciliation, but the complete exact source bodies remain uncontrolled.",
-      "impact": "Foundations and Blueprint drafting have disposition-level viability traceability, but PG0 cannot pass while complete foundational and viability source bodies remain incomplete.",
-      "lifecycle_status": "open",
-      "blocking_gate_ids": [
-        "PG0",
-        "PG1",
-        "PG2"
-      ]
-    },
-    {
-      "id": "PUB-GAP-0005",
-      "title": "Complete verbatim AIOP section bodies remain uncontrolled",
-      "description": "AIOP Sections 1–7, their approval chain, the final AIOP v1.0 approval, the locked operating posture, and the exact 22-item DIP AI Constitution list are controlled. Complete verbatim AIOP section bodies, all subsection text, and any extended constitutional commentary remain unavailable.",
-      "impact": "AI principles, invariants, requirements, terminology, and core conformance mappings can now be normalized, but PG0 cannot pass until the complete approved AIOP source package is controlled.",
-      "lifecycle_status": "open",
-      "blocking_gate_ids": [
-        "PG0",
-        "PG1",
-        "PG2"
-      ]
-    },
-    {
-      "id": "PUB-GAP-0006",
-      "title": "Publication gate criteria require exact extraction",
-      "description": "Resolved: the complete approved P0–P6 planning responses, approval chains, and exact PG0–PG6 gate criteria are controlled.",
-      "impact": "PG0–PG6 are formally evaluable, but none passes merely because its planning model was approved.",
-      "lifecycle_status": "closed",
-      "blocking_gate_ids": []
-    },
-    {
-      "id": "PUB-GAP-0008",
-      "title": "Source revision and release pinning are not established",
-      "description": "Repository roles, locator forms, and release-pin conventions are approved. A controlled working corpus exists, while the final authoritative public source revision and Architecture v1.0 publication tag and commit remain pending.",
-      "impact": "Current file integrity can be verified, but generated editions and archives cannot claim source-revision or release-level reproducibility.",
-      "lifecycle_status": "open",
-      "blocking_gate_ids": [
-        "PG0",
-        "PG4",
-        "PG5"
-      ]
-    },
-    {
-      "id": "PUB-GAP-0011",
-      "title": "Implementation non-ADR record decomposition remains incomplete",
-      "description": "All 29 implementation ADR bodies and all 464 approved non-ADR locked decisions from Implementation Planning Sections 1 through 12 are normalized with controlled source and approval evidence.",
-      "impact": "Resolved: the implementation-planning decision corpus is record-complete. Other source-family and publication-control gaps remain separate blockers for PG0 and PG3.",
-      "lifecycle_status": "closed",
-      "blocking_gate_ids": []
-    },
-    {
-      "id": "PUB-GAP-0012",
-      "title": "Structured register public projection remains incomplete",
-      "description": "P0-B27 rejected unsafe direct structured-register publication. P0-B28 defines closed per-register public schemas. P0-B29 generates and reviews all twelve quarantined candidate projections successfully; explicit installation approval, public-build integration, immutable public revision binding, and repository readback remain pending.",
-      "impact": "The public repository has a safe abstract ADR working corpus, but the public editions cannot yet include machine-readable decision, requirement, principle, invariant, terminology, source, gap, gate, spike, scope, and traceability registers with verified disclosure boundaries.",
-      "lifecycle_status": "open",
-      "blocking_gate_ids": [
-        "PG0",
-        "PG3",
-        "PG5"
-      ]
-    }
-  ]
+    {"id":"PUB-GAP-0001","title":"Complete immutable historical evidence export is unavailable","description":"The original conversation export and exact historical message locators are unavailable after the account migration.","impact":"Accepted as a provenance limitation under PG0-E001; current approved sources remain usable after semantic review.","lifecycle_status":"accepted_provenance_limitation","blocking_gate_ids":[]},
+    {"id":"PUB-GAP-0002","title":"ADR-IMP-024 title is not evidenced","description":"The historical title evidence gap was resolved during prior ADR normalization.","impact":"No current publication impact.","lifecycle_status":"closed","blocking_gate_ids":[]},
+    {"id":"PUB-GAP-0003","title":"Implementation ADR decision bodies and section decisions remain partially unextracted","description":"The historical extraction gap was resolved for the approved ADR corpus and normalized implementation records.","impact":"No current publication impact.","lifecycle_status":"closed","blocking_gate_ids":[]},
+    {"id":"PUB-GAP-0004","title":"Foundational source bodies are provenance-limited","description":"G0, G1, and the viability review are controlled as approved normalized current sources under PG0-E001; unavailable historical wording is not represented as recovered verbatim text.","impact":"Accepted current-authority limitation; it does not prevent accurate release-candidate drafting.","lifecycle_status":"bounded_accepted_under_PG0-E001","blocking_gate_ids":[]},
+    {"id":"PUB-GAP-0005","title":"AIOP and constitutional historical wording is provenance-limited","description":"AIOP v1.0 and the Constitution are controlled as approved normalized current sources; exact historical section wording and constitutional enumeration wording remain unavailable.","impact":"Accepted current-authority limitation; the normalized current sources govern the candidate.","lifecycle_status":"bounded_accepted_under_PG0-E001","blocking_gate_ids":[]},
+    {"id":"PUB-GAP-0006","title":"Publication gate criteria require exact extraction","description":"The approved P0–P6 planning responses and evaluable gate criteria are controlled.","impact":"No current publication impact.","lifecycle_status":"closed","blocking_gate_ids":[]},
+    {"id":"PUB-GAP-0007","title":"Exact approval-locator coverage is incomplete","description":"Some historical message-level approval locators remain unavailable; current source and approval bindings are retained with explicit provenance labels.","impact":"Accepted as a provenance limitation under PG0-E001.","lifecycle_status":"accepted_provenance_limitation","blocking_gate_ids":[]},
+    {"id":"PUB-GAP-0008","title":"Architecture v1.0 release pin is not established","description":"The working authorities and release candidate exist, but Architecture v1.0 approval, release tagging, and immutable pinning remain outstanding.","impact":"Blocks formal release and final PG0 closure until B49 or the approved successor sequence completes.","lifecycle_status":"open_release_control","blocking_gate_ids":["PG0","PG4","PG5"]},
+    {"id":"PUB-GAP-0011","title":"Implementation non-ADR record decomposition remains incomplete","description":"The approved implementation-planning decision corpus is record-complete.","impact":"No current publication impact.","lifecycle_status":"closed","blocking_gate_ids":[]},
+    {"id":"PUB-GAP-0012","title":"Structured register public projection remains incomplete","description":"The twelve approved public structured-register projections were installed and read back in P0-B30; the prior projection was stale only because its later closure state was not reflected in the public gap log.","impact":"Projection control reconciled in P0-B48.","lifecycle_status":"closed","blocking_gate_ids":[]},
+    {"id":"PUB-GAP-0013","title":"Mixed-classification exact source packages require authority-safe routing","description":"Eight exact source packages contain protected instance references and are formally deferred to Private Authority pointer/decomposition handling. They are excluded from this public release candidate and from the restricted working repository.","impact":"Non-blocking for this Architecture v1.0 candidate; future exact-source publication remains separately controlled.","lifecycle_status":"formally_dispositioned_deferred","blocking_gate_ids":[]},
+    {"id":"PUB-GAP-0014","title":"Public authoritative publication manifest was invalid","description":"Corrected and merged during P0-B38/P0-B39.","impact":"No current publication impact.","lifecycle_status":"closed","blocking_gate_ids":[]},
+    {"id":"PUB-GAP-0015","title":"Restricted source pointer registry readback was incomplete","description":"Restricted authority was corrected and read back during P0-B38/P0-B39.","impact":"No current publication impact.","lifecycle_status":"closed","blocking_gate_ids":[]},
+    {"id":"PUB-GAP-0016","title":"Restricted registry authority metadata was stale","description":"Corrected and merged during P0-B39 authority reconciliation.","impact":"No current publication impact.","lifecycle_status":"closed","blocking_gate_ids":[]},
+    {"id":"P0-B40-CNTR-001","title":"Public gap-log projection was stale against mainline authority","description":"The public projection omitted P0-B39 closure state and retained stale PUB-GAP-0012 status.","impact":"Reconciled in the B48 repository-ready candidate; the public-repository update remains staged pending explicit destination/file authorization.","lifecycle_status":"reconciled_candidate_pending_commit","blocking_gate_ids":[]}
+  ],
+  "remaining_release_blocker_ids": ["PUB-GAP-0008"],
+  "authorization": {"pg0_passed":false,"ikg0_granted":false,"product_implementation_coding_permitted":false}
 }
