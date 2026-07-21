@@ -2,7 +2,7 @@
   "manifest_id": "DIP-P0-B49-ARCHITECTURE-V1-SOURCE-MANIFEST",
   "version": "1.0.0",
   "date": "2026-07-21",
-  "status": "release_source_manifest",
+  "status": "pinned_release_source_manifest",
   "algorithm": "SHA-256",
   "classification": "Public Reference Architecture",
   "source_root": "releases/architecture-v1.0/",
@@ -43,7 +43,14 @@
     "P0-B46 approved canonical sources",
     "PG0-E001",
     "P0-B39 current repository authority",
-    "P0-B48 reconciled publication controls"
+    "P0-B48 reconciled publication controls",
+    "P0-B49 merged release commit 13332696e8e4a1403bb986af8dc25410a9aba596"
   ],
-  "release_pin": null
+  "release_pin": {
+    "type": "immutable_commit",
+    "repository": "axnjp/dip-architecture",
+    "commit": "13332696e8e4a1403bb986af8dc25410a9aba596",
+    "release": "Architecture v1.0",
+    "version": "1.0.0"
+  }
 }
