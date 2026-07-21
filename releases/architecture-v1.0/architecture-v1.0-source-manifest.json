@@ -1,0 +1,49 @@
+{
+  "manifest_id": "DIP-P0-B49-ARCHITECTURE-V1-SOURCE-MANIFEST",
+  "version": "1.0.0",
+  "date": "2026-07-21",
+  "status": "release_source_manifest",
+  "algorithm": "SHA-256",
+  "classification": "Public Reference Architecture",
+  "source_root": "releases/architecture-v1.0/",
+  "files": [
+    {
+      "path": "releases/architecture-v1.0/ARCHITECTURE-v1.0.md",
+      "size_bytes": 5449,
+      "sha256": "e511b2b1e7c5cc27a78d60bcea624ce450465baa80260957af6cc2c4629c0b7d"
+    },
+    {
+      "path": "releases/architecture-v1.0/foundations/AIOP-v1.0.md",
+      "size_bytes": 3121,
+      "sha256": "a822fe459bb4a31c2bfd442318bac064e252b97d5ad7f658d26fff1706b30af3"
+    },
+    {
+      "path": "releases/architecture-v1.0/foundations/DIP-AI-Constitution.md",
+      "size_bytes": 2770,
+      "sha256": "723e7013f1f053939adc92fadd862afa11d24c40730fc0d18c77d900f5d745bf"
+    },
+    {
+      "path": "releases/architecture-v1.0/foundations/G0-conceptual-architecture.md",
+      "size_bytes": 3673,
+      "sha256": "c5acdb3bf275359dac664f1eb7decd47a3d6873bea71a057806ff823df240aa3"
+    },
+    {
+      "path": "releases/architecture-v1.0/foundations/G1-operational-design.md",
+      "size_bytes": 3615,
+      "sha256": "872c9655966d921063463d837649f31d2b33a6d67c7db0d0ef3367a93ed23d89"
+    },
+    {
+      "path": "releases/architecture-v1.0/foundations/first-domain-viability-and-readiness.md",
+      "size_bytes": 2918,
+      "sha256": "2d2724337d507820b3bd0c6891b8de5bf97a2a87b717fc640109c1367b3c874f"
+    }
+  ],
+  "self_hash_excluded": true,
+  "authority_inputs": [
+    "P0-B46 approved canonical sources",
+    "PG0-E001",
+    "P0-B39 current repository authority",
+    "P0-B48 reconciled publication controls"
+  ],
+  "release_pin": null
+}

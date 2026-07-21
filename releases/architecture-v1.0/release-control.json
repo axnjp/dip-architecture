@@ -1,0 +1,31 @@
+{
+  "release_id": "DIP-P0-B49-ARCHITECTURE-V1.0",
+  "version": "1.0.0",
+  "date": "2026-07-21",
+  "status": "release_candidate_on_b49_branch",
+  "release_name": "Architecture v1.0",
+  "proposed_tag": "architecture-v1.0",
+  "approval_basis": "P0-B46 source approval and user-approved P0-B48 Architecture v1.0 candidate",
+  "provenance_exception": "PG0-E001",
+  "public_repository": "axnjp/dip-architecture",
+  "restricted_repository": "axnjp/dip-architecture-restricted",
+  "public_source_set": "releases/architecture-v1.0/architecture-v1.0-source-manifest.json",
+  "gate_assessment": {
+    "PG0": "pending_immutable_release_pin_and_mainline_readback",
+    "IKG0": "not_granted",
+    "runtime_coding": "prohibited"
+  },
+  "security_boundary": {
+    "public_reference_architecture": "included",
+    "restricted_architecture": "excluded",
+    "private_authority": "excluded",
+    "secrets": "excluded"
+  },
+  "remaining_actions": [
+    "merge the reviewed B49 release PR",
+    "read back the merged release source set and exact mainline commit",
+    "record the immutable release commit",
+    "formally close PG0 against that commit",
+    "retain IKG0 as a later explicit decision"
+  ]
+}
